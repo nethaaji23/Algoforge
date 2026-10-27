@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>AlgoForge // Cyber-Glitch</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&amp;family=Space+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "primary-container": "#c3f400",
+          "on-surface": "#e5e2e3",
+          "surface-dim": "#131314",
+          "on-primary-fixed": "#161e00",
+          "on-error-container": "#ffdad6",
+          "inverse-on-surface": "#313031",
+          "secondary-fixed": "#e9ddff",
+          "surface-container": "#201f20",
+          "inverse-surface": "#e5e2e3",
+          "surface": "#131314",
+          "on-primary-container": "#556d00",
+          "primary-fixed": "#c3f400",
+          "on-background": "#e5e2e3",
+          "on-surface-variant": "#c4c9ac",
+          "on-primary-fixed-variant": "#3c4d00",
+          "on-tertiary-fixed-variant": "#004f54",
+          "tertiary-fixed-dim": "#00dbe9",
+          "inverse-primary": "#506600",
+          "surface-container-lowest": "#0e0e0f",
+          "primary": "#ffffff",
+          "surface-container-low": "#1c1b1c",
+          "tertiary": "#ffffff",
+          "error": "#ffb4ab",
+          "on-error": "#690005",
+          "on-tertiary-fixed": "#002022",
+          "background": "#131314",
+          "surface-variant": "#353436",
+          "secondary-container": "#571bc1",
+          "surface-container-highest": "#353436",
+          "on-secondary": "#3c0091",
+          "on-tertiary-container": "#006f77",
+          "on-secondary-container": "#c4abff",
+          "on-secondary-fixed-variant": "#5516be",
+          "surface-tint": "#abd600",
+          "surface-container-high": "#2a2a2b",
+          "on-secondary-fixed": "#23005c",
+          "error-container": "#93000a",
+          "outline": "#8e9379",
+          "outline-variant": "#444933",
+          "surface-bright": "#3a393a",
+          "tertiary-fixed": "#7df4ff",
+          "secondary": "#d0bcff",
+          "on-primary": "#283500",
+          "tertiary-container": "#7df4ff",
+          "primary-fixed-dim": "#abd600",
+          "on-tertiary": "#00363a",
+          "secondary-fixed-dim": "#d0bcff"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "spacing": {
+          "margin-mobile": "16px",
+          "stack-sm": "8px",
+          "stack-lg": "32px",
+          "stack-md": "16px",
+          "margin-desktop": "48px",
+          "gutter": "24px",
+          "unit": "4px"
+        },
+        "fontFamily": {
+          "headline-lg": [
+            "Space Grotesk"
+          ],
+          "code-md": [
+            "JetBrains Mono"
+          ],
+          "headline-xl": [
+            "Space Grotesk"
+          ],
+          "body-md": [
+            "Space Grotesk"
+          ],
+          "label-caps": [
+            "JetBrains Mono"
+          ],
+          "headline-md": [
+            "Space Grotesk"
+          ],
+          "body-lg": [
+            "Space Grotesk"
+          ],
+          "headline-lg-mobile": [
+            "Space Grotesk"
+          ]
+        },
+        "fontSize": {
+          "headline-lg": [
+            "40px",
+            {
+              "lineHeight": "1.2",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ],
+          "code-md": [
+            "14px",
+            {
+              "lineHeight": "1.5",
+              "fontWeight": "500"
+            }
+          ],
+          "headline-xl": [
+            "64px",
+            {
+              "lineHeight": "1.1",
+              "letterSpacing": "-0.04em",
+              "fontWeight": "700"
+            }
+          ],
+          "body-md": [
+            "16px",
+            {
+              "lineHeight": "1.6",
+              "fontWeight": "400"
+            }
+          ],
+          "label-caps": [
+            "12px",
+            {
+              "lineHeight": "1",
+              "letterSpacing": "0.1em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-md": [
+            "24px",
+            {
+              "lineHeight": "1.4",
+              "fontWeight": "600"
+            }
+          ],
+          "body-lg": [
+            "18px",
+            {
+              "lineHeight": "1.6",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg-mobile": [
+            "32px",
+            {
+              "lineHeight": "1.2",
+              "fontWeight": "700"
+            }
+          ]
+        }
+      },
+    },
+  }</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl border-b border-outline-variant"><div class="h-16 w-full px-margin-mobile lg:px-margin-desktop flex items-center justify-between gap-gutter"><div class="flex items-center gap-gutter"><a class="flex items-center gap-stack-sm select-none group" data-path="platform" href="#"><span class="font-headline-md text-headline-md italic font-bold tracking-tighter text-primary-fixed group-hover:text-primary transition-colors">ALGO<span class="text-tertiary-fixed">FORGE</span></span><span class="font-label-caps text-label-caps px-unit py-0.5 bg-surface-container-high text-primary-fixed border border-primary-fixed-dim/40">v4.2</span></a><div class="hidden xl:flex items-center gap-unit px-stack-sm py-unit bg-surface-container-lowest border border-outline-variant/60 font-label-caps text-label-caps text-primary-fixed-dim"><span class="w-2 h-2 rounded-full bg-primary-fixed animate-pulse inline-block mr-unit"></span>[SYS: ONLINE // 144 FPS]</div></div><nav class="hidden md:flex items-center gap-unit font-label-caps text-label-caps" data-active-classes="bg-primary-container text-on-primary-container font-bold border border-primary-fixed"><a aria-current="page" class="px-stack-md py-stack-sm transition-colors bg-primary-container text-on-primary-container font-bold border border-primary-fixed" data-path="platform" href="#">PLATFORM</a><a class="px-stack-md py-stack-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="curriculum" href="#">CURRICULUM</a><a class="px-stack-md py-stack-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="arena" href="#">ARENA</a><a class="px-stack-md py-stack-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="docs" href="#">DOCS</a></nav><div class="flex items-center gap-stack-sm"><button class="hidden sm:flex items-center gap-stack-sm px-stack-sm py-unit bg-surface-container-low border border-outline-variant text-on-surface-variant hover:text-on-surface font-code-md text-code-md hover:border-primary-fixed transition-colors" type="button"><span class="material-symbols-outlined text-base">terminal</span><span class="font-label-caps text-label-caps">CTRL+`</span></button><a class="flex items-center justify-center px-stack-md py-unit bg-primary-container text-on-primary-container font-label-caps text-label-caps font-bold border-2 border-primary-fixed hover:bg-primary-fixed hover:text-on-primary-fixed transition-all" data-path="enter-gateway" href="#">ENTER_GATEWAY</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0 border border-outline"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full relative selection:bg-primary-container selection:text-on-primary-container">
+<!-- BACKGROUND AMBIENT GRID & GLITCH LIGHTING -->
+<div class="absolute inset-0 pointer-events-none overflow-hidden -z-10">
+<div class="absolute top-10 left-1/4 w-[600px] h-[600px] bg-primary-container/5 blur-[140px] rounded-full"></div>
+<div class="absolute top-40 right-10 w-[500px] h-[500px] bg-secondary-container/20 blur-[130px] rounded-full"></div>
+<div class="absolute bottom-20 left-10 w-[700px] h-[400px] bg-tertiary-container/5 blur-[160px] rounded-full"></div>
+<svg class="absolute inset-0 w-full h-full opacity-[0.035]" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="matrix-grid" patternunits="userSpaceOnUse" width="40">
+<path class="text-on-surface" d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="1"></path>
+<circle class="text-primary-fixed" cx="0" cy="0" fill="currentColor" r="1.5"></circle>
+</pattern>
+</defs>
+<rect fill="url(#matrix-grid)" height="100%" width="100%"></rect>
+</svg>
+</div>
+<!-- HERO SECTION -->
+<section class="w-full px-margin-mobile lg:px-margin-desktop py-stack-lg lg:py-16">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- LEFT COLUMN: VALUE PROPOSITION -->
+<div class="lg:col-span-7 flex flex-col gap-stack-md">
+<!-- TELEMETRY BADGE -->
+<div class="inline-flex items-center gap-stack-sm self-start px-stack-sm py-1 bg-surface-container-high rounded text-on-surface font-label-caps text-label-caps shadow-sm">
+<span class="w-2 h-2 rounded-full bg-primary-fixed animate-ping"></span>
+<span class="text-primary-fixed">// QUANTUM COMPILATION ENGINE V2.04</span>
+<span class="text-on-surface-variant/40">|</span>
+<span class="text-on-surface-variant font-code-md">PARALLEL JIT ACTIVE</span>
+</div>
+<!-- MAIN HEADLINE -->
+<div class="flex flex-col">
+<h1 class="font-headline-xl text-headline-xl tracking-tighter text-on-surface uppercase">
+            FORGE YOUR <br class="hidden sm:inline"/>
+<span class="bg-gradient-to-r from-primary-fixed via-tertiary-fixed to-secondary-fixed bg-clip-text text-transparent drop-shadow-[0_0_24px_rgba(195,244,0,0.3)]">
+              ALGORITHMIC
+            </span><br/>
+            SUPREMACY.
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-stack-sm">
+            The competitive execution environment for high-velocity coders, hackathon contenders, and systems engineers. Real-time GPU topology, distributed benchmarking, and adversarial live arenas.
+          </p>
+</div>
+<!-- SYSTEM TELEMETRY CHIPS -->
+<div class="grid grid-cols-3 gap-unit sm:gap-stack-sm py-stack-sm">
+<div class="p-stack-sm bg-surface-container-low rounded flex flex-col justify-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant">ACTIVE UNITS</span>
+<span class="font-headline-md text-headline-md text-primary-fixed font-bold tracking-tight">&gt; 142k</span>
+<span class="font-code-md text-code-md text-on-surface-variant/70">Global Operators</span>
+</div>
+<div class="p-stack-sm bg-surface-container-low rounded flex flex-col justify-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant">KERNEL SPEED</span>
+<span class="font-headline-md text-headline-md text-tertiary-fixed font-bold tracking-tight">&lt; 0.04ms</span>
+<span class="font-code-md text-code-md text-on-surface-variant/70">Bare-Metal Ring0</span>
+</div>
+<div class="p-stack-sm bg-surface-container-low rounded flex flex-col justify-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant">PRIZE BOUNTIES</span>
+<span class="font-headline-md text-headline-md text-secondary-fixed font-bold tracking-tight">&gt; $250k</span>
+<span class="font-code-md text-code-md text-on-surface-variant/70">Instant Settlement</span>
+</div>
+</div>
+<!-- TERMINAL CLI PREVIEW -->
+<div class="w-full bg-surface-container-lowest rounded p-stack-md flex flex-col gap-unit shadow-xl">
+<div class="flex items-center justify-between pb-unit">
+<div class="flex items-center gap-stack-sm font-label-caps text-label-caps text-on-surface-variant">
+<span class="inline-block w-2.5 h-2.5 rounded-full bg-error-container"></span>
+<span class="inline-block w-2.5 h-2.5 rounded-full bg-surface-variant"></span>
+<span class="inline-block w-2.5 h-2.5 rounded-full bg-primary-fixed-dim"></span>
+<span class="ml-stack-sm text-on-surface-variant">SYS_DAEMON: v4.2-STABLE // ttyS0</span>
+</div>
+<span class="font-label-caps text-label-caps text-primary-fixed bg-surface-container px-2 py-0.5 rounded">QUICK CLI AUTH</span>
+</div>
+<div class="font-code-md text-code-md text-on-surface space-y-1">
+<div class="text-on-surface-variant flex items-center gap-2">
+<span class="text-primary-fixed">&gt;</span> $ algoforge auth --session-init --cluster=us-east-metal
+            </div>
+<div class="text-tertiary-fixed flex items-center gap-2 pl-4">
+<span class="material-symbols-outlined text-[14px]">bolt</span> Quantum cryptographic handshake verified. Token: 0x9AF87...2B
+            </div>
+<div class="text-on-surface-variant pl-4">
+              [TLS 1.3] AES-256-GCM established // Host latency: 1.2ms
+            </div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: INTEGRATED AUTHENTICATION GATEWAY -->
+<div class="lg:col-span-5 w-full">
+<div class="relative bg-surface-container p-stack-md lg:p-stack-lg rounded shadow-2xl overflow-hidden">
+<!-- AMBIENT GLOW CORNER -->
+<div class="absolute -top-16 -right-16 w-36 h-36 bg-primary-container/20 rounded-full blur-2xl pointer-events-none"></div>
+<!-- CARD HEADER & GLITCH BADGE -->
+<div class="flex items-center justify-between mb-stack-md">
+<div class="flex items-center gap-stack-sm">
+<span class="material-symbols-outlined text-primary-fixed">encrypted</span>
+<span class="font-headline-md text-headline-md tracking-tight text-on-surface uppercase">OPERATOR GATEWAY</span>
+</div>
+<span class="font-label-caps text-label-caps bg-surface-container-highest text-primary-fixed px-stack-sm py-1 rounded">CLEARANCE: L1</span>
+</div>
+<!-- TAB SWITCHER -->
+<div class="grid grid-cols-2 gap-unit bg-surface-container-lowest p-1 rounded mb-stack-md" id="auth-tab-group">
+<button class="py-stack-sm font-label-caps text-label-caps rounded transition-all bg-primary-container text-on-primary-container font-bold shadow-md flex items-center justify-center gap-stack-sm" id="tab-login" type="button">
+<span class="material-symbols-outlined text-[16px]">vpn_key</span>
+              [LOGIN // OPERATOR]
+            </button>
+<button class="py-stack-sm font-label-caps text-label-caps rounded transition-all text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-stack-sm" id="tab-register" type="button">
+<span class="material-symbols-outlined text-[16px]">person_add</span>
+              [REGISTER // CADET]
+            </button>
+</div>
+<!-- FORM BODY -->
+<form class="space-y-stack-md" id="auth-form" onsubmit="event.preventDefault(); triggerAuthSim();">
+<!-- REGISTER ONLY EXTRA FIELD (DYNAMIC TOGGLE) -->
+<div class="hidden space-y-1" id="register-handle-field">
+<label class="font-label-caps text-label-caps text-on-surface-variant flex items-center justify-between">
+<span>// OPERATOR CALLSIGN</span>
+<span class="text-tertiary-fixed font-code-md">AUTO-ASSIGN_ID</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-stack-sm text-on-surface-variant text-[18px]">badge</span>
+<input class="w-full bg-surface-container-lowest text-on-surface pl-10 pr-stack-sm py-stack-sm font-code-md text-code-md rounded focus:outline-none focus:ring-1 focus:ring-primary-fixed placeholder:text-on-surface-variant/40" placeholder="ZeroCool_99" type="text"/>
+</div>
+</div>
+<!-- EMAIL FIELD -->
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps text-on-surface-variant flex items-center justify-between">
+<span>// OPERATOR EMAIL</span>
+<span class="text-primary-fixed font-code-md">[ENCRYPTED UPLINK]</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-stack-sm text-on-surface-variant text-[18px]">alternate_email</span>
+<input class="w-full bg-surface-container-lowest text-on-surface pl-10 pr-stack-sm py-stack-sm font-code-md text-code-md rounded focus:outline-none focus:ring-1 focus:ring-primary-fixed placeholder:text-on-surface-variant/40" id="auth-email" placeholder="operator@algoforge.dev" required="" type="email"/>
+</div>
+</div>
+<!-- PASSKEY FIELD -->
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<label class="font-label-caps text-label-caps text-on-surface-variant">// PASSKEY / HARDWARE KEY</label>
+<a class="font-code-md text-code-md text-primary-fixed-dim hover:text-primary-fixed transition-colors" href="#">Recover Uplink?</a>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-stack-sm text-on-surface-variant text-[18px]">key</span>
+<input class="w-full bg-surface-container-lowest text-on-surface pl-10 pr-10 py-stack-sm font-code-md text-code-md rounded focus:outline-none focus:ring-1 focus:ring-primary-fixed placeholder:text-on-surface-variant/40" id="auth-passkey" placeholder="••••••••••••••••" required="" type="password"/>
+<button class="absolute right-stack-sm text-on-surface-variant hover:text-on-surface focus:outline-none" id="toggle-password-visibility" type="button">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</div>
+<!-- PROTOCOL CLEARANCE BADGE -->
+<div class="p-stack-sm bg-surface-container-low rounded flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center gap-stack-sm">
+<span class="material-symbols-outlined text-primary-fixed text-[18px]">shield</span>
+<span class="font-label-caps text-label-caps">PROTOCOL: E2EE_TLS_V1.3</span>
+</div>
+<span class="font-code-md text-code-md text-primary-fixed">CLEARANCE: L1_ACCESS</span>
+</div>
+<!-- PRIMARY SUBMIT CTA -->
+<button class="w-full py-stack-sm bg-primary-container hover:bg-primary-fixed text-on-primary-container font-label-caps text-label-caps font-bold rounded shadow-lg transition-all flex items-center justify-center gap-stack-sm group" id="auth-submit-btn" type="submit">
+<span class="material-symbols-outlined text-[18px] group-hover:rotate-45 transition-transform">bolt</span>
+<span id="submit-btn-text">[INITIALIZE SESSION // AUTH]</span>
+</button>
+<!-- SSO BUTTONS -->
+<div class="grid grid-cols-2 gap-stack-sm pt-unit">
+<button class="py-stack-sm bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-caps text-label-caps rounded flex items-center justify-center gap-stack-sm transition-colors" type="button">
+<svg class="w-4 h-4 fill-current" viewbox="0 0 24 24">
+<path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path>
+</svg>
+<span>[GITHUB // KEY]</span>
+</button>
+<button class="py-stack-sm bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-caps text-label-caps rounded flex items-center justify-center gap-stack-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">fingerprint</span>
+<span>[GOOGLE // SSO]</span>
+</button>
+</div>
+<!-- SECURITY MICROTEXT -->
+<div class="pt-unit text-center">
+<p class="font-code-md text-code-md text-on-surface-variant/60 leading-tight">
+                By initiating, you agree to AlgoForge Hackathon Protocols and telemetry sync regulations.
+              </p>
+</div>
+</form>
+<!-- CONSOLE LOG OUTPUT FEEDBACK (HIDDEN INITIALLY) -->
+<div class="hidden mt-stack-sm p-stack-sm bg-surface-container-lowest rounded text-primary-fixed font-code-md text-code-md flex items-center gap-2" id="auth-status-log">
+<span class="material-symbols-outlined text-[16px] animate-spin">sync</span>
+<span id="auth-status-text">Handshaking with node...</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- LIVE ARENA BENCHMARKS & TELEMETRY STRIP -->
+<section class="w-full bg-surface-container-lowest py-stack-sm overflow-hidden shadow-inner">
+<div class="w-full px-margin-mobile lg:px-margin-desktop flex flex-col md:flex-row items-center justify-between gap-stack-sm">
+<!-- TICKER BADGE -->
+<div class="flex items-center gap-stack-sm shrink-0">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-fixed animate-pulse"></span>
+<span class="font-label-caps text-label-caps text-primary-fixed uppercase tracking-wider">LIVE TELEMETRY FEED</span>
+<span class="text-on-surface-variant/40">::</span>
+</div>
+<!-- STREAMING EVENTS -->
+<div class="flex-1 overflow-x-auto whitespace-nowrap scrollbar-none py-1">
+<div class="flex items-center gap-stack-lg font-code-md text-code-md text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="text-primary-fixed font-bold">0xNullPointer</span>
+<span>solved Quantum Route Optimizer</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container text-tertiary-fixed font-bold">44ms</span>
+</div>
+<span class="text-on-surface-variant/30 font-bold">•</span>
+<div class="flex items-center gap-2">
+<span class="text-secondary-fixed font-bold">CyberValkyrie</span>
+<span>climbed to rank #1</span>
+<span class="px-1.5 py-0.5 rounded bg-secondary-container/40 text-secondary-fixed font-bold">+150 pts</span>
+</div>
+<span class="text-on-surface-variant/30 font-bold">•</span>
+<div class="flex items-center gap-2">
+<span class="text-on-surface font-bold">ByteShifter_404</span>
+<span>unlocked zero-copy B-Tree achievement</span>
+<span class="text-primary-fixed font-bold">[$500 BOUNTY]</span>
+</div>
+</div>
+</div>
+<!-- HARDWARE SNAPSHOT -->
+<div class="hidden xl:flex items-center gap-stack-sm font-label-caps text-label-caps text-on-surface-variant/80 shrink-0">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">memory</span>
+<span>GLOBAL LOAD: 88.2% // CLUSTER: 2,410 NODES</span>
+</div>
+</div>
+</section>
+<!-- PLATFORM MODES SHOWCASE (3-COLUMN HIGH-TECH CARDS) -->
+<section class="w-full px-margin-mobile lg:px-margin-desktop py-stack-lg lg:py-24">
+<div class="max-w-7xl mx-auto flex flex-col gap-stack-lg">
+<!-- SECTION HEADER -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-stack-sm">
+<div>
+<span class="font-label-caps text-label-caps text-primary-fixed">// ARCHITECTURE MODES</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface tracking-tight uppercase mt-1">
+            THREE VECTORS OF EXECUTION
+          </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Switch fluidly between deliberate algorithmic mastery, zero-overhead developer pipelines, and adversarial bounty-backed battlegrounds.
+        </p>
+</div>
+<!-- GRID CARDS -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter items-stretch">
+<!-- CARD 1: LEARNING MODE -->
+<div class="bg-surface-container-low rounded p-stack-lg flex flex-col justify-between hover:bg-surface-container transition-all group shadow-xl">
+<div class="space-y-stack-md">
+<div class="flex items-center justify-between">
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center text-primary-fixed group-hover:bg-primary-container group-hover:text-on-primary-container transition-colors">
+<span class="material-symbols-outlined text-[28px]">account_tree</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant bg-surface-container-lowest px-2 py-1 rounded">MODE_01</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase group-hover:text-primary-fixed transition-colors">
+                LEARNING MODE
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+                Interactive step-by-step memory pointer trace, binary tree visualizer, and guided data structure paths tailored for hardware comprehension.
+              </p>
+</div>
+<!-- EMBEDDED MINI GRAPHIC / TREE VISUAL -->
+<div class="p-stack-sm bg-surface-container-lowest rounded space-y-2">
+<div class="flex items-center justify-between font-label-caps text-label-caps text-on-surface-variant">
+<span>HEAP_PTR TRACE</span>
+<span class="text-primary-fixed">0x7FFE_4A10</span>
+</div>
+<!-- Small Inline SVG Visualizer -->
+<svg class="w-full h-16 text-primary-fixed fill-none stroke-current" stroke-width="2" viewbox="0 0 240 70">
+<circle class="fill-surface-container stroke-primary-fixed" cx="120" cy="15" r="9"></circle>
+<text class="font-code-md fill-primary-fixed stroke-none" font-size="10" text-anchor="middle" x="120" y="19">ROOT</text>
+<line stroke-dasharray="2 2" x1="113" x2="60" y1="21" y2="45"></line>
+<line x1="127" x2="180" y1="21" y2="45"></line>
+<circle class="fill-surface-container stroke-outline" cx="60" cy="50" r="8"></circle>
+<circle class="fill-primary-container stroke-primary-fixed" cx="180" cy="50" r="8"></circle>
+<text class="font-code-md fill-on-primary-container stroke-none" font-size="9" text-anchor="middle" x="180" y="54">L_ROT</text>
+</svg>
+</div>
+<ul class="space-y-1 font-code-md text-code-md text-on-surface-variant">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary-fixed">check</span>
+                Interactive memory leak auditor
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary-fixed">check</span>
+                Dynamic Trie &amp; Red-Black visualizers
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-primary-fixed">check</span>
+                Cycle-by-cycle register debugger
+              </li>
+</ul>
+</div>
+<a class="mt-stack-lg inline-flex items-center justify-between p-stack-sm bg-surface-container rounded font-label-caps text-label-caps text-on-surface hover:text-primary-fixed group-hover:bg-surface-container-high transition-colors" href="#">
+<span>EXPLORE CURRICULUM</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<!-- CARD 2: EXPERIENCE MODE (IDE) -->
+<div class="bg-surface-container-low rounded p-stack-lg flex flex-col justify-between hover:bg-surface-container transition-all group shadow-xl">
+<div class="space-y-stack-md">
+<div class="flex items-center justify-between">
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center text-tertiary-fixed group-hover:bg-tertiary-fixed group-hover:text-on-tertiary transition-colors">
+<span class="material-symbols-outlined text-[28px]">terminal</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant bg-surface-container-lowest px-2 py-1 rounded">MODE_02</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase group-hover:text-tertiary-fixed transition-colors">
+                EXPERIENCE MODE (IDE)
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+                Low-level runtime telemetry, Vulkan pipe acceleration, and AVX-512 JIT compiler benchmark statistics integrated right in browser memory.
+              </p>
+</div>
+<!-- COMPILER BENCHMARK VISUAL -->
+<div class="p-stack-sm bg-surface-container-lowest rounded space-y-2">
+<div class="flex items-center justify-between font-label-caps text-label-caps text-on-surface-variant">
+<span>SIMD AVX-512 VECTOR</span>
+<span class="text-tertiary-fixed">98.4% EFFICIENCY</span>
+</div>
+<!-- Micro Bar Graph -->
+<div class="space-y-1.5 font-code-md text-code-md">
+<div class="flex items-center justify-between text-xs text-on-surface-variant">
+<span>Standard GCC -O3</span>
+<span>142 GFLOPS</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="bg-outline w-2/3 h-full"></div>
+</div>
+<div class="flex items-center justify-between text-xs text-tertiary-fixed">
+<span>AlgoForge JIT Pipe</span>
+<span>389 GFLOPS</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="bg-tertiary-fixed w-full h-full"></div>
+</div>
+</div>
+</div>
+<ul class="space-y-1 font-code-md text-code-md text-on-surface-variant">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">check</span>
+                Wasm zero-latency local runner
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">check</span>
+                Flamegraph cache miss profiler
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">check</span>
+                Direct LLVM IR inspection pane
+              </li>
+</ul>
+</div>
+<a class="mt-stack-lg inline-flex items-center justify-between p-stack-sm bg-surface-container rounded font-label-caps text-label-caps text-on-surface hover:text-tertiary-fixed group-hover:bg-surface-container-high transition-colors" href="#">
+<span>LAUNCH CLOUD IDE</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<!-- CARD 3: CHALLENGE MODE (ARENA) -->
+<div class="bg-surface-container-low rounded p-stack-lg flex flex-col justify-between hover:bg-surface-container transition-all group shadow-xl">
+<div class="space-y-stack-md">
+<div class="flex items-center justify-between">
+<div class="w-12 h-12 rounded bg-surface-container-high flex items-center justify-center text-secondary-fixed group-hover:bg-secondary-container group-hover:text-on-secondary-container transition-colors">
+<span class="material-symbols-outlined text-[28px]">swords</span>
+</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant bg-surface-container-lowest px-2 py-1 rounded">MODE_03</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface uppercase group-hover:text-secondary-fixed transition-colors">
+                CHALLENGE MODE (ARENA)
+              </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+                Adversarial ghost-mirror sync, dynamic ELO ratings, real-time memory profile battles, and instant liquidity token bounties.
+              </p>
+</div>
+<!-- ELO / BOUNTY VISUAL -->
+<div class="p-stack-sm bg-surface-container-lowest rounded space-y-2">
+<div class="flex items-center justify-between font-label-caps text-label-caps text-on-surface-variant">
+<span>ARENA PRIZE POOL</span>
+<span class="text-secondary-fixed">$45,000 LIVE</span>
+</div>
+<div class="p-2 bg-surface-container rounded flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded bg-secondary-container flex items-center justify-center font-bold text-xs text-secondary-fixed">#1</div>
+<span class="font-code-md text-code-md text-on-surface">Kowalski_Dev</span>
+</div>
+<span class="font-label-caps text-label-caps text-primary-fixed">2,890 ELO</span>
+</div>
+</div>
+<ul class="space-y-1 font-code-md text-code-md text-on-surface-variant">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed">check</span>
+                Head-to-head 1v1 split ghost coding
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed">check</span>
+                Adversarial edge-case test generation
+              </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary-fixed">check</span>
+                USDC direct automated payouts
+              </li>
+</ul>
+</div>
+<a class="mt-stack-lg inline-flex items-center justify-between p-stack-sm bg-surface-container rounded font-label-caps text-label-caps text-on-surface hover:text-secondary-fixed group-hover:bg-surface-container-high transition-colors" href="#">
+<span>ENTER LIVE LOBBY</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- INTERACTIVE COMPARISON & TELEMETRY CHARTS SECTION -->
+<section class="w-full bg-surface-container-low py-stack-lg lg:py-20 shadow-md">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<!-- LEFT: VISUALIZATION & EFFICIENCY CURVES -->
+<div class="lg:col-span-7 flex flex-col gap-stack-md">
+<div class="flex items-center gap-stack-sm">
+<span class="font-label-caps text-label-caps text-tertiary-fixed">// BENCHMARK PROTOCOL</span>
+<span class="text-outline">|</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">BIG-O MEMORY FOOTPRINT PROFILER</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface tracking-tight uppercase">
+          RADICAL EFFICIENCY <br/>
+          UNDER MAXIMUM CRUNCH.
+        </h3>
+<!-- BENCHMARK SVG GRAPH -->
+<div class="w-full bg-surface-container-lowest p-stack-md rounded shadow-xl flex flex-col gap-stack-sm">
+<div class="flex items-center justify-between">
+<span class="font-code-md text-code-md text-on-surface-variant">N = 10,000,000 OPERATIONS (SHARDED)</span>
+<div class="flex items-center gap-stack-md font-label-caps text-label-caps">
+<span class="flex items-center gap-1.5 text-primary-fixed">
+<span class="w-2.5 h-2.5 bg-primary-fixed rounded-sm"></span> AlgoForge JIT
+              </span>
+<span class="flex items-center gap-1.5 text-on-surface-variant">
+<span class="w-2.5 h-2.5 bg-surface-variant rounded-sm"></span> Legacy Runners
+              </span>
+</div>
+</div>
+<!-- Sparkline / Efficiency Graph -->
+<div class="w-full h-44 relative flex items-end">
+<svg class="w-full h-full overflow-visible" viewbox="0 0 500 160">
+<!-- Grid lines -->
+<line class="text-surface-variant opacity-40" stroke="currentColor" stroke-dasharray="4 4" x1="0" x2="500" y1="40" y2="40"></line>
+<line class="text-surface-variant opacity-40" stroke="currentColor" stroke-dasharray="4 4" x1="0" x2="500" y1="80" y2="80"></line>
+<line class="text-surface-variant opacity-40" stroke="currentColor" stroke-dasharray="4 4" x1="0" x2="500" y1="120" y2="120"></line>
+<!-- Legacy curve (steep/bad) -->
+<path class="text-surface-variant" d="M 0 150 Q 150 140 250 80 T 500 10" fill="none" stroke="currentColor" stroke-width="2.5"></path>
+<!-- AlgoForge curve (flat/fast) -->
+<path class="text-primary-fixed" d="M 0 150 Q 150 148 250 140 T 500 130" fill="none" stroke="currentColor" stroke-width="3"></path>
+<!-- Marker point -->
+<circle class="fill-primary-container stroke-primary-fixed" cx="500" cy="130" r="5" stroke-width="2"></circle>
+<circle class="fill-surface-variant" cx="500" cy="10" r="4"></circle>
+</svg>
+</div>
+<div class="flex items-center justify-between font-label-caps text-label-caps text-on-surface-variant/70 border-t border-outline-variant/30 pt-2">
+<span>INPUT COMPLEXITY O(1) → O(N log N)</span>
+<span class="text-primary-fixed">LATENCY DELTA: -84.2%</span>
+</div>
+</div>
+</div>
+<!-- RIGHT: LIVE BOUNTY CALLOUT BOX -->
+<div class="lg:col-span-5 flex flex-col gap-stack-md bg-surface-container p-stack-lg rounded shadow-2xl">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-secondary-fixed bg-secondary-container/40 px-stack-sm py-0.5 rounded">WEEKLY ARENA DRILL</span>
+<span class="font-code-md text-code-md text-on-surface-variant">T-MINUS 04:12:30</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-surface uppercase">
+          CYBER-NET DISTRIBUTED GRAPH RUNNER #78
+        </h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Implement an ultra-sparse Dijkstra pathfinder with lock-free concurrent atomics under 128MB RAM envelope.
+        </p>
+<!-- PRIZE STACK -->
+<div class="grid grid-cols-2 gap-stack-sm py-unit">
+<div class="p-stack-sm bg-surface-container-low rounded">
+<span class="font-label-caps text-label-caps text-on-surface-variant">PRIZE BOUNTY</span>
+<div class="font-headline-md text-headline-md text-primary-fixed font-bold mt-1">$10,000 USD</div>
+</div>
+<div class="p-stack-sm bg-surface-container-low rounded">
+<span class="font-label-caps text-label-caps text-on-surface-variant">SUBMISSION CAP</span>
+<div class="font-headline-md text-headline-md text-tertiary-fixed font-bold mt-1">500 CADETS</div>
+</div>
+</div>
+<button class="w-full py-stack-sm bg-primary-container hover:bg-primary-fixed text-on-primary-container font-label-caps text-label-caps font-bold rounded shadow transition-all flex items-center justify-center gap-stack-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>RESERVE DRILL SEAT // AUTO-REGISTER</span>
+</button>
+</div>
+</div>
+</section>
+<!-- HACKATHON SPONSOR & ECOSYSTEM STRIP -->
+<section class="w-full px-margin-mobile lg:px-margin-desktop py-stack-lg border-t border-outline-variant/30">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-stack-md">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">OFFICIAL HACKATHON BENCHMARK PARTNERS</span>
+<span class="font-code-md text-code-md text-on-surface-variant/60">Powering high-velocity cloud hardware execution</span>
+</div>
+<div class="flex flex-wrap items-center gap-stack-lg font-headline-md text-headline-md text-on-surface-variant/40 tracking-wider">
+<span class="hover:text-primary-fixed transition-colors cursor-default font-bold">NEXUS_CHIP</span>
+<span class="hover:text-primary-fixed transition-colors cursor-default font-bold">QUANTUM_GPU</span>
+<span class="hover:text-primary-fixed transition-colors cursor-default font-bold">BYTE_FORGE</span>
+<span class="hover:text-primary-fixed transition-colors cursor-default font-bold">VULKAN_CORE</span>
+</div>
+</div>
+</section>
+<!-- CYBER TECH FOOTER NAVIGATION -->
+<footer class="w-full bg-surface-container-lowest border-t border-outline-variant/40 pt-stack-lg pb-stack-lg">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop grid grid-cols-2 md:grid-cols-4 gap-gutter mb-stack-lg">
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-primary-fixed">// TERMINAL &amp; RUNTIME</span>
+<a class="font-code-md text-code-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Cluster Status</a>
+<a class="font-code-md text-code-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">API Documentation</a>
+<a class="font-code-md text-code-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">WASM Engine Specs</a>
+<a class="font-code-md text-code-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">JIT Compiler Releases</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-tertiary-fixed">// ARENA &amp; COMPETITION</span>
+<a class="font-code-md text-code-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Active Bounties</a>
+<a class="font-code-md text-code-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Global ELO Ladder</a>
+<a class="font-code-md text-code-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">University Leagues</a>
+<a class="font-code-md text-code-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Hackathon Host Portal</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-secondary-fixed">// GOVERNANCE &amp; SECURITY</span>
+<a class="font-code-md text-code-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Bug Bounty Matrix</a>
+<a class="font-code-md text-code-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Anti-Cheat Architecture</a>
+<a class="font-code-md text-code-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">E2EE Protocol Whitepaper</a>
+<a class="font-code-md text-code-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Terms of Verification</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-on-surface">// SYNDICATE</span>
+<a class="font-code-md text-code-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Discord Operator Relay</a>
+<a class="font-code-md text-code-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">GitHub Repository</a>
+<a class="font-code-md text-code-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">Matrix Synapse Room</a>
+<a class="font-code-md text-code-md text-on-surface-variant hover:text-on-surface transition-colors" href="#">X / Cyber Relay</a>
+</div>
+</div>
+<!-- TECH SPECS TELEMETRY LINE -->
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop pt-stack-sm border-t border-outline-variant/20 flex flex-col sm:flex-row items-center justify-between gap-stack-sm">
+<span class="font-label-caps text-label-caps text-on-surface-variant/60">
+        SYSTEM SPEC: ARCH-LINUX // KERNEL 6.8 // LATENCY: 3MS // MEMORY_POOLS: SECURE
+      </span>
+<span class="font-label-caps text-label-caps text-primary-fixed">
+        © ALGOFORGE PROTOCOL // ALL RIGS RESERVED.
+      </span>
+</div>
+</footer>
+<!-- CLIENT-SIDE INTERACTION SCRIPT FOR LOGIN/REGISTER SWITCH & PASSWORD REVEAL -->
+<script>
+    (function initAuthGateway() {
+      const tabLogin = document.getElementById('tab-login');
+      const tabRegister = document.getElementById('tab-register');
+      const registerHandleField = document.getElementById('register-handle-field');
+      const submitBtnText = document.getElementById('submit-btn-text');
+      const passwordInput = document.getElementById('auth-passkey');
+      const togglePasswordBtn = document.getElementById('toggle-password-visibility');
+      const authStatusLog = document.getElementById('auth-status-log');
+      const authStatusText = document.getElementById('auth-status-text');
+
+      let currentMode = 'LOGIN';
+
+      // Switch to LOGIN
+      tabLogin.addEventListener('click', () => {
+        if (currentMode === 'LOGIN') return;
+        currentMode = 'LOGIN';
+        tabLogin.className = 'py-stack-sm font-label-caps text-label-caps rounded transition-all bg-primary-container text-on-primary-container font-bold shadow-md flex items-center justify-center gap-stack-sm';
+        tabRegister.className = 'py-stack-sm font-label-caps text-label-caps rounded transition-all text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-stack-sm';
+        registerHandleField.classList.add('hidden');
+        submitBtnText.textContent = '[INITIALIZE SESSION // AUTH]';
+      });
+
+      // Switch to REGISTER
+      tabRegister.addEventListener('click', () => {
+        if (currentMode === 'REGISTER') return;
+        currentMode = 'REGISTER';
+        tabRegister.className = 'py-stack-sm font-label-caps text-label-caps rounded transition-all bg-primary-container text-on-primary-container font-bold shadow-md flex items-center justify-center gap-stack-sm';
+        tabLogin.className = 'py-stack-sm font-label-caps text-label-caps rounded transition-all text-on-surface-variant hover:text-on-surface flex items-center justify-center gap-stack-sm';
+        registerHandleField.classList.remove('hidden');
+        submitBtnText.textContent = '[CREATE CADET CREDENTIALS // REGISTER]';
+      });
+
+      // Show/Hide Password
+      togglePasswordBtn.addEventListener('click', () => {
+        const isPassword = passwordInput.getAttribute('type') === 'password';
+        passwordInput.setAttribute('type', isPassword ? 'text' : 'password');
+        togglePasswordBtn.innerHTML = isPassword 
+          ? '<span class="material-symbols-outlined text-[18px] text-primary-fixed">visibility_off</span>' 
+          : '<span class="material-symbols-outlined text-[18px]">visibility</span>';
+      });
+
+      // Simulated Async Authentication Sequence
+      window.triggerAuthSim = function() {
+        authStatusLog.classList.remove('hidden');
+        authStatusText.textContent = 'Generating cryptographic signature...';
+        
+        setTimeout(() => {
+          authStatusText.textContent = 'Querying distributed node consensus...';
+        }, 600);
+
+        setTimeout(() => {
+          authStatusText.textContent = currentMode === 'LOGIN' 
+            ? '✓ ACCESS GRANTED. Redirecting to Arena Sandbox...' 
+            : '✓ CADET PROFILE PROVISIONED. Welcome to AlgoForge.';
+        }, 1300);
+      };
+    })();
+  </script>
+</div></main><footer class="w-full bg-surface-container-lowest border-t border-outline-variant"><div class="w-full px-margin-mobile lg:px-margin-desktop py-stack-lg flex flex-col md:flex-row items-center justify-between gap-stack-md"><div class="flex items-center gap-stack-sm font-label-caps text-label-caps text-on-surface-variant"><span>// ALGOFORGE_SYNAPSE_GRID</span><span class="text-outline">|</span><span>HEX_ID: #131314</span></div><div class="font-label-caps text-label-caps text-on-surface-variant">SYS_STATUS: OPTIMAL // END_OF_TRANSMISSION</div></div></footer></body></html>

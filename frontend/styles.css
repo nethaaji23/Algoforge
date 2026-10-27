@@ -1,0 +1,712 @@
+/* AlgoForge Multi-Template Theme Engine */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+/* ========================================================================= */
+/* THEME 1: STITCH AI SAFETY ORANGE & WHITE (BRIGHT WHITE/WARM INDUSTRIAL)  */
+/* ========================================================================= */
+:root, [data-theme="orange"] {
+    --bg-background: #fbf9f5;
+    --surface: #fbf9f5;
+    --surface-bright: #ffffff;
+    --surface-dim: #dbdad6;
+    --surface-container-lowest: #ffffff;
+    --surface-container-low: #f5f3ef;
+    --surface-container: #edebe7;
+    --surface-container-high: #e3e0db;
+    --surface-container-highest: #d7d4ce;
+    --primary: #c2410c;
+    --primary-container: #ea580c;
+    --primary-fixed: #ffedd5;
+    --primary-fixed-dim: #fed7aa;
+    --on-primary: #ffffff;
+    --on-primary-container: #ffffff;
+    --on-primary-fixed: #7c2d12;
+    --on-primary-fixed-variant: #9a3412;
+    --on-surface: #0f172a;            /* High-contrast dark charcoal font on white/bright background */
+    --on-surface-variant: #334155;    /* High-contrast dark slate font for secondary labels */
+    --outline: #475569;               /* Clear dark slate outline text */
+    --outline-variant: #cbd5e1;       /* Clean subtle border */
+    --secondary: #1e293b;
+    --secondary-container: #e2e8f0;
+    --secondary-fixed: #e2e8f0;
+    --secondary-fixed-dim: #cbd5e1;
+    --on-secondary-fixed: #0f172a;
+    --on-secondary-container: #0f172a;
+    --tertiary: #334155;
+    --tertiary-container: #64748b;
+    --error: #b91c1c;
+    --error-container: #fee2e2;
+    --on-error-container: #7f1d1d;
+}
+
+/* ========================================================================= */
+/* THEME 2: CYBERPUNK HYPER-GLITCH (DARK MATRIX OBSIDIAN)                    */
+/* ========================================================================= */
+[data-theme="cyberpunk"] {
+    --bg-background: #090a10;
+    --surface: #090a10;
+    --surface-bright: #121422;
+    --surface-dim: #05060a;
+    --surface-container-lowest: #10121e;
+    --surface-container-low: #151828;
+    --surface-container: #1b1f33;
+    --surface-container-high: #232842;
+    --surface-container-highest: #2b3252;
+    --primary: #00f0ff;
+    --primary-container: #00f0ff;
+    --primary-fixed: #083344;
+    --primary-fixed-dim: #004d53;
+    --on-primary: #040810;            /* Dark text on electric cyan button */
+    --on-primary-container: #040810;
+    --on-primary-fixed: #00f0ff;      /* Bright neon font on dark badge */
+    --on-primary-fixed-variant: #38bdf8;
+    --on-surface: #f8fafc;            /* Crisp bright white font on dark background */
+    --on-surface-variant: #cbd5e1;    /* Clear light silvery font on dark background */
+    --outline: #94a3b8;               /* Clear light readable outline */
+    --outline-variant: #334155;
+    --secondary: #f43f5e;
+    --secondary-container: #3d0515;
+    --secondary-fixed: #3d0515;
+    --secondary-fixed-dim: #4c0d1b;
+    --on-secondary-fixed: #f43f5e;
+    --on-secondary-container: #fecdd3;
+    --tertiary: #c084fc;
+    --tertiary-container: #9333ea;
+    --error: #ff3366;
+    --error-container: #4c0d1b;
+    --on-error-container: #fecdd3;
+}
+
+/* ========================================================================= */
+/* THEME 3: CLEAN MINIMALIST ROYAL BLUE & CRISP WHITE                        */
+/* ========================================================================= */
+[data-theme="blue"] {
+    --bg-background: #f8fafc;
+    --surface: #f8fafc;
+    --surface-bright: #ffffff;
+    --surface-dim: #e2e8f0;
+    --surface-container-lowest: #ffffff;
+    --surface-container-low: #f1f5f9;
+    --surface-container: #e2e8f0;
+    --surface-container-high: #cbd5e1;
+    --surface-container-highest: #94a3b8;
+    --primary: #1d4ed8;
+    --primary-container: #2563eb;
+    --primary-fixed: #dbeafe;
+    --primary-fixed-dim: #bfdbfe;
+    --on-primary: #ffffff;            /* White text on royal blue button */
+    --on-primary-container: #ffffff;
+    --on-primary-fixed: #1e3a8a;      /* Dark text on light blue badge */
+    --on-primary-fixed-variant: #1d4ed8;
+    --on-surface: #0f172a;            /* High-contrast dark slate-900 font on white/bright background */
+    --on-surface-variant: #334155;    /* High-contrast dark slate font for secondary labels */
+    --outline: #475569;               /* Dark readable outline text */
+    --outline-variant: #cbd5e1;
+    --secondary: #0369a1;
+    --secondary-container: #e0f2fe;
+    --secondary-fixed: #e0f2fe;
+    --secondary-fixed-dim: #bae6fd;
+    --on-secondary-fixed: #0c4a6e;
+    --on-secondary-container: #0c4a6e;
+    --tertiary: #4338ca;
+    --tertiary-container: #6366f1;
+    --error: #b91c1c;
+    --error-container: #fee2e2;
+    --on-error-container: #7f1d1d;
+}
+
+/* ========================================================================= */
+/* THEME 4: MATRIX TERMINAL HACKER GREEN (DARK MATRIX)                       */
+/* ========================================================================= */
+[data-theme="emerald"] {
+    --bg-background: #060d09;
+    --surface: #060d09;
+    --surface-bright: #0c1812;
+    --surface-dim: #030705;
+    --surface-container-lowest: #0c1a13;
+    --surface-container-low: #102219;
+    --surface-container: #162c21;
+    --surface-container-high: #1c382a;
+    --surface-container-highest: #234534;
+    --primary: #10b981;
+    --primary-container: #10b981;
+    --primary-fixed: #064e3b;
+    --primary-fixed-dim: #047857;
+    --on-primary: #021a10;            /* Dark font on bright green button */
+    --on-primary-container: #021a10;
+    --on-primary-fixed: #6ee7b7;      /* Bright mint font on dark badge */
+    --on-primary-fixed-variant: #34d399;
+    --on-surface: #ecfdf5;            /* Crisp bright mint white font on dark background */
+    --on-surface-variant: #a7f3d0;    /* Clear light mint font on dark background */
+    --outline: #6ee7b7;               /* Clear light mint outline font */
+    --outline-variant: #133824;
+    --secondary: #2dd4bf;
+    --secondary-container: #042f2e;
+    --secondary-fixed: #042f2e;
+    --secondary-fixed-dim: #064e3b;
+    --on-secondary-fixed: #2dd4bf;
+    --on-secondary-container: #99f6e4;
+    --tertiary: #a7f3d0;
+    --tertiary-container: #059669;
+    --error: #f43f5e;
+    --error-container: #4c0519;
+    --on-error-container: #fecdd3;
+}
+
+/* ========================================================================= */
+/* BASE STYLES & FONT SMOOTHING                                              */
+/* ========================================================================= */
+body {
+    background-color: var(--bg-background);
+    color: var(--on-surface);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Force reliable view hiding across all cascades */
+.hidden {
+    display: none !important;
+}
+
+#landing-page-view.hidden {
+    display: none !important;
+}
+
+#platform-app-view.hidden {
+    display: none !important;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: var(--surface-container-low);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--outline-variant);
+    border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-container);
+}
+
+/* Soft Industrial Card System */
+.telematics-card {
+    background-color: var(--surface-container-lowest) !important;
+    color: var(--on-surface) !important;
+    border: 1px solid var(--outline-variant);
+    box-shadow: 0 8px 30px -4px rgba(15, 23, 42, 0.04);
+    border-radius: 24px;
+}
+
+/* Active Code Line */
+.active-code-line {
+    background-color: rgba(249, 115, 22, 0.12);
+    border-left: 3px solid var(--primary-container);
+    box-shadow: 0 0 10px rgba(249, 115, 22, 0.15);
+}
+
+/* Auth Modal Overlay */
+.auth-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(12px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Question Palette Tile States */
+.q-tile {
+    transition: all 0.15s ease-in-out;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 10px;
+}
+.q-tile.active-q {
+    border-color: var(--primary-container) !important;
+    background-color: var(--surface-container-lowest) !important;
+    box-shadow: 0 0 0 2px var(--primary-container), 0 4px 12px rgba(249, 115, 22, 0.15);
+    transform: scale(1.04);
+    color: var(--primary) !important;
+    font-weight: 700;
+}
+.q-tile.answered {
+    background-color: rgba(16, 185, 129, 0.15) !important;
+    border-color: #10b981 !important;
+    color: #059669 !important;
+    font-weight: 700;
+}
+.q-tile.flagged {
+    background-color: rgba(249, 115, 22, 0.15) !important;
+    border-color: #f97316 !important;
+    color: #c2410c !important;
+    font-weight: 700;
+}
+.q-tile.unanswered {
+    background-color: var(--surface-container-low);
+    border-color: var(--outline-variant);
+    color: var(--on-surface-variant);
+}
+.timer-warning {
+    color: var(--error) !important;
+    animation: pulse 1s infinite;
+}
+
+/* Sandtimer Hourglass Rotating Animation */
+@keyframes sandtimer-flip {
+    0% { transform: rotate(0deg) scale(1); }
+    35% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.15); }
+    85% { transform: rotate(180deg) scale(1); }
+    100% { transform: rotate(360deg) scale(1); }
+}
+
+.sandtimer-rotate {
+    display: inline-block;
+    animation: sandtimer-flip 4s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+    transform-origin: center center;
+    vertical-align: middle;
+}
+
+.sandtimer-pulse {
+    filter: drop-shadow(0 0 6px rgba(249, 115, 22, 0.4));
+}
+
+/* ========================================================================= */
+/* BULLETPROOF DYNAMIC MULTI-THEME OVERRIDES FOR ALL 4 TEMPLATES              */
+/* ========================================================================= */
+
+/* 1. SURFACE BACKGROUNDS (Including Tailwind slash opacity classes) */
+[data-theme] .bg-surface,
+[data-theme] .bg-surface\/90 {
+    background-color: var(--surface) !important;
+}
+
+[data-theme] .bg-surface-container-lowest,
+[data-theme] .bg-surface-container-lowest\/95,
+[data-theme] .bg-surface-container-lowest\/90,
+[data-theme] .bg-surface-container-lowest\/60 {
+    background-color: var(--surface-container-lowest) !important;
+}
+
+[data-theme] .bg-surface-container-low,
+[data-theme] .bg-surface-container-low\/60,
+[data-theme] .bg-surface-container-low\/50,
+[data-theme] .bg-surface-container-low\/30 {
+    background-color: var(--surface-container-low) !important;
+}
+
+[data-theme] .bg-surface-container {
+    background-color: var(--surface-container) !important;
+}
+
+[data-theme] .bg-surface-container-high,
+[data-theme] .bg-surface-container-high\/80,
+[data-theme] .bg-surface-container-high\/60 {
+    background-color: var(--surface-container-high) !important;
+}
+
+[data-theme] .bg-surface-container-highest {
+    background-color: var(--surface-container-highest) !important;
+}
+
+/* 2. PRIMARY & FIXED PILLS */
+[data-theme] .bg-primary-container {
+    background-color: var(--primary-container) !important;
+    color: var(--on-primary) !important;
+}
+
+[data-theme] .bg-primary-fixed {
+    background-color: var(--primary-fixed) !important;
+    color: var(--on-primary-fixed) !important;
+}
+
+[data-theme] .bg-secondary-fixed,
+[data-theme] .bg-secondary-fixed-dim {
+    background-color: var(--secondary-fixed) !important;
+    color: var(--on-secondary-fixed) !important;
+}
+
+[data-theme] .bg-secondary-container {
+    background-color: var(--secondary-container) !important;
+    color: var(--on-secondary-container) !important;
+}
+
+/* 3. TEXT COLOR MAPPINGS (HIGH CONTRAST GUARANTEE) */
+[data-theme] .text-on-surface {
+    color: var(--on-surface) !important;
+}
+
+[data-theme] .text-on-surface-variant,
+[data-theme] .text-on-surface-variant\/70 {
+    color: var(--on-surface-variant) !important;
+}
+
+[data-theme] .text-outline {
+    color: var(--outline) !important;
+}
+
+[data-theme] .text-outline-variant,
+[data-theme] .text-outline-variant\/30 {
+    color: var(--outline-variant) !important;
+}
+
+[data-theme] .text-secondary {
+    color: var(--secondary) !important;
+}
+
+[data-theme] .text-tertiary {
+    color: var(--tertiary) !important;
+}
+
+[data-theme] .text-primary {
+    color: var(--primary) !important;
+}
+
+[data-theme] .text-primary-container {
+    color: var(--primary-container) !important;
+}
+
+[data-theme] .text-on-primary {
+    color: var(--on-primary) !important;
+}
+
+[data-theme] .text-on-primary-fixed {
+    color: var(--on-primary-fixed) !important;
+}
+
+[data-theme] .text-on-primary-fixed-variant {
+    color: var(--on-primary-fixed-variant) !important;
+}
+
+[data-theme] .text-on-secondary-fixed {
+    color: var(--on-secondary-fixed) !important;
+}
+
+[data-theme] .text-on-secondary-container {
+    color: var(--on-secondary-container) !important;
+}
+
+/* 4. BORDERS */
+[data-theme] .border-outline-variant,
+[data-theme] .border-outline-variant\/20,
+[data-theme] .border-outline-variant\/30,
+[data-theme] .border-outline-variant\/40,
+[data-theme] .border-outline-variant\/50,
+[data-theme] .border-outline-variant\/60 {
+    border-color: var(--outline-variant) !important;
+}
+
+[data-theme] .border-surface-container-high,
+[data-theme] .border-surface-container-high\/40,
+[data-theme] .border-surface-container-high\/50,
+[data-theme] .border-surface-container-high\/60,
+[data-theme] .border-surface-container-high\/80 {
+    border-color: var(--surface-container-high) !important;
+}
+
+[data-theme] .border-primary-container,
+[data-theme] .border-primary-container\/30,
+[data-theme] .border-primary-container\/40,
+[data-theme] .border-primary-container\/60 {
+    border-color: var(--primary-container) !important;
+}
+
+/* ========================================================================= */
+/* STRICT CONTRAST: DARK FONT IN WHITE BACKGROUND & VICE VERSA               */
+/* ========================================================================= */
+
+/* A. BRIGHT / WHITE BACKGROUND TEMPLATES (ORANGE & BLUE) */
+[data-theme="orange"],
+[data-theme="blue"] {
+    /* All base text and headings in light mode default to rich dark slate */
+    color: #0f172a;
+}
+
+[data-theme="orange"] h1, [data-theme="orange"] h2, [data-theme="orange"] h3,
+[data-theme="blue"] h1, [data-theme="blue"] h2, [data-theme="blue"] h3 {
+    color: #0f172a !important;
+}
+
+[data-theme="orange"] .bg-surface-container-lowest,
+[data-theme="blue"] .bg-surface-container-lowest {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+    border-color: #e2e8f0 !important;
+}
+
+[data-theme="orange"] .bg-surface-container-lowest p,
+[data-theme="blue"] .bg-surface-container-lowest p {
+    color: #334155 !important;
+}
+
+/* Inputs and Selects in Bright Mode: crisp white bg, dark font */
+[data-theme="orange"] select,
+[data-theme="blue"] select,
+[data-theme="orange"] input,
+[data-theme="blue"] input {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+    border: 1px solid #cbd5e1 !important;
+}
+
+[data-theme="orange"] select option,
+[data-theme="blue"] select option {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+}
+
+/* Step navigation buttons in bright mode */
+[data-theme="orange"] #btn-step-prev,
+[data-theme="orange"] #btn-step-next,
+[data-theme="blue"] #btn-step-prev,
+[data-theme="blue"] #btn-step-next {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+    border: 1px solid #cbd5e1 !important;
+}
+
+/* Invertible Pill: Export Button & Tooltips in Light Mode */
+[data-theme="orange"] .bg-on-surface,
+[data-theme="blue"] .bg-on-surface {
+    background-color: #0f172a !important;
+    color: #ffffff !important;
+}
+[data-theme="orange"] .bg-on-surface .text-surface,
+[data-theme="blue"] .bg-on-surface .text-surface {
+    color: #ffffff !important;
+}
+
+/* Learning & Experience Code Displays in Light Mode */
+[data-theme="orange"] #code-content,
+[data-theme="blue"] #code-content {
+    color: #0f172a !important;
+}
+
+[data-theme="orange"] #line-numbers,
+[data-theme="blue"] #line-numbers {
+    color: #475569 !important;
+    border-color: #e2e8f0 !important;
+}
+
+[data-theme="orange"] #exp-code-display,
+[data-theme="blue"] #exp-code-display {
+    color: #f8fafc !important;
+}
+
+/* B. DARK MATRIX TEMPLATES (CYBERPUNK & EMERALD) */
+[data-theme="cyberpunk"],
+[data-theme="emerald"] {
+    /* All base text and headings in dark mode default to crisp white/mint */
+    color: var(--on-surface);
+}
+
+[data-theme="cyberpunk"] h1, [data-theme="cyberpunk"] h2, [data-theme="cyberpunk"] h3,
+[data-theme="emerald"] h1, [data-theme="emerald"] h2, [data-theme="emerald"] h3 {
+    color: var(--on-surface) !important;
+}
+
+[data-theme="cyberpunk"] .bg-surface-container-lowest,
+[data-theme="emerald"] .bg-surface-container-lowest {
+    background-color: var(--surface-container-lowest) !important;
+    color: var(--on-surface) !important;
+    border-color: var(--outline-variant) !important;
+}
+
+[data-theme="cyberpunk"] .bg-surface-container-lowest p,
+[data-theme="emerald"] .bg-surface-container-lowest p {
+    color: var(--on-surface-variant) !important;
+}
+
+/* Inputs and Selects in Dark Mode: dark bg, crisp light font */
+[data-theme="cyberpunk"] select,
+[data-theme="emerald"] select,
+[data-theme="cyberpunk"] input,
+[data-theme="emerald"] input {
+    background-color: var(--surface-container-low) !important;
+    color: var(--on-surface) !important;
+    border: 1px solid var(--outline-variant) !important;
+}
+
+[data-theme="cyberpunk"] select option,
+[data-theme="emerald"] select option {
+    background-color: var(--surface-container-lowest) !important;
+    color: var(--on-surface) !important;
+}
+
+/* Step navigation buttons in dark mode */
+[data-theme="cyberpunk"] #btn-step-prev,
+[data-theme="cyberpunk"] #btn-step-next,
+[data-theme="emerald"] #btn-step-prev,
+[data-theme="emerald"] #btn-step-next {
+    background-color: var(--surface-container-high) !important;
+    color: var(--on-surface) !important;
+    border: 1px solid var(--outline-variant) !important;
+}
+
+/* Invertible Pill: Export Button & Tooltips in Dark Mode (White bg, Dark font) */
+[data-theme="cyberpunk"] .bg-on-surface {
+    background-color: #f8fafc !important;
+    color: #090a10 !important;
+}
+[data-theme="cyberpunk"] .bg-on-surface .text-surface {
+    color: #090a10 !important;
+}
+
+[data-theme="emerald"] .bg-on-surface {
+    background-color: #ecfdf5 !important;
+    color: #060d09 !important;
+}
+[data-theme="emerald"] .bg-on-surface .text-surface {
+    color: #060d09 !important;
+}
+
+/* Learning & Experience Code Displays in Dark Mode */
+[data-theme="cyberpunk"] #code-content,
+[data-theme="emerald"] #code-content {
+    color: var(--on-surface) !important;
+}
+
+[data-theme="cyberpunk"] #line-numbers,
+[data-theme="emerald"] #line-numbers {
+    color: var(--outline) !important;
+    border-color: var(--outline-variant) !important;
+}
+
+[data-theme="cyberpunk"] #exp-code-display,
+[data-theme="emerald"] #exp-code-display {
+    color: var(--on-surface) !important;
+}
+
+/* Template Selection Cards */
+.template-card {
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+    user-select: none;
+    background-color: var(--surface-container-lowest) !important;
+    color: var(--on-surface) !important;
+}
+.template-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+}
+.template-card.active-template {
+    border-color: var(--primary-container) !important;
+    box-shadow: 0 0 0 2px var(--primary-container), 0 8px 24px -4px rgba(249, 115, 22, 0.25);
+}
+
+/* Modals */
+#modal-arena-leaderboard > div,
+#modal-theme-selector > div,
+#arena-performance-modal > div {
+    background-color: var(--surface-container-lowest) !important;
+    color: var(--on-surface) !important;
+    border-color: var(--outline-variant) !important;
+}
+
+/* Floating & Sticky Mode Bar */
+.sticky-mode-nav {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+
+/* Interactive Code Editors Styling */
+#exp-code-editor,
+#challenge-code-editor {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    line-height: 22px;
+    tab-size: 4;
+    caret-color: var(--primary-container);
+    outline: none !important;
+    border: none !important;
+}
+
+#exp-code-editor:focus,
+#challenge-code-editor:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+#exp-line-numbers,
+#challenge-line-numbers {
+    line-height: 22px;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+#exp-code-editor,
+#challenge-code-editor {
+    color: #f8fafc !important;
+    background-color: transparent !important;
+}
+
+#exp-line-numbers,
+#challenge-line-numbers {
+    color: #94a3b8 !important;
+}
+
+/* Question Tablet & MCQ Chamber Styling */
+.tablet-question-tile {
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    user-select: none;
+}
+.tablet-question-tile:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+.tablet-question-tile.active-tile {
+    box-shadow: 0 0 0 2px var(--primary-container), 0 4px 14px rgba(14, 165, 233, 0.25);
+}
+
+.mcq-option-btn {
+    transition: all 0.18s ease-in-out;
+}
+.mcq-option-btn:hover {
+    border-color: var(--primary-container);
+    background-color: var(--surface-container-high);
+}
+.mcq-option-btn.selected-option {
+    border-color: var(--primary-container) !important;
+    background-color: rgba(14, 165, 233, 0.08) !important;
+    box-shadow: 0 0 0 1.5px var(--primary-container);
+}
+
+/* Custom scrollbar for Question Tablet Grid */
+#tablet-tiles-grid::-webkit-scrollbar {
+    width: 6px;
+}
+#tablet-tiles-grid::-webkit-scrollbar-track {
+    background: transparent;
+}
+#tablet-tiles-grid::-webkit-scrollbar-thumb {
+    background: rgba(148, 163, 184, 0.3);
+    border-radius: 9999px;
+}
+#tablet-tiles-grid::-webkit-scrollbar-thumb:hover {
+    background: rgba(148, 163, 184, 0.5);
+}
+
+/* Read-Only Theme Informational Badges */
+#header-theme-info-badge,
+#sub-bar-theme-info-badge {
+    cursor: default !important;
+    user-select: none;
+}
+
+#auth-notification-banner {
+    animation: fadeInSlide 0.25s ease-out;
+}
+@keyframes fadeInSlide {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
+}
