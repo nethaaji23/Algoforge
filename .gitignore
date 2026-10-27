@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.env
+venv/
+env/
+ENV/
+
+# Development & Scratch Files
+scratch/
+*.png
+*.jpg
+*.log
+*.txt
+step_*
+saved_*
+
+# Patch & verification scripts
+apply_*.py
+patch_*.py
+verify_*.py
+check_*.py
+test_*.py
+trace_*.py
+compare_*.py
+debug_*.py
+fix_*.py
+read_*.py
+search_*.py
+capture_*.py
+add_*.py
+update_*.py
+
+# System & IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.system_generated/
