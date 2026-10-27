@@ -1,0 +1,1366 @@
+[
+  {
+    "id": "EXP-SORT-01",
+    "source": "GeeksforGeeks",
+    "source_badge": "[GFG]",
+    "topic": "Sorting",
+    "topicCategory": "Time Complexity",
+    "type": "mcq",
+    "points": 10,
+    "title": "BUBBLE SORT BEST CASE COMPLEXITY",
+    "desc": "What is the Time Complexity of Bubble Sort with a boolean swapped flag when the input array is already sorted in ascending order?",
+    "constraints": "CONCEPTUAL MCQ",
+    "timelimit": "0.30 SEC",
+    "options": [
+      "O(n) - Linear Time",
+      "O(n\u00b2) - Quadratic Time",
+      "O(n log n) - Linearithmic Time",
+      "O(1) - Constant Time"
+    ],
+    "correctAnswer": 0,
+    "hint": "When the array is already sorted, no adjacent swaps occur during the first pass, allowing the early break flag to exit in O(n) time.",
+    "steps": [
+      {
+        "line": 1,
+        "desc": "Pass 1: Inspecting sorted array [1, 2, 3, 4, 5] -> No swaps detected -> Early Break!",
+        "nodes": [
+          {
+            "val": 1,
+            "color": "#10b981"
+          },
+          {
+            "val": 2,
+            "color": "#10b981"
+          },
+          {
+            "val": 3,
+            "color": "#10b981"
+          },
+          {
+            "val": 4,
+            "color": "#10b981"
+          },
+          {
+            "val": 5,
+            "color": "#10b981"
+          }
+        ],
+        "variables": [
+          {
+            "name": "swapped",
+            "value": "False",
+            "type_str": "bool"
+          },
+          {
+            "name": "time_complexity",
+            "value": "O(n)",
+            "type_str": "str"
+          }
+        ]
+      }
+    ],
+    "visualizable": false
+  },
+  {
+    "id": "EXP-SORT-02",
+    "source": "HackerRank",
+    "source_badge": "[HACKERRANK]",
+    "topic": "Sorting",
+    "topicCategory": "Pass Execution",
+    "type": "output_prediction",
+    "points": 10,
+    "title": "SELECTION SORT FIRST PASS OUTPUT",
+    "desc": "Given array [29, 10, 14, 37, 13], what is the array state after 1 complete pass of Selection Sort (ascending order)?",
+    "constraints": "N = 5",
+    "timelimit": "0.30 SEC",
+    "options": [
+      "[10, 29, 14, 37, 13]",
+      "[10, 14, 29, 37, 13]",
+      "[13, 10, 14, 29, 37]",
+      "[29, 10, 14, 13, 37]"
+    ],
+    "correctAnswer": 0,
+    "hint": "Selection Sort scans the entire array for the minimum element (10) and swaps it with the first element (29).",
+    "steps": [
+      {
+        "line": 2,
+        "desc": "Pass 1: Min element found = 10 at index 1 -> Swap with index 0 (29) -> Result: [10, 29, 14, 37, 13]",
+        "nodes": [
+          {
+            "val": 10,
+            "color": "#10b981"
+          },
+          {
+            "val": 29,
+            "color": "#ffb4ab"
+          },
+          {
+            "val": 14,
+            "color": "#c3f400"
+          },
+          {
+            "val": 37,
+            "color": "#c3f400"
+          },
+          {
+            "val": 13,
+            "color": "#c3f400"
+          }
+        ],
+        "variables": [
+          {
+            "name": "min_idx",
+            "value": "1 (val=10)",
+            "type_str": "int"
+          },
+          {
+            "name": "arr",
+            "value": "[10, 29, 14, 37, 13]",
+            "type_str": "list"
+          }
+        ]
+      }
+    ],
+    "visualizable": true
+  },
+  {
+    "id": "EXP-SORT-03",
+    "source": "LeetCode",
+    "source_badge": "[LEETCODE]",
+    "topic": "Sorting",
+    "topicCategory": "Algorithm Tracing",
+    "type": "algorithm_tracing",
+    "points": 10,
+    "title": "INSERTION SORT KEY SHIFTING",
+    "desc": "Inserting key `12` into sorted subarray [5, 8, 15, 20]. Which elements shift right to make room for `12`?",
+    "constraints": "N = 5",
+    "timelimit": "0.40 SEC",
+    "options": [
+      "Elements 15 and 20 shift right",
+      "Only element 20 shifts right",
+      "Elements 5, 8, 15, and 20 all shift right",
+      "No elements shift"
+    ],
+    "correctAnswer": 0,
+    "hint": "Elements greater than key 12 (i.e. 15 and 20) shift one position right to make room for inserting 12.",
+    "steps": [
+      {
+        "line": 4,
+        "desc": "Key = 12. Comparing with 20 (>12, shift right) and 15 (>12, shift right). 8 is < 12 (stop). Insert 12.",
+        "nodes": [
+          {
+            "val": 5,
+            "color": "#c3f400"
+          },
+          {
+            "val": 8,
+            "color": "#c3f400"
+          },
+          {
+            "val": 12,
+            "color": "#10b981"
+          },
+          {
+            "val": 15,
+            "color": "#d0bcff"
+          },
+          {
+            "val": 20,
+            "color": "#d0bcff"
+          }
+        ],
+        "variables": [
+          {
+            "name": "key",
+            "value": "12",
+            "type_str": "int"
+          },
+          {
+            "name": "shifted",
+            "value": "[15, 20]",
+            "type_str": "list"
+          }
+        ]
+      }
+    ],
+    "visualizable": true
+  },
+  {
+    "id": "EXP-SORT-04",
+    "source": "GeeksforGeeks",
+    "source_badge": "[GFG]",
+    "topic": "Sorting",
+    "topicCategory": "Array Sorting",
+    "type": "coding",
+    "points": 10,
+    "title": "SORT A SMALL ARRAY (EASY)",
+    "desc": "Write a function `sortSmallArray(arr)` that sorts a list of numbers in ascending order using Bubble Sort or Selection Sort.",
+    "constraints": "N \u2264 100",
+    "timelimit": "0.50 SEC",
+    "hint": "Iterate through the array and swap adjacent elements if a[j] > a[j+1]. Return the sorted array.",
+    "code": "def sortSmallArray(arr):\n    # TODO: Sort array in ascending order\n    a = arr.copy()\n    for i in range(len(a)):\n        for j in range(len(a) - 1 - i):\n            if a[j] > a[j + 1]:\n                a[j], a[j + 1] = a[j + 1], a[j]\n    return a\n\nprint(sortSmallArray([4, 2, 5, 1]))",
+    "steps": [
+      {
+        "line": 3,
+        "desc": "Sorting array [4, 2, 5, 1] -> Final Sorted Output: [1, 2, 4, 5]",
+        "nodes": [
+          {
+            "val": 1,
+            "color": "#10b981"
+          },
+          {
+            "val": 2,
+            "color": "#10b981"
+          },
+          {
+            "val": 4,
+            "color": "#10b981"
+          },
+          {
+            "val": 5,
+            "color": "#10b981"
+          }
+        ],
+        "variables": [
+          {
+            "name": "sorted_arr",
+            "value": "[1, 2, 4, 5]",
+            "type_str": "list"
+          }
+        ]
+      }
+    ],
+    "visualizable": true,
+    "testcases": [
+      {
+        "id": "TC #01",
+        "input": "[4, 2, 1, 3]",
+        "expected": "[1, 2, 3, 4]"
+      },
+      {
+        "id": "TC #02",
+        "input": "[5, 1, 1, 2, 0, 0]",
+        "expected": "[0, 0, 1, 1, 2, 5]"
+      },
+      {
+        "id": "TC #03",
+        "input": "[10, -1, 3, 8, 2]",
+        "expected": "[-1, 2, 3, 8, 10]"
+      },
+      {
+        "id": "TC #04",
+        "input": "[1]",
+        "expected": "[1]"
+      },
+      {
+        "id": "TC #05",
+        "input": "[3, 3, 3]",
+        "expected": "[3, 3, 3]"
+      }
+    ]
+  },
+  {
+    "id": "EXP-SEARCH-01",
+    "source": "Codeforces",
+    "source_badge": "[CODEFORCES]",
+    "topic": "Searching",
+    "topicCategory": "Prerequisites",
+    "type": "mcq",
+    "points": 10,
+    "title": "LINEAR VS BINARY SEARCH PREREQUISITES",
+    "desc": "Why can Linear Search be executed on an unsorted array, while Binary Search cannot?",
+    "constraints": "CONCEPTUAL MCQ",
+    "timelimit": "0.30 SEC",
+    "options": [
+      "Linear search checks elements sequentially without relying on sorted order",
+      "Binary search requires linked lists",
+      "Linear search requires prime numbers",
+      "Binary search only works on arrays of size 10"
+    ],
+    "correctAnswer": 0,
+    "hint": "Linear search checks each element sequentially, whereas binary search halves the search space based on monotonic sorted order.",
+    "steps": [
+      {
+        "line": 1,
+        "desc": "Linear Search: O(n) sequential scan. Binary Search: O(log n) requires monotonic sorted array.",
+        "nodes": [
+          {
+            "val": "Linear: Unsorted OK",
+            "color": "#10b981"
+          },
+          {
+            "val": "Binary: Sorted Required",
+            "color": "#d0bcff"
+          }
+        ],
+        "variables": [
+          {
+            "name": "binary_precondition",
+            "value": "Sorted Order",
+            "type_str": "str"
+          }
+        ]
+      }
+    ],
+    "visualizable": false
+  },
+  {
+    "id": "EXP-SEARCH-02",
+    "source": "HackerRank",
+    "source_badge": "[HACKERRANK]",
+    "topic": "Searching",
+    "topicCategory": "Mid Index Calculation",
+    "type": "output_prediction",
+    "points": 10,
+    "title": "BINARY SEARCH MID INDEX TRACE",
+    "desc": "Searching for target = 7 in sorted array [1, 3, 5, 7, 9, 11]. What is the first mid index and mid value inspected?",
+    "constraints": "N = 6",
+    "timelimit": "0.30 SEC",
+    "options": [
+      "mid index = 2 (mid value = 5)",
+      "mid index = 3 (mid value = 7)",
+      "mid index = 1 (mid value = 3)",
+      "mid index = 4 (mid value = 9)"
+    ],
+    "correctAnswer": 0,
+    "hint": "low = 0, high = 5. mid = (0 + 5) // 2 = 2. arr[2] = 5. Since 5 < 7, search moves to right half.",
+    "steps": [
+      {
+        "line": 3,
+        "desc": "Iteration 1: low=0, high=5 -> mid = (0+5)//2 = 2 (arr[2] = 5 < 7) -> move low to 3",
+        "nodes": [
+          {
+            "val": 1,
+            "color": "#444933"
+          },
+          {
+            "val": 3,
+            "color": "#444933"
+          },
+          {
+            "val": 5,
+            "color": "#ffb4ab"
+          },
+          {
+            "val": 7,
+            "color": "#10b981"
+          },
+          {
+            "val": 9,
+            "color": "#c3f400"
+          },
+          {
+            "val": 11,
+            "color": "#c3f400"
+          }
+        ],
+        "variables": [
+          {
+            "name": "low",
+            "value": "0",
+            "type_str": "int"
+          },
+          {
+            "name": "high",
+            "value": "5",
+            "type_str": "int"
+          },
+          {
+            "name": "mid",
+            "value": "2 (val=5)",
+            "type_str": "int"
+          }
+        ]
+      }
+    ],
+    "visualizable": true
+  },
+  {
+    "id": "EXP-SEARCH-03",
+    "source": "LeetCode",
+    "source_badge": "[LEETCODE]",
+    "topic": "Searching",
+    "topicCategory": "Iteration Count",
+    "type": "algorithm_tracing",
+    "points": 10,
+    "title": "BINARY SEARCH TOTAL COMPARISONS",
+    "desc": "How many total mid comparisons are needed to find target = 91 in sorted array [2, 5, 8, 12, 16, 23, 38, 56, 72, 91]?",
+    "constraints": "N = 10",
+    "timelimit": "0.40 SEC",
+    "options": [
+      "4 total comparisons",
+      "10 total comparisons",
+      "1 comparison",
+      "7 comparisons"
+    ],
+    "correctAnswer": 0,
+    "hint": "Iteration 1: mid=4 (16) -> Iteration 2: mid=7 (56) -> Iteration 3: mid=8 (72) -> Iteration 4: mid=9 (91 Match!). Total 4 comparisons.",
+    "steps": [
+      {
+        "line": 5,
+        "desc": "Mid Trace: 16 -> 56 -> 72 -> 91 (Match!). Total 4 mid comparisons.",
+        "nodes": [
+          {
+            "val": 16,
+            "color": "#c3f400"
+          },
+          {
+            "val": 56,
+            "color": "#c3f400"
+          },
+          {
+            "val": 72,
+            "color": "#c3f400"
+          },
+          {
+            "val": 91,
+            "color": "#10b981"
+          }
+        ],
+        "variables": [
+          {
+            "name": "total_comparisons",
+            "value": "4",
+            "type_str": "int"
+          }
+        ]
+      }
+    ],
+    "visualizable": true
+  },
+  {
+    "id": "EXP-SEARCH-04",
+    "source": "GeeksforGeeks",
+    "source_badge": "[GFG]",
+    "topic": "Searching",
+    "topicCategory": "Linear Search",
+    "type": "coding",
+    "points": 10,
+    "title": "FIND ELEMENT INDEX (EASY)",
+    "desc": "Write a function `findTargetIndex(arr, target)` that returns the 0-based index of target in array, or -1 if target is not found.",
+    "constraints": "N \u2264 500",
+    "timelimit": "0.40 SEC",
+    "hint": "Iterate through arr with loop index i. If arr[i] == target, return i. If loop completes, return -1.",
+    "code": "def findTargetIndex(arr, target):\n    # TODO: Return index of target or -1\n    for i in range(len(arr)):\n        if arr[i] == target:\n            return i\n    return -1\n\nprint(findTargetIndex([15, 42, 8, 99, 23], 99))",
+    "steps": [
+      {
+        "line": 3,
+        "desc": "Scanning array [15, 42, 8, 99, 23] for target 99 -> Found at index 3!",
+        "nodes": [
+          {
+            "val": 15,
+            "color": "#444933"
+          },
+          {
+            "val": 42,
+            "color": "#444933"
+          },
+          {
+            "val": 8,
+            "color": "#444933"
+          },
+          {
+            "val": 99,
+            "color": "#10b981"
+          },
+          {
+            "val": 23,
+            "color": "#444933"
+          }
+        ],
+        "variables": [
+          {
+            "name": "found_idx",
+            "value": "3",
+            "type_str": "int"
+          }
+        ]
+      }
+    ],
+    "visualizable": true,
+    "testcases": [
+      {
+        "id": "TC #01",
+        "input": "arr=[10, 20, 30, 40, 50], target=30",
+        "expected": "2"
+      },
+      {
+        "id": "TC #02",
+        "input": "arr=[10, 20, 30, 40, 50], target=99",
+        "expected": "-1"
+      },
+      {
+        "id": "TC #03",
+        "input": "arr=[5], target=5",
+        "expected": "0"
+      },
+      {
+        "id": "TC #04",
+        "input": "arr=[1, 3, 5, 7, 9, 11], target=7",
+        "expected": "3"
+      },
+      {
+        "id": "TC #05",
+        "input": "arr=[2, 4, 6, 8, 10], target=2",
+        "expected": "0"
+      }
+    ]
+  },
+  {
+    "id": "EXP-GRAPH-01",
+    "source": "GeeksforGeeks",
+    "source_badge": "[GFG]",
+    "topic": "Graphs",
+    "topicCategory": "BFS Traversal",
+    "type": "mcq",
+    "points": 10,
+    "title": "BFS LEVEL-BY-LEVEL EXPLORATION",
+    "desc": "Which graph traversal strategy visits all direct neighbors of a node before visiting nodes two steps away?",
+    "constraints": "CONCEPTUAL MCQ",
+    "timelimit": "0.30 SEC",
+    "options": [
+      "Breadth-First Search (BFS)",
+      "Depth-First Search (DFS)",
+      "Preorder Traversal",
+      "Postorder Traversal"
+    ],
+    "correctAnswer": 0,
+    "hint": "BFS explores graph nodes level-by-level using a FIFO Queue.",
+    "steps": [
+      {
+        "line": 1,
+        "desc": "BFS uses FIFO Queue to visit all distance d nodes before distance d+1 nodes.",
+        "nodes": [
+          {
+            "val": "Level 0",
+            "color": "#10b981"
+          },
+          {
+            "val": "Level 1",
+            "color": "#d0bcff"
+          },
+          {
+            "val": "Level 2",
+            "color": "#c3f400"
+          }
+        ],
+        "variables": [
+          {
+            "name": "traversal",
+            "value": "BFS",
+            "type_str": "str"
+          }
+        ]
+      }
+    ],
+    "visualizable": false
+  },
+  {
+    "id": "EXP-GRAPH-02",
+    "source": "Codeforces",
+    "source_badge": "[CODEFORCES]",
+    "topic": "Graphs",
+    "topicCategory": "DFS Trace",
+    "type": "output_prediction",
+    "points": 10,
+    "title": "DFS TRAVERSAL STACK TRACE",
+    "desc": "Graph adjacency: 0 -> [1, 2], 1 -> [3], 2 -> [], 3 -> []. Starting from node 0, what is the DFS traversal order (visiting first neighbor first)?",
+    "constraints": "V = 4",
+    "timelimit": "0.40 SEC",
+    "options": [
+      "0, 1, 3, 2",
+      "0, 1, 2, 3",
+      "0, 2, 1, 3",
+      "3, 1, 2, 0"
+    ],
+    "correctAnswer": 0,
+    "hint": "DFS goes deep: visits 0 -> visits 1 -> visits 3 (leaf) -> backtracks to 0 -> visits 2. Order: 0, 1, 3, 2.",
+    "steps": [
+      {
+        "line": 3,
+        "desc": "DFS Path: 0 -> 1 -> 3 -> backtrack -> 2. Order: [0, 1, 3, 2]",
+        "nodes": [
+          {
+            "val": 0,
+            "color": "#10b981"
+          },
+          {
+            "val": 1,
+            "color": "#10b981"
+          },
+          {
+            "val": 3,
+            "color": "#10b981"
+          },
+          {
+            "val": 2,
+            "color": "#d0bcff"
+          }
+        ],
+        "variables": [
+          {
+            "name": "dfs_order",
+            "value": "[0, 1, 3, 2]",
+            "type_str": "list"
+          }
+        ]
+      }
+    ],
+    "visualizable": true
+  },
+  {
+    "id": "EXP-GRAPH-03",
+    "source": "HackerRank",
+    "source_badge": "[HACKERRANK]",
+    "topic": "Graphs",
+    "topicCategory": "Shortest Path",
+    "type": "algorithm_tracing",
+    "points": 10,
+    "title": "UNWEIGHTED SHORTEST DISTANCE WITH BFS",
+    "desc": "In an unweighted graph, what is the shortest distance (number of edges) from node A to node D if paths are A-B-C-D (3 edges) and A-E-D (2 edges)?",
+    "constraints": "UNWEIGHTED GRAPH",
+    "timelimit": "0.30 SEC",
+    "options": [
+      "2 edges (via path A-E-D)",
+      "3 edges (via path A-B-C-D)",
+      "1 edge",
+      "4 edges"
+    ],
+    "correctAnswer": 0,
+    "hint": "BFS guarantees finding the shortest path in terms of edge count in unweighted graphs. Path A-E-D takes 2 edges.",
+    "steps": [
+      {
+        "line": 2,
+        "desc": "BFS finds shortest path A -> E -> D of length 2 edges.",
+        "nodes": [
+          {
+            "val": "A",
+            "color": "#10b981"
+          },
+          {
+            "val": "E",
+            "color": "#10b981"
+          },
+          {
+            "val": "D",
+            "color": "#10b981"
+          }
+        ],
+        "variables": [
+          {
+            "name": "shortest_dist",
+            "value": "2",
+            "type_str": "int"
+          }
+        ]
+      }
+    ],
+    "visualizable": true
+  },
+  {
+    "id": "EXP-GRAPH-04",
+    "source": "LeetCode",
+    "source_badge": "[LEETCODE]",
+    "topic": "Graphs",
+    "topicCategory": "Adjacency List",
+    "type": "coding",
+    "points": 10,
+    "title": "COUNT NEIGHBORS OF A NODE (EASY)",
+    "desc": "Write a function `countNeighbors(graph, node)` that returns the number of direct neighbors connected to `node` in an adjacency list dictionary.",
+    "constraints": "V \u2264 100",
+    "timelimit": "0.30 SEC",
+    "hint": "Return `len(graph.get(node, []))`.",
+    "code": "def countNeighbors(graph, node):\n    # TODO: Return length of graph[node]\n    return len(graph.get(node, []))\n\nprint(countNeighbors({0: [1, 2, 3], 1: [0], 2: [0]}, 0))",
+    "steps": [
+      {
+        "line": 2,
+        "desc": "Checking graph[0] = [1, 2, 3] -> Total neighbors = 3",
+        "nodes": [
+          {
+            "val": 1,
+            "color": "#10b981"
+          },
+          {
+            "val": 2,
+            "color": "#10b981"
+          },
+          {
+            "val": 3,
+            "color": "#10b981"
+          }
+        ],
+        "variables": [
+          {
+            "name": "count",
+            "value": "3",
+            "type_str": "int"
+          }
+        ]
+      }
+    ],
+    "visualizable": true,
+    "testcases": [
+      {
+        "id": "TC #01",
+        "input": "adj=[[1, 2], [0, 2, 3], [0, 1], [1]], node=1",
+        "expected": "3"
+      },
+      {
+        "id": "TC #02",
+        "input": "adj=[[], [0], [1]], node=0",
+        "expected": "0"
+      },
+      {
+        "id": "TC #03",
+        "input": "adj=[[1,2,3,4], [0], [0], [0], [0]], node=0",
+        "expected": "4"
+      },
+      {
+        "id": "TC #04",
+        "input": "adj=[[1], [0]], node=1",
+        "expected": "1"
+      },
+      {
+        "id": "TC #05",
+        "input": "adj=[[2], [], [0]], node=2",
+        "expected": "1"
+      }
+    ]
+  },
+  {
+    "id": "EXP-TREE-01",
+    "source": "GeeksforGeeks",
+    "source_badge": "[GFG]",
+    "topic": "Trees",
+    "topicCategory": "BST Invariant",
+    "type": "mcq",
+    "points": 10,
+    "title": "BST NODE VALUE INVARIANT",
+    "desc": "In a Binary Search Tree (BST), which statement is true for any node with key K?",
+    "constraints": "CONCEPTUAL MCQ",
+    "timelimit": "0.30 SEC",
+    "options": [
+      "All keys in Left Subtree < K and all keys in Right Subtree > K",
+      "All keys in Left Subtree > K",
+      "Left child key must equal Right child key",
+      "Tree height must always be 1"
+    ],
+    "correctAnswer": 0,
+    "hint": "BST property requires left subtree keys < K and right subtree keys > K for every node in the tree.",
+    "steps": [
+      {
+        "line": 1,
+        "desc": "BST Invariant: Left < Root < Right",
+        "nodes": [
+          {
+            "val": 30,
+            "color": "#10b981"
+          },
+          {
+            "val": 50,
+            "color": "#c3f400"
+          },
+          {
+            "val": 70,
+            "color": "#d0bcff"
+          }
+        ],
+        "variables": [
+          {
+            "name": "invariant",
+            "value": "Left < Root < Right",
+            "type_str": "str"
+          }
+        ]
+      }
+    ],
+    "visualizable": false
+  },
+  {
+    "id": "EXP-TREE-02",
+    "source": "HackerRank",
+    "source_badge": "[HACKERRANK]",
+    "topic": "Trees",
+    "topicCategory": "Inorder Traversal",
+    "type": "output_prediction",
+    "points": 10,
+    "title": "BST INORDER OUTPUT PREDICTION",
+    "desc": "What is the output sequence of performing Inorder traversal on a BST containing inserted values [50, 30, 70, 20, 40]?",
+    "constraints": "N = 5",
+    "timelimit": "0.30 SEC",
+    "options": [
+      "[20, 30, 40, 50, 70]",
+      "[50, 30, 20, 40, 70]",
+      "[70, 50, 40, 30, 20]",
+      "[20, 40, 30, 70, 50]"
+    ],
+    "correctAnswer": 0,
+    "hint": "Inorder traversal (Left, Root, Right) on a BST always visits nodes in sorted ascending order.",
+    "steps": [
+      {
+        "line": 3,
+        "desc": "Inorder Traversal visits BST in ascending order: [20, 30, 40, 50, 70]",
+        "nodes": [
+          {
+            "val": 20,
+            "color": "#10b981"
+          },
+          {
+            "val": 30,
+            "color": "#10b981"
+          },
+          {
+            "val": 40,
+            "color": "#10b981"
+          },
+          {
+            "val": 50,
+            "color": "#10b981"
+          },
+          {
+            "val": 70,
+            "color": "#10b981"
+          }
+        ],
+        "variables": [
+          {
+            "name": "inorder_sequence",
+            "value": "[20, 30, 40, 50, 70]",
+            "type_str": "list"
+          }
+        ]
+      }
+    ],
+    "visualizable": true
+  },
+  {
+    "id": "EXP-TREE-03",
+    "source": "LeetCode",
+    "source_badge": "[LEETCODE]",
+    "topic": "Trees",
+    "topicCategory": "BST Insertion Path",
+    "type": "algorithm_tracing",
+    "points": 10,
+    "title": "BST INSERTION PATH TRACE",
+    "desc": "Inserting key 35 into a BST with root 50, left child 30, right child 70, and 30's right child 40. Where does 35 attach?",
+    "constraints": "N = 4",
+    "timelimit": "0.40 SEC",
+    "options": [
+      "As the left child of node 40",
+      "As the right child of node 40",
+      "As the left child of node 70",
+      "As the left child of root 50"
+    ],
+    "correctAnswer": 0,
+    "hint": "35 < 50 (go left to 30), 35 > 30 (go right to 40), 35 < 40 (attach as left child of 40).",
+    "steps": [
+      {
+        "line": 4,
+        "desc": "Insertion path: 50 (left) -> 30 (right) -> 40 (left) -> Insert 35 as left child of 40",
+        "nodes": [
+          {
+            "val": 50,
+            "color": "#444933"
+          },
+          {
+            "val": 30,
+            "color": "#c3f400"
+          },
+          {
+            "val": 40,
+            "color": "#c3f400"
+          },
+          {
+            "val": 35,
+            "color": "#10b981"
+          }
+        ],
+        "variables": [
+          {
+            "name": "parent_node",
+            "value": "40",
+            "type_str": "int"
+          },
+          {
+            "name": "position",
+            "value": "left_child",
+            "type_str": "str"
+          }
+        ]
+      }
+    ],
+    "visualizable": true
+  },
+  {
+    "id": "EXP-TREE-04",
+    "source": "GeeksforGeeks",
+    "source_badge": "[GFG]",
+    "topic": "Trees",
+    "topicCategory": "BST Minimum",
+    "type": "coding",
+    "points": 10,
+    "title": "FIND MINIMUM VALUE IN BST (EASY)",
+    "desc": "Write a function `findMinBST(tree)` that returns the smallest key in a BST (the leftmost node value).",
+    "constraints": "N \u2264 100",
+    "timelimit": "0.30 SEC",
+    "hint": "Start at root. Keep moving to left child until left child is None. Return that node's value.",
+    "code": "def findMinBST(tree):\n    # TODO: Traverse left child to find min value\n    curr = tree\n    while curr and isinstance(curr, list) and curr[1] is not None:\n        curr = curr[1]\n    return curr[0] if isinstance(curr, list) else curr\n\nprint(findMinBST([50, [30, [20, None, None], [40, None, None]], [70, None, None]]))",
+    "steps": [
+      {
+        "line": 3,
+        "desc": "Traversing leftmost path: 50 -> 30 -> 20 (Min key = 20)",
+        "nodes": [
+          {
+            "val": 20,
+            "color": "#10b981"
+          }
+        ],
+        "variables": [
+          {
+            "name": "min_key",
+            "value": "20",
+            "type_str": "int"
+          }
+        ]
+      }
+    ],
+    "visualizable": true,
+    "testcases": [
+      {
+        "id": "TC #01",
+        "input": "root=[20, 10, 30, 5, 15]",
+        "expected": "5"
+      },
+      {
+        "id": "TC #02",
+        "input": "root=[50, 40, 60, 30]",
+        "expected": "30"
+      },
+      {
+        "id": "TC #03",
+        "input": "root=[100]",
+        "expected": "100"
+      },
+      {
+        "id": "TC #04",
+        "input": "root=[8, 3, 10, 1, 6, 14]",
+        "expected": "1"
+      },
+      {
+        "id": "TC #05",
+        "input": "root=[25, 12, 36, 8, 19]",
+        "expected": "8"
+      }
+    ]
+  },
+  {
+    "id": "EXP-AVL-01",
+    "source": "GeeksforGeeks",
+    "source_badge": "[GFG]",
+    "topic": "AVL Trees",
+    "topicCategory": "Balance Factor",
+    "type": "mcq",
+    "points": 10,
+    "title": "AVL BALANCE FACTOR FORMULA",
+    "desc": "How is the Balance Factor (BF) of an AVL tree node calculated?",
+    "constraints": "CONCEPTUAL MCQ",
+    "timelimit": "0.30 SEC",
+    "options": [
+      "BF = Height(Left Subtree) - Height(Right Subtree)",
+      "BF = Height(Root) * 2",
+      "BF = Number of Left Nodes + Number of Right Nodes",
+      "BF = Left Child Value - Right Child Value"
+    ],
+    "correctAnswer": 0,
+    "hint": "Balance factor is Height(Left) - Height(Right), which must equal -1, 0, or +1 in a valid AVL tree.",
+    "steps": [
+      {
+        "line": 1,
+        "desc": "BF = Height(Left) - Height(Right) in {-1, 0, +1}",
+        "nodes": [
+          {
+            "val": "BF = H(L) - H(R)",
+            "color": "#10b981"
+          }
+        ],
+        "variables": [
+          {
+            "name": "balance_factor",
+            "value": "0",
+            "type_str": "int"
+          }
+        ]
+      }
+    ],
+    "visualizable": false
+  },
+  {
+    "id": "EXP-AVL-02",
+    "source": "HackerRank",
+    "source_badge": "[HACKERRANK]",
+    "topic": "AVL Trees",
+    "topicCategory": "Single Rotation",
+    "type": "output_prediction",
+    "points": 10,
+    "title": "SINGLE RIGHT ROTATION (LL IMPALANCE)",
+    "desc": "Inserting keys 30, 20, 10 in order into an AVL tree creates an LL heavy imbalance at node 30. After a single Right Rotation, which node becomes the new root?",
+    "constraints": "CONCEPTUAL TRACING",
+    "timelimit": "0.30 SEC",
+    "options": [
+      "Node 20",
+      "Node 10",
+      "Node 30",
+      "Node 15"
+    ],
+    "correctAnswer": 0,
+    "hint": "Right rotating at node 30 pulls node 20 up to root, with 10 as left child and 30 as right child.",
+    "steps": [
+      {
+        "line": 2,
+        "desc": "Right Rotate at 30: 20 moves up to root, 10 is left child, 30 is right child. Balanced root = 20",
+        "nodes": [
+          {
+            "val": 20,
+            "color": "#10b981"
+          },
+          {
+            "val": 10,
+            "color": "#c3f400"
+          },
+          {
+            "val": 30,
+            "color": "#c3f400"
+          }
+        ],
+        "variables": [
+          {
+            "name": "new_root",
+            "value": "20",
+            "type_str": "int"
+          }
+        ]
+      }
+    ],
+    "visualizable": true
+  },
+  {
+    "id": "EXP-AVL-03",
+    "source": "Codeforces",
+    "source_badge": "[CODEFORCES]",
+    "topic": "AVL Trees",
+    "topicCategory": "Rebalancing Trigger",
+    "type": "algorithm_tracing",
+    "points": 10,
+    "title": "AVL REBALANCING TRIGGER",
+    "desc": "If adding a key causes a node's Balance Factor to become +2, what action must the AVL tree perform?",
+    "constraints": "CONCEPTUAL TRACING",
+    "timelimit": "0.30 SEC",
+    "options": [
+      "Perform tree rotation(s) to restore balance factor to {-1, 0, +1}",
+      "Delete the root node",
+      "Convert tree into a Linked List",
+      "Do nothing"
+    ],
+    "correctAnswer": 0,
+    "hint": "Any node with Balance Factor +2 or -2 violates the AVL balance invariant and triggers tree rotation(s).",
+    "steps": [
+      {
+        "line": 2,
+        "desc": "BF = +2 detected -> Trigger Tree Rotation -> Balance Factor restored to 0.",
+        "nodes": [
+          {
+            "val": 50,
+            "color": "#10b981"
+          }
+        ],
+        "variables": [
+          {
+            "name": "action",
+            "value": "Perform Rotation",
+            "type_str": "str"
+          }
+        ]
+      }
+    ],
+    "visualizable": true
+  },
+  {
+    "id": "EXP-AVL-04",
+    "source": "LeetCode",
+    "source_badge": "[LEETCODE]",
+    "topic": "AVL Trees",
+    "topicCategory": "Balance Factor Calculation",
+    "type": "coding",
+    "points": 10,
+    "title": "CALCULATE BALANCE FACTOR (EASY)",
+    "desc": "Write a function `getBalanceFactor(left_height, right_height)` that returns `left_height - right_height`.",
+    "constraints": "CONCEPTUAL EASY",
+    "timelimit": "0.20 SEC",
+    "hint": "Return `left_height - right_height`.",
+    "code": "def getBalanceFactor(left_height, right_height):\n    # TODO: Return left_height - right_height\n    return left_height - right_height\n\nprint(getBalanceFactor(3, 2))",
+    "steps": [
+      {
+        "line": 2,
+        "desc": "Calculating 3 - 2 = +1 (Valid AVL Balance Factor)",
+        "nodes": [
+          {
+            "val": "+1",
+            "color": "#10b981"
+          }
+        ],
+        "variables": [
+          {
+            "name": "bf",
+            "value": "1",
+            "type_str": "int"
+          }
+        ]
+      }
+    ],
+    "visualizable": true,
+    "testcases": [
+      {
+        "id": "TC #01",
+        "input": "left_height=3, right_height=1",
+        "expected": "2"
+      },
+      {
+        "id": "TC #02",
+        "input": "left_height=2, right_height=2",
+        "expected": "0"
+      },
+      {
+        "id": "TC #03",
+        "input": "left_height=1, right_height=3",
+        "expected": "-2"
+      },
+      {
+        "id": "TC #04",
+        "input": "left_height=0, right_height=1",
+        "expected": "-1"
+      },
+      {
+        "id": "TC #05",
+        "input": "left_height=4, right_height=2",
+        "expected": "2"
+      }
+    ]
+  },
+  {
+    "id": "EXP-HEAP-01",
+    "source": "GeeksforGeeks",
+    "source_badge": "[GFG]",
+    "topic": "Heaps",
+    "topicCategory": "Min-Heap Invariant",
+    "type": "mcq",
+    "points": 10,
+    "title": "MIN-HEAP ROOT INVARIANT",
+    "desc": "What is always true about the element stored at index 0 (root) of a valid Min-Heap?",
+    "constraints": "CONCEPTUAL MCQ",
+    "timelimit": "0.30 SEC",
+    "options": [
+      "It is the minimum element in the entire heap",
+      "It is the maximum element in the entire heap",
+      "It is the median element",
+      "It is always 0"
+    ],
+    "correctAnswer": 0,
+    "hint": "In a Min-Heap, parent <= children everywhere, making index 0 the global minimum value.",
+    "steps": [
+      {
+        "line": 1,
+        "desc": "Min-Heap Root Property: arr[0] is the minimum element in the heap.",
+        "nodes": [
+          {
+            "val": "Root: Min Val",
+            "color": "#10b981"
+          }
+        ],
+        "variables": [
+          {
+            "name": "root_property",
+            "value": "Minimum Element",
+            "type_str": "str"
+          }
+        ]
+      }
+    ],
+    "visualizable": false
+  },
+  {
+    "id": "EXP-HEAP-02",
+    "source": "HackerRank",
+    "source_badge": "[HACKERRANK]",
+    "topic": "Heaps",
+    "topicCategory": "Sift-Up Insertion",
+    "type": "output_prediction",
+    "points": 10,
+    "title": "MIN-HEAP INSERTION (SIFT-UP)",
+    "desc": "In a Min-Heap [10, 20, 30], key 5 is inserted at the end. After sifting up to restore heap order, what is the array state?",
+    "constraints": "N = 4",
+    "timelimit": "0.30 SEC",
+    "options": [
+      "[5, 10, 30, 20]",
+      "[10, 20, 30, 5]",
+      "[5, 20, 10, 30]",
+      "[30, 20, 10, 5]"
+    ],
+    "correctAnswer": 0,
+    "hint": "5 is added at end [10, 20, 30, 5]. Sift up: 5 swaps with 20 -> [10, 5, 30, 20], 5 swaps with 10 -> [5, 10, 30, 20].",
+    "steps": [
+      {
+        "line": 4,
+        "desc": "Sift Up 5: Swap 5 with 20 -> Swap 5 with 10 -> Result: [5, 10, 30, 20]",
+        "nodes": [
+          {
+            "val": 5,
+            "color": "#10b981"
+          },
+          {
+            "val": 10,
+            "color": "#c3f400"
+          },
+          {
+            "val": 30,
+            "color": "#c3f400"
+          },
+          {
+            "val": 20,
+            "color": "#c3f400"
+          }
+        ],
+        "variables": [
+          {
+            "name": "heap_array",
+            "value": "[5, 10, 30, 20]",
+            "type_str": "list"
+          }
+        ]
+      }
+    ],
+    "visualizable": true
+  },
+  {
+    "id": "EXP-HEAP-03",
+    "source": "Codeforces",
+    "source_badge": "[CODEFORCES]",
+    "topic": "Heaps",
+    "topicCategory": "Extract Max",
+    "type": "algorithm_tracing",
+    "points": 10,
+    "title": "MAX-HEAP EXTRACT-MAX STEP",
+    "desc": "When extracting the maximum value from a Max-Heap [90, 80, 70, 40, 30], which element is moved to the root before heapifying down?",
+    "constraints": "N = 5",
+    "timelimit": "0.30 SEC",
+    "options": [
+      "The last element (30)",
+      "The second element (80)",
+      "Element 40",
+      "Number 0"
+    ],
+    "correctAnswer": 0,
+    "hint": "Extract-Max replaces root 90 with the last leaf element (30), shrinks size by 1, and calls Heapify-Down on root.",
+    "steps": [
+      {
+        "line": 2,
+        "desc": "Extract Max 90: Move last leaf 30 to root -> [30, 80, 70, 40] -> Heapify Down 30 -> [80, 40, 70, 30]",
+        "nodes": [
+          {
+            "val": 80,
+            "color": "#10b981"
+          },
+          {
+            "val": 40,
+            "color": "#c3f400"
+          },
+          {
+            "val": 70,
+            "color": "#c3f400"
+          },
+          {
+            "val": 30,
+            "color": "#c3f400"
+          }
+        ],
+        "variables": [
+          {
+            "name": "replacement_node",
+            "value": "30 (Last Leaf)",
+            "type_str": "str"
+          }
+        ]
+      }
+    ],
+    "visualizable": true
+  },
+  {
+    "id": "EXP-HEAP-04",
+    "source": "LeetCode",
+    "source_badge": "[LEETCODE]",
+    "topic": "Heaps",
+    "topicCategory": "Min-Heap Check",
+    "type": "coding",
+    "points": 10,
+    "title": "CHECK MIN-HEAP PROPERTY FOR 3 NODES (EASY)",
+    "desc": "Write a function `isMinHeap3(parent, left_child, right_child)` that returns True if parent <= left_child and parent <= right_child.",
+    "constraints": "CONCEPTUAL EASY",
+    "timelimit": "0.20 SEC",
+    "hint": "Return `parent <= left_child and parent <= right_child`.",
+    "code": "def isMinHeap3(parent, left_child, right_child):\n    # TODO: Return True if parent <= left and parent <= right\n    return parent <= left_child and parent <= right_child\n\nprint(isMinHeap3(5, 10, 15))",
+    "steps": [
+      {
+        "line": 2,
+        "desc": "Checking 5 <= 10 and 5 <= 15 -> True (Valid Min-Heap node)",
+        "nodes": [
+          {
+            "val": 5,
+            "color": "#10b981"
+          },
+          {
+            "val": 10,
+            "color": "#c3f400"
+          },
+          {
+            "val": 15,
+            "color": "#c3f400"
+          }
+        ],
+        "variables": [
+          {
+            "name": "is_valid",
+            "value": "True",
+            "type_str": "bool"
+          }
+        ]
+      }
+    ],
+    "visualizable": true,
+    "testcases": [
+      {
+        "id": "TC #01",
+        "input": "parent=2, left=5, right=8",
+        "expected": "true"
+      },
+      {
+        "id": "TC #02",
+        "input": "parent=10, left=4, right=12",
+        "expected": "false"
+      },
+      {
+        "id": "TC #03",
+        "input": "parent=1, left=1, right=3",
+        "expected": "true"
+      },
+      {
+        "id": "TC #04",
+        "input": "parent=7, left=9, right=6",
+        "expected": "false"
+      },
+      {
+        "id": "TC #05",
+        "input": "parent=3, left=4, right=5",
+        "expected": "true"
+      }
+    ]
+  }
+]
