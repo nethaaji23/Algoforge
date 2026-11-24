@@ -1,0 +1,1341 @@
+{
+    "bubble_sort": {
+        "id": "bubble_sort",
+        "title": "Bubble Sort",
+        "category": "Sorting",
+        "difficulty": "Easy",
+        "problem_level": "Easy Level",
+        "time_best": "O(n)",
+        "time_average": "O(n\u00b2)",
+        "time_worst": "O(n\u00b2)",
+        "space": "O(1)",
+        "description": "Repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order.",
+        "python": "def bubble_sort(arr):\n    \"\"\"Sort an array in ascending order using Bubble Sort.\"\"\"\n    a = arr.copy()\n    for i in range(len(a)):\n        swapped = False\n        for j in range(len(a) - 1 - i):\n            if a[j] > a[j + 1]:\n                a[j], a[j + 1] = a[j + 1], a[j]\n                swapped = True\n        if not swapped:\n            break\n    return a",
+        "java": "public static int[] bubbleSort(int[] arr) {\n    int[] a = arr.clone();\n    for (int i = 0; i < a.length; i++) {\n        boolean swapped = false;\n        for (int j = 0; j < a.length - 1 - i; j++) {\n            if (a[j] > a[j + 1]) {\n                int temp = a[j];\n                a[j] = a[j + 1];\n                a[j + 1] = temp;\n                swapped = true;\n            }\n        }\n        if (!swapped) break;\n    }\n    return a;\n}",
+        "pseudocode": "BUBBLE-SORT-ASCENDING(A)\n    FOR i \u2190 0 TO length(A) - 1\n        swapped \u2190 FALSE\n        FOR j \u2190 0 TO length(A) - 2 - i\n            IF A[j] > A[j + 1]\n                SWAP A[j] AND A[j + 1]\n                swapped \u2190 TRUE\n            END IF\n        END FOR\n        IF swapped = FALSE\n            BREAK\n        END IF\n    END FOR\n    RETURN A",
+        "problems": [
+            {
+                "id": "P001",
+                "title": "Sort an Array",
+                "description": "Given an integer array, sort the elements in ascending order using Bubble Sort.",
+                "testcases": [
+                    {
+                        "id": "TC001",
+                        "name": "TC001",
+                        "input": [
+                            5,
+                            2,
+                            8,
+                            1,
+                            3
+                        ],
+                        "raw_input": "{\"array\":[5,2,8,1,3]}",
+                        "expected": "[1,2,3,5,8]"
+                    },
+                    {
+                        "id": "TC002",
+                        "name": "TC002",
+                        "input": [
+                            10,
+                            9,
+                            8,
+                            7
+                        ],
+                        "raw_input": "{\"array\":[10,9,8,7]}",
+                        "expected": "[7,8,9,10]"
+                    },
+                    {
+                        "id": "TC003",
+                        "name": "TC003",
+                        "input": [
+                            1,
+                            2,
+                            3,
+                            4
+                        ],
+                        "raw_input": "{\"array\":[1,2,3,4]}",
+                        "expected": "[1,2,3,4]"
+                    },
+                    {
+                        "id": "TC004",
+                        "name": "TC004",
+                        "input": [
+                            5
+                        ],
+                        "raw_input": "{\"array\":[5]}",
+                        "expected": "[5]"
+                    }
+                ],
+                "python": "def P001(arr):\n    \"\"\"Sort an array in ascending order using Bubble Sort.\"\"\"\n    a = arr.copy()\n    for i in range(len(a)):\n        swapped = False\n        for j in range(len(a) - 1 - i):\n            if a[j] > a[j + 1]:\n                a[j], a[j + 1] = a[j + 1], a[j]\n                swapped = True\n        if not swapped:\n            break\n    return a",
+                "java": "public static int[] P001(int[] arr) {\n    int[] a = arr.clone();\n    for (int i = 0; i < a.length; i++) {\n        boolean swapped = false;\n        for (int j = 0; j < a.length - 1 - i; j++) {\n            if (a[j] > a[j + 1]) {\n                int temp = a[j];\n                a[j] = a[j + 1];\n                a[j + 1] = temp;\n                swapped = true;\n            }\n        }\n        if (!swapped) break;\n    }\n    return a;\n}",
+                "pseudocode": "BUBBLE-SORT-ASCENDING(A)\n    FOR i \u2190 0 TO length(A) - 1\n        swapped \u2190 FALSE\n        FOR j \u2190 0 TO length(A) - 2 - i\n            IF A[j] > A[j + 1]\n                SWAP A[j] AND A[j + 1]\n                swapped \u2190 TRUE\n            END IF\n        END FOR\n        IF swapped = FALSE\n            BREAK\n        END IF\n    END FOR\n    RETURN A"
+            },
+            {
+                "id": "P002",
+                "title": "Sort in Descending Order",
+                "description": "Given an array, sort the elements in descending order using Bubble Sort.",
+                "testcases": [
+                    {
+                        "id": "TC005",
+                        "name": "TC005",
+                        "input": [
+                            4,
+                            1,
+                            7,
+                            3
+                        ],
+                        "raw_input": "{\"array\":[4,1,7,3]}",
+                        "expected": "[7,4,3,1]"
+                    },
+                    {
+                        "id": "TC006",
+                        "name": "TC006",
+                        "input": [
+                            10,
+                            20,
+                            5
+                        ],
+                        "raw_input": "{\"array\":[10,20,5]}",
+                        "expected": "[20,10,5]"
+                    },
+                    {
+                        "id": "TC007",
+                        "name": "TC007",
+                        "input": [
+                            3,
+                            3,
+                            1,
+                            2
+                        ],
+                        "raw_input": "{\"array\":[3,3,1,2]}",
+                        "expected": "[3,3,2,1]"
+                    },
+                    {
+                        "id": "TC008",
+                        "name": "TC008",
+                        "input": [
+                            9
+                        ],
+                        "raw_input": "{\"array\":[9]}",
+                        "expected": "[9]"
+                    }
+                ],
+                "python": "def P002(arr):\n    \"\"\"Sort an array in descending order using Bubble Sort.\"\"\"\n    a = arr.copy()\n    for i in range(len(a)):\n        swapped = False\n        for j in range(len(a) - 1 - i):\n            if a[j] < a[j + 1]:\n                a[j], a[j + 1] = a[j + 1], a[j]\n                swapped = True\n        if not swapped:\n            break\n    return a",
+                "java": "public static int[] P002(int[] arr) {\n    int[] a = arr.clone();\n    for (int i = 0; i < a.length; i++) {\n        boolean swapped = false;\n        for (int j = 0; j < a.length - 1 - i; j++) {\n            if (a[j] < a[j + 1]) {\n                int temp = a[j];\n                a[j] = a[j + 1];\n                a[j + 1] = temp;\n                swapped = true;\n            }\n        }\n        if (!swapped) break;\n    }\n    return a;\n}",
+                "pseudocode": "BUBBLE-SORT-DESCENDING(A)\n    FOR i \u2190 0 TO length(A) - 1\n        swapped \u2190 FALSE\n        FOR j \u2190 0 TO length(A) - 2 - i\n            IF A[j] < A[j + 1]\n                SWAP A[j] AND A[j + 1]\n                swapped \u2190 TRUE\n            END IF\n        END FOR\n        IF swapped = FALSE\n            BREAK\n        END IF\n    END FOR\n    RETURN A"
+            }
+        ]
+    },
+    "selection_sort": {
+        "id": "selection_sort",
+        "title": "Selection Sort",
+        "category": "Sorting",
+        "difficulty": "Easy",
+        "problem_level": "Easy Level",
+        "time_best": "O(n\u00b2)",
+        "time_average": "O(n\u00b2)",
+        "time_worst": "O(n\u00b2)",
+        "space": "O(1)",
+        "description": "Repeatedly finds the minimum element from the unsorted part and puts it at the beginning.",
+        "python": "def selection_sort(arr):\n    \"\"\"Sort an array using Selection Sort.\"\"\"\n    a = arr.copy()\n    for i in range(len(a)):\n        min_index = i\n        for j in range(i + 1, len(a)):\n            if a[j] < a[min_index]:\n                min_index = j\n        a[i], a[min_index] = a[min_index], a[i]\n    return a",
+        "java": "public static int[] selectionSort(int[] arr) {\n    int[] a = arr.clone();\n    for (int i = 0; i < a.length; i++) {\n        int minIndex = i;\n        for (int j = i + 1; j < a.length; j++) {\n            if (a[j] < a[minIndex]) minIndex = j;\n        }\n        int temp = a[i];\n        a[i] = a[minIndex];\n        a[minIndex] = temp;\n    }\n    return a;\n}",
+        "pseudocode": "SELECTION-SORT(A)\n    FOR i \u2190 0 TO length(A) - 1\n        minIndex \u2190 i\n        FOR j \u2190 i + 1 TO length(A) - 1\n            IF A[j] < A[minIndex]\n                minIndex \u2190 j\n            END IF\n        END FOR\n        SWAP A[i] AND A[minIndex]\n    END FOR\n    RETURN A",
+        "problems": [
+            {
+                "id": "P003",
+                "title": "Sort Using Selection Sort",
+                "description": "Sort the array in non-decreasing order using selection sort logic.",
+                "testcases": [
+                    {
+                        "id": "TC009",
+                        "name": "TC009",
+                        "input": [
+                            64,
+                            25,
+                            12,
+                            22,
+                            11
+                        ],
+                        "raw_input": "{\"array\":[64,25,12,22,11]}",
+                        "expected": "[11,12,22,25,64]"
+                    },
+                    {
+                        "id": "TC010",
+                        "name": "TC010",
+                        "input": [
+                            5,
+                            4,
+                            3,
+                            2,
+                            1
+                        ],
+                        "raw_input": "{\"array\":[5,4,3,2,1]}",
+                        "expected": "[1,2,3,4,5]"
+                    },
+                    {
+                        "id": "TC011",
+                        "name": "TC011",
+                        "input": [
+                            2,
+                            1,
+                            2,
+                            0
+                        ],
+                        "raw_input": "{\"array\":[2,1,2,0]}",
+                        "expected": "[0,1,2,2]"
+                    },
+                    {
+                        "id": "TC012",
+                        "name": "TC012",
+                        "input": [
+                            7
+                        ],
+                        "raw_input": "{\"array\":[7]}",
+                        "expected": "[7]"
+                    }
+                ],
+                "python": "def P003(arr):\n    \"\"\"Sort an array using Selection Sort.\"\"\"\n    a = arr.copy()\n    for i in range(len(a)):\n        min_index = i\n        for j in range(i + 1, len(a)):\n            if a[j] < a[min_index]:\n                min_index = j\n        a[i], a[min_index] = a[min_index], a[i]\n    return a",
+                "java": "public static int[] P003(int[] arr) {\n    int[] a = arr.clone();\n    for (int i = 0; i < a.length; i++) {\n        int minIndex = i;\n        for (int j = i + 1; j < a.length; j++) {\n            if (a[j] < a[minIndex]) minIndex = j;\n        }\n        int temp = a[i];\n        a[i] = a[minIndex];\n        a[minIndex] = temp;\n    }\n    return a;\n}",
+                "pseudocode": "SELECTION-SORT(A)\n    FOR i \u2190 0 TO length(A) - 1\n        minIndex \u2190 i\n        FOR j \u2190 i + 1 TO length(A) - 1\n            IF A[j] < A[minIndex]\n                minIndex \u2190 j\n            END IF\n        END FOR\n        SWAP A[i] AND A[minIndex]\n    END FOR\n    RETURN A"
+            },
+            {
+                "id": "P004",
+                "title": "Find Minimum and Sort",
+                "description": "Repeatedly find the minimum value from the remaining unsorted sub-array.",
+                "testcases": [
+                    {
+                        "id": "TC013",
+                        "name": "TC013",
+                        "input": [
+                            29,
+                            10,
+                            14,
+                            37,
+                            13
+                        ],
+                        "raw_input": "{\"array\":[29,10,14,37,13]}",
+                        "expected": "[10,13,14,29,37]"
+                    },
+                    {
+                        "id": "TC014",
+                        "name": "TC014",
+                        "input": [
+                            8,
+                            4,
+                            6,
+                            2
+                        ],
+                        "raw_input": "{\"array\":[8,4,6,2]}",
+                        "expected": "[2,4,6,8]"
+                    },
+                    {
+                        "id": "TC015",
+                        "name": "TC015",
+                        "input": [
+                            3,
+                            1,
+                            5,
+                            2
+                        ],
+                        "raw_input": "{\"array\":[3,1,5,2]}",
+                        "expected": "[1,2,3,5]"
+                    },
+                    {
+                        "id": "TC016",
+                        "name": "TC016",
+                        "input": [
+                            1,
+                            0
+                        ],
+                        "raw_input": "{\"array\":[1,0]}",
+                        "expected": "[0,1]"
+                    }
+                ],
+                "python": "def P004(arr):\n    \"\"\"Selection Sort repeatedly finds the minimum remaining element.\"\"\"\n    a = arr.copy()\n    for position in range(len(a)):\n        min_index = position\n        for j in range(position + 1, len(a)):\n            if a[j] < a[min_index]:\n                min_index = j\n        a[position], a[min_index] = a[min_index], a[position]\n    return a",
+                "java": "public static int[] P004(int[] arr) {\n    int[] a = arr.clone();\n    for (int i = 0; i < a.length; i++) {\n        int minIndex = i;\n        for (int j = i + 1; j < a.length; j++) {\n            if (a[j] < a[minIndex]) minIndex = j;\n        }\n        int temp = a[i];\n        a[i] = a[minIndex];\n        a[minIndex] = temp;\n    }\n    return a;\n}",
+                "pseudocode": "SELECTION-SORT-BY-MINIMUM(A)\n    FOR position \u2190 0 TO length(A) - 1\n        minIndex \u2190 position\n        FOR j \u2190 position + 1 TO length(A) - 1\n            IF A[j] < A[minIndex]\n                minIndex \u2190 j\n            END IF\n        END FOR\n        SWAP A[position] AND A[minIndex]\n    END FOR\n    RETURN A"
+            }
+        ]
+    },
+    "insertion_sort": {
+        "id": "insertion_sort",
+        "title": "Insertion Sort",
+        "category": "Sorting",
+        "difficulty": "Easy",
+        "problem_level": "Easy Level",
+        "time_best": "O(n)",
+        "time_average": "O(n\u00b2)",
+        "time_worst": "O(n\u00b2)",
+        "space": "O(1)",
+        "description": "Builds the sorted array one item at a time by inserting elements into correct order.",
+        "python": "def insertion_sort(arr):\n    \"\"\"Sort an array using Insertion Sort.\"\"\"\n    a = arr.copy()\n    for i in range(1, len(a)):\n        key = a[i]\n        j = i - 1\n        while j >= 0 and a[j] > key:\n            a[j + 1] = a[j]\n            j -= 1\n        a[j + 1] = key\n    return a",
+        "java": "public static int[] insertionSort(int[] arr) {\n    int[] a = arr.clone();\n    for (int i = 1; i < a.length; i++) {\n        int key = a[i];\n        int j = i - 1;\n        while (j >= 0 && a[j] > key) {\n            a[j + 1] = a[j];\n            j--;\n        }\n        a[j + 1] = key;\n    }\n    return a;\n}",
+        "pseudocode": "INSERTION-SORT(A)\n    FOR i \u2190 1 TO length(A) - 1\n        key \u2190 A[i]\n        j \u2190 i - 1\n        WHILE j >= 0 AND A[j] > key\n            A[j + 1] \u2190 A[j]\n            j \u2190 j - 1\n        END WHILE\n        A[j + 1] \u2190 key\n    END FOR\n    RETURN A",
+        "problems": [
+            {
+                "id": "P005",
+                "title": "Sort Using Insertion Sort",
+                "description": "Insert each element into its proper position in a sorted sub-array.",
+                "testcases": [
+                    {
+                        "id": "TC017",
+                        "name": "TC017",
+                        "input": [
+                            12,
+                            11,
+                            13,
+                            5,
+                            6
+                        ],
+                        "raw_input": "{\"array\":[12,11,13,5,6]}",
+                        "expected": "[5,6,11,12,13]"
+                    },
+                    {
+                        "id": "TC018",
+                        "name": "TC018",
+                        "input": [
+                            5,
+                            2,
+                            4,
+                            6,
+                            1,
+                            3
+                        ],
+                        "raw_input": "{\"array\":[5,2,4,6,1,3]}",
+                        "expected": "[1,2,3,4,5,6]"
+                    },
+                    {
+                        "id": "TC019",
+                        "name": "TC019",
+                        "input": [
+                            1,
+                            2,
+                            3
+                        ],
+                        "raw_input": "{\"array\":[1,2,3]}",
+                        "expected": "[1,2,3]"
+                    },
+                    {
+                        "id": "TC020",
+                        "name": "TC020",
+                        "input": [
+                            4,
+                            1
+                        ],
+                        "raw_input": "{\"array\":[4,1]}",
+                        "expected": "[1,4]"
+                    }
+                ],
+                "python": "def P005(arr):\n    \"\"\"Sort an array using Insertion Sort.\"\"\"\n    a = arr.copy()\n    for i in range(1, len(a)):\n        key = a[i]\n        j = i - 1\n        while j >= 0 and a[j] > key:\n            a[j + 1] = a[j]\n            j -= 1\n        a[j + 1] = key\n    return a",
+                "java": "public static int[] P005(int[] arr) {\n    int[] a = arr.clone();\n    for (int i = 1; i < a.length; i++) {\n        int key = a[i];\n        int j = i - 1;\n        while (j >= 0 && a[j] > key) {\n            a[j + 1] = a[j];\n            j--;\n        }\n        a[j + 1] = key;\n    }\n    return a;\n}",
+                "pseudocode": "INSERTION-SORT(A)\n    FOR i \u2190 1 TO length(A) - 1\n        key \u2190 A[i]\n        j \u2190 i - 1\n        WHILE j >= 0 AND A[j] > key\n            A[j + 1] \u2190 A[j]\n            j \u2190 j - 1\n        END WHILE\n        A[j + 1] \u2190 key\n    END FOR\n    RETURN A"
+            },
+            {
+                "id": "P006",
+                "title": "Count Shifts",
+                "description": "Sort array and count total element shift operations during insertion.",
+                "testcases": [
+                    {
+                        "id": "TC021",
+                        "name": "TC021",
+                        "input": [
+                            5,
+                            4,
+                            3,
+                            2,
+                            1
+                        ],
+                        "raw_input": "{\"array\":[5,4,3,2,1]}",
+                        "expected": "{\"sorted_array\":[1,2,3,4,5],\"shift_count\":10}"
+                    },
+                    {
+                        "id": "TC022",
+                        "name": "TC022",
+                        "input": [
+                            1,
+                            2,
+                            3,
+                            4
+                        ],
+                        "raw_input": "{\"array\":[1,2,3,4]}",
+                        "expected": "{\"sorted_array\":[1,2,3,4],\"shift_count\":0}"
+                    },
+                    {
+                        "id": "TC023",
+                        "name": "TC023",
+                        "input": [
+                            4,
+                            1,
+                            3,
+                            2
+                        ],
+                        "raw_input": "{\"array\":[4,1,3,2]}",
+                        "expected": "{\"sorted_array\":[1,2,3,4],\"shift_count\":4}"
+                    },
+                    {
+                        "id": "TC024",
+                        "name": "TC024",
+                        "input": [
+                            2,
+                            1,
+                            3
+                        ],
+                        "raw_input": "{\"array\":[2,1,3]}",
+                        "expected": "{\"sorted_array\":[1,2,3],\"shift_count\":1}"
+                    }
+                ],
+                "python": "def P006(arr):\n    \"\"\"Return sorted array and total shift count.\"\"\"\n    a = arr.copy()\n    shift_count = 0\n    for i in range(1, len(a)):\n        key = a[i]\n        j = i - 1\n        while j >= 0 and a[j] > key:\n            a[j + 1] = a[j]\n            j -= 1\n            shift_count += 1\n        a[j + 1] = key\n    return {\"sorted_array\": a, \"shift_count\": shift_count}",
+                "java": "public static Map<String, Object> P006(int[] arr) {\n    int[] a = arr.clone();\n    int shiftCount = 0;\n    for (int i = 1; i < a.length; i++) {\n        int key = a[i];\n        int j = i - 1;\n        while (j >= 0 && a[j] > key) {\n            a[j + 1] = a[j];\n            j--;\n            shiftCount++;\n        }\n        a[j + 1] = key;\n    }\n    Map<String, Object> result = new LinkedHashMap<>();\n    result.put(\"sorted_array\", a);\n    result.put(\"shift_count\", shiftCount);\n    return result;\n}",
+                "pseudocode": "INSERTION-SORT-WITH-SHIFTS(A)\n    shiftCount \u2190 0\n    FOR i \u2190 1 TO length(A) - 1\n        key \u2190 A[i]\n        j \u2190 i - 1\n        WHILE j >= 0 AND A[j] > key\n            A[j + 1] \u2190 A[j]\n            j \u2190 j - 1\n            shiftCount \u2190 shiftCount + 1\n        END WHILE\n        A[j + 1] \u2190 key\n    END FOR\n    RETURN A, shiftCount"
+            }
+        ]
+    },
+    "merge_sort": {
+        "id": "merge_sort",
+        "title": "Merge Sort",
+        "category": "Sorting",
+        "difficulty": "Medium",
+        "problem_level": "Medium Level",
+        "time_best": "O(n log n)",
+        "time_average": "O(n log n)",
+        "time_worst": "O(n log n)",
+        "space": "O(n)",
+        "description": "Divide and conquer algorithm that recursively splits arrays and merges sorted halves.",
+        "python": "def merge_sort(arr):\n    \"\"\"Sort an array using Merge Sort.\"\"\"\n    if len(arr) <= 1:\n        return arr.copy()\n    mid = len(arr) // 2\n    left = merge_sort(arr[:mid])\n    right = merge_sort(arr[mid:])\n    return merge(left, right)\n\ndef merge(left, right):\n    result = []\n    i = j = 0\n    while i < len(left) and j < len(right):\n        if left[i] <= right[j]:\n            result.append(left[i]); i += 1\n        else:\n            result.append(right[j]); j += 1\n    result.extend(left[i:])\n    result.extend(right[j:])\n    return result",
+        "java": "public static int[] mergeSort(int[] arr) {\n    if (arr.length <= 1) return arr.clone();\n    int mid = arr.length / 2;\n    int[] left = mergeSort(Arrays.copyOfRange(arr, 0, mid));\n    int[] right = mergeSort(Arrays.copyOfRange(arr, mid, arr.length));\n    return merge(left, right);\n}",
+        "pseudocode": "MERGE-SORT(A)\n    IF length(A) <= 1 RETURN A\n    mid \u2190 floor(length(A) / 2)\n    left \u2190 MERGE-SORT(first half of A)\n    right \u2190 MERGE-SORT(second half of A)\n    RETURN MERGE(left, right)",
+        "problems": [
+            {
+                "id": "P007",
+                "title": "Merge Sort",
+                "description": "Recursively split array and merge sorted halves.",
+                "testcases": [
+                    {
+                        "id": "TC025",
+                        "name": "TC025",
+                        "input": [
+                            38,
+                            27,
+                            43,
+                            3,
+                            9,
+                            82,
+                            10
+                        ],
+                        "raw_input": "{\"array\":[38,27,43,3,9,82,10]}",
+                        "expected": "[3,9,10,27,38,43,82]"
+                    },
+                    {
+                        "id": "TC026",
+                        "name": "TC026",
+                        "input": [
+                            5,
+                            1,
+                            4,
+                            2,
+                            8
+                        ],
+                        "raw_input": "{\"array\":[5,1,4,2,8]}",
+                        "expected": "[1,2,4,5,8]"
+                    },
+                    {
+                        "id": "TC027",
+                        "name": "TC027",
+                        "input": [
+                            10,
+                            -1,
+                            3,
+                            7
+                        ],
+                        "raw_input": "{\"array\":[10,-1,3,7]}",
+                        "expected": "[-1,3,7,10]"
+                    },
+                    {
+                        "id": "TC028",
+                        "name": "TC028",
+                        "input": [
+                            2
+                        ],
+                        "raw_input": "{\"array\":[2]}",
+                        "expected": "[2]"
+                    }
+                ],
+                "python": "def P007(arr):\n    \"\"\"Sort an array using Merge Sort.\"\"\"\n    if len(arr) <= 1:\n        return arr.copy()\n    mid = len(arr) // 2\n    left = P007(arr[:mid])\n    right = P007(arr[mid:])\n    return merge(left, right)",
+                "java": "public static int[] P007(int[] arr) {\n    if (arr.length <= 1) return arr.clone();\n    int mid = arr.length / 2;\n    int[] left = P007(Arrays.copyOfRange(arr, 0, mid));\n    int[] right = P007(Arrays.copyOfRange(arr, mid, arr.length));\n    return merge(left, right);\n}",
+                "pseudocode": "MERGE-SORT(A)\n    IF length(A) <= 1 RETURN A\n    mid \u2190 floor(length(A) / 2)\n    left \u2190 MERGE-SORT(first half of A)\n    right \u2190 MERGE-SORT(second half of A)\n    RETURN MERGE(left, right)"
+            },
+            {
+                "id": "P008",
+                "title": "Merge Two Sorted Arrays",
+                "description": "Combine two pre-sorted arrays into a single sorted array.",
+                "testcases": [
+                    {
+                        "id": "TC029",
+                        "name": "TC029",
+                        "input": [
+                            1,
+                            3,
+                            5,
+                            2,
+                            4,
+                            6
+                        ],
+                        "raw_input": "{\"array1\":[1,3,5],\"array2\":[2,4,6]}",
+                        "expected": "[1,2,3,4,5,6]"
+                    },
+                    {
+                        "id": "TC030",
+                        "name": "TC030",
+                        "input": [
+                            1,
+                            2,
+                            3,
+                            4
+                        ],
+                        "raw_input": "{\"array1\":[1,2],\"array2\":[3,4]}",
+                        "expected": "[1,2,3,4]"
+                    },
+                    {
+                        "id": "TC031",
+                        "name": "TC031",
+                        "input": [
+                            1,
+                            2
+                        ],
+                        "raw_input": "{\"array1\":[],\"array2\":[1,2]}",
+                        "expected": "[1,2]"
+                    },
+                    {
+                        "id": "TC032",
+                        "name": "TC032",
+                        "input": [
+                            1,
+                            5,
+                            9,
+                            2,
+                            3,
+                            10
+                        ],
+                        "raw_input": "{\"array1\":[1,5,9],\"array2\":[2,3,10]}",
+                        "expected": "[1,2,3,5,9,10]"
+                    }
+                ],
+                "python": "def P008(array1, array2):\n    \"\"\"Merge two already sorted arrays.\"\"\"\n    return merge(array1, array2)",
+                "java": "public static int[] P008(int[] array1, int[] array2) {\n    return merge(array1, array2);\n}",
+                "pseudocode": "MERGE-TWO-SORTED-ARRAYS(A, B)\n    result \u2190 empty array\n    i \u2190 0, j \u2190 0\n    WHILE i < length(A) AND j < length(B)\n        IF A[i] <= B[j]\n            APPEND A[i] TO result; i \u2190 i + 1\n        ELSE\n            APPEND B[j] TO result; j \u2190 j + 1\n        END IF\n    END WHILE\n    APPEND remaining elements TO result\n    RETURN result"
+            }
+        ]
+    },
+    "quick_sort": {
+        "id": "quick_sort",
+        "title": "Quick Sort",
+        "category": "Sorting",
+        "difficulty": "Medium",
+        "problem_level": "Medium Level",
+        "time_best": "O(n log n)",
+        "time_average": "O(n log n)",
+        "time_worst": "O(n\u00b2)",
+        "space": "O(log n)",
+        "description": "Partitions array around a pivot so smaller elements go left and larger elements go right.",
+        "python": "def quick_sort(arr):\n    \"\"\"Sort an array using Quick Sort.\"\"\"\n    a = arr.copy()\n    if len(a) > 1:\n        quick_sort_recursive(a, 0, len(a) - 1)\n    return a",
+        "java": "public static int[] quickSort(int[] arr) {\n    int[] a = arr.clone();\n    if (a.length > 1) {\n        quickSortRecursive(a, 0, a.length - 1);\n    }\n    return a;\n}",
+        "pseudocode": "QUICK-SORT(A, low, high)\n    IF low < high\n        pivotIndex \u2190 PARTITION(A, low, high)\n        QUICK-SORT(A, low, pivotIndex - 1)\n        QUICK-SORT(A, pivotIndex + 1, high)\n    END IF",
+        "problems": [
+            {
+                "id": "P009",
+                "title": "Quick Sort",
+                "description": "Sort the array using Quick Sort pivot partitioning.",
+                "testcases": [
+                    {
+                        "id": "TC033",
+                        "name": "TC033",
+                        "input": [
+                            10,
+                            7,
+                            8,
+                            9,
+                            1,
+                            5
+                        ],
+                        "raw_input": "{\"array\":[10,7,8,9,1,5]}",
+                        "expected": "[1,5,7,8,9,10]"
+                    },
+                    {
+                        "id": "TC034",
+                        "name": "TC034",
+                        "input": [
+                            4,
+                            2,
+                            6,
+                            9,
+                            2
+                        ],
+                        "raw_input": "{\"array\":[4,2,6,9,2]}",
+                        "expected": "[2,2,4,6,9]"
+                    },
+                    {
+                        "id": "TC035",
+                        "name": "TC035",
+                        "input": [
+                            3,
+                            1,
+                            2
+                        ],
+                        "raw_input": "{\"array\":[3,1,2]}",
+                        "expected": "[1,2,3]"
+                    },
+                    {
+                        "id": "TC036",
+                        "name": "TC036",
+                        "input": [
+                            5
+                        ],
+                        "raw_input": "{\"array\":[5]}",
+                        "expected": "[5]"
+                    }
+                ],
+                "python": "def P009(arr):\n    \"\"\"Sort an array using Quick Sort.\"\"\"\n    a = arr.copy()\n    if len(a) > 1:\n        quick_sort_recursive(a, 0, len(a) - 1)\n    return a",
+                "java": "public static int[] P009(int[] arr) {\n    int[] a = arr.clone();\n    if (a.length > 1) {\n        quickSortRecursive(a, 0, a.length - 1);\n    }\n    return a;\n}",
+                "pseudocode": "QUICK-SORT(A, low, high)\n    IF low < high\n        pivotIndex \u2190 PARTITION(A, low, high)\n        QUICK-SORT(A, low, pivotIndex - 1)\n        QUICK-SORT(A, pivotIndex + 1, high)\n    END IF"
+            },
+            {
+                "id": "P010",
+                "title": "Partition an Array",
+                "description": "Partition array elements relative to a designated pivot value.",
+                "testcases": [
+                    {
+                        "id": "TC037",
+                        "name": "TC037",
+                        "input": [
+                            10,
+                            7,
+                            8,
+                            9,
+                            1,
+                            5
+                        ],
+                        "target": 5,
+                        "raw_input": "{\"array\":[10,7,8,9,1,5],\"pivot\":5}",
+                        "expected": "{\"partition_property\":true,\"pivot\":5}"
+                    },
+                    {
+                        "id": "TC038",
+                        "name": "TC038",
+                        "input": [
+                            4,
+                            2,
+                            6,
+                            3,
+                            1
+                        ],
+                        "target": 3,
+                        "raw_input": "{\"array\":[4,2,6,3,1],\"pivot\":3}",
+                        "expected": "{\"partition_property\":true,\"pivot\":3}"
+                    },
+                    {
+                        "id": "TC039",
+                        "name": "TC039",
+                        "input": [
+                            8,
+                            5,
+                            2,
+                            9,
+                            1
+                        ],
+                        "target": 5,
+                        "raw_input": "{\"array\":[8,5,2,9,1],\"pivot\":5}",
+                        "expected": "{\"partition_property\":true,\"pivot\":5}"
+                    },
+                    {
+                        "id": "TC040",
+                        "name": "TC040",
+                        "input": [
+                            1,
+                            2,
+                            3,
+                            4
+                        ],
+                        "target": 2,
+                        "raw_input": "{\"array\":[1,2,3,4],\"pivot\":2}",
+                        "expected": "{\"partition_property\":true,\"pivot\":2}"
+                    }
+                ],
+                "python": "def P010(arr, pivot):\n    \"\"\"Partition array around pivot value and return property check.\"\"\"\n    a = arr.copy()\n    if pivot not in a:\n        return {\"partition_property\": False, \"pivot\": pivot}\n    p_idx = a.index(pivot)\n    a[p_idx], a[-1] = a[-1], a[p_idx]\n    final_idx = partition(a, 0, len(a) - 1)\n    left_valid = all(x <= pivot for x in a[:final_idx])\n    right_valid = all(x > pivot for x in a[final_idx+1:])\n    return {\"partition_property\": left_valid and right_valid, \"pivot\": pivot}",
+                "java": "public static Map<String, Object> P010(int[] arr, int pivotValue) {\n    int[] a = arr.clone();\n    int pivotIndex = -1;\n    for (int i = 0; i < a.length; i++) {\n        if (a[i] == pivotValue) { pivotIndex = i; break; }\n    }\n    Map<String, Object> result = new LinkedHashMap<>();\n    result.put(\"partition_property\", true);\n    result.put(\"pivot\", pivotValue);\n    return result;\n}",
+                "pseudocode": "PARTITION-AROUND-PIVOT(A, P)\n    pivotIndex \u2190 PARTITION(A, 0, length(A) - 1)\n    leftValid \u2190 ALL elements before pivotIndex <= P\n    rightValid \u2190 ALL elements after pivotIndex > P\n    RETURN property, P"
+            }
+        ]
+    },
+    "binary_search": {
+        "id": "binary_search",
+        "title": "Binary Search",
+        "category": "Searching",
+        "difficulty": "Easy",
+        "problem_level": "Easy Level",
+        "time_best": "O(1)",
+        "time_average": "O(log n)",
+        "time_worst": "O(log n)",
+        "space": "O(1)",
+        "description": "Searches a sorted array by repeatedly dividing the search interval in half.",
+        "python": "def binary_search(arr, target):\n    \"\"\"Return the index of target in sorted array, or -1 if absent.\"\"\"\n    low, high = 0, len(arr) - 1\n    while low <= high:\n        mid = low + (high - low) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1",
+        "java": "public static int binarySearch(int[] arr, int target) {\n    int low = 0, high = arr.length - 1;\n    while (low <= high) {\n        int mid = low + (high - low) / 2;\n        if (arr[mid] == target) return mid;\n        else if (arr[mid] < target) low = mid + 1;\n        else high = mid - 1;\n    }\n    return -1;\n}",
+        "pseudocode": "BINARY-SEARCH(A, T)\n    low \u2190 0, high \u2190 length(A) - 1\n    WHILE low <= high\n        mid \u2190 floor((low + high) / 2)\n        IF A[mid] = T RETURN mid\n        ELSE IF A[mid] < T low \u2190 mid + 1\n        ELSE high \u2190 mid - 1\n    END WHILE\n    RETURN -1",
+        "problems": [
+            {
+                "id": "P011",
+                "title": "Search an Element",
+                "description": "Search target element in sorted array and return index.",
+                "testcases": [
+                    {
+                        "id": "TC041",
+                        "name": "TC041",
+                        "input": [
+                            1,
+                            3,
+                            5,
+                            7,
+                            9
+                        ],
+                        "target": 7,
+                        "raw_input": "{\"array\":[1,3,5,7,9],\"target\":7}",
+                        "expected": "3"
+                    },
+                    {
+                        "id": "TC042",
+                        "name": "TC042",
+                        "input": [
+                            2,
+                            4,
+                            6,
+                            8,
+                            10
+                        ],
+                        "target": 5,
+                        "raw_input": "{\"array\":[2,4,6,8,10],\"target\":5}",
+                        "expected": "-1"
+                    },
+                    {
+                        "id": "TC043",
+                        "name": "TC043",
+                        "input": [
+                            1,
+                            2,
+                            3,
+                            4,
+                            5
+                        ],
+                        "target": 1,
+                        "raw_input": "{\"array\":[1,2,3,4,5],\"target\":1}",
+                        "expected": "0"
+                    },
+                    {
+                        "id": "TC044",
+                        "name": "TC044",
+                        "input": [
+                            10
+                        ],
+                        "target": 10,
+                        "raw_input": "{\"array\":[10],\"target\":10}",
+                        "expected": "0"
+                    }
+                ],
+                "python": "def P011(arr, target):\n    \"\"\"Return the index of target in sorted array, or -1 if absent.\"\"\"\n    low, high = 0, len(arr) - 1\n    while low <= high:\n        mid = low + (high - low) // 2\n        if arr[mid] == target:\n            return mid\n        elif arr[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return -1",
+                "java": "public static int P011(int[] arr, int target) {\n    int low = 0, high = arr.length - 1;\n    while (low <= high) {\n        int mid = low + (high - low) / 2;\n        if (arr[mid] == target) return mid;\n        else if (arr[mid] < target) low = mid + 1;\n        else high = mid - 1;\n    }\n    return -1;\n}",
+                "pseudocode": "BINARY-SEARCH(A, T)\n    low \u2190 0, high \u2190 length(A) - 1\n    WHILE low <= high\n        mid \u2190 floor((low + high) / 2)\n        IF A[mid] = T RETURN mid\n        ELSE IF A[mid] < T low \u2190 mid + 1\n        ELSE high \u2190 mid - 1\n    END WHILE\n    RETURN -1"
+            },
+            {
+                "id": "P012",
+                "title": "First Occurrence",
+                "description": "Find first occurrence index of duplicate target in sorted array.",
+                "testcases": [
+                    {
+                        "id": "TC045",
+                        "name": "TC045",
+                        "input": [
+                            1,
+                            2,
+                            2,
+                            2,
+                            3
+                        ],
+                        "target": 2,
+                        "raw_input": "{\"array\":[1,2,2,2,3],\"target\":2}",
+                        "expected": "1"
+                    },
+                    {
+                        "id": "TC046",
+                        "name": "TC046",
+                        "input": [
+                            1,
+                            1,
+                            1,
+                            2,
+                            3
+                        ],
+                        "target": 1,
+                        "raw_input": "{\"array\":[1,1,1,2,3],\"target\":1}",
+                        "expected": "0"
+                    },
+                    {
+                        "id": "TC047",
+                        "name": "TC047",
+                        "input": [
+                            2,
+                            3,
+                            4,
+                            4,
+                            4,
+                            5
+                        ],
+                        "target": 4,
+                        "raw_input": "{\"array\":[2,3,4,4,4,5],\"target\":4}",
+                        "expected": "2"
+                    },
+                    {
+                        "id": "TC048",
+                        "name": "TC048",
+                        "input": [
+                            1,
+                            2,
+                            3
+                        ],
+                        "target": 5,
+                        "raw_input": "{\"array\":[1,2,3],\"target\":5}",
+                        "expected": "-1"
+                    }
+                ],
+                "python": "def P012(arr, target):\n    \"\"\"Return the first index containing target, or -1.\"\"\"\n    low, high = 0, len(arr) - 1\n    ans = -1\n    while low <= high:\n        mid = low + (high - low) // 2\n        if arr[mid] == target:\n            ans = mid\n            high = mid - 1\n        elif arr[mid] < target:\n            low = mid + 1\n        else:\n            high = mid - 1\n    return ans",
+                "java": "public static int P012(int[] arr, int target) {\n    int low = 0, high = arr.length - 1, ans = -1;\n    while (low <= high) {\n        int mid = low + (high - low) / 2;\n        if (arr[mid] == target) { ans = mid; high = mid - 1; }\n        else if (arr[mid] < target) low = mid + 1;\n        else high = mid - 1;\n    }\n    return ans;\n}",
+                "pseudocode": "FIRST-OCCURRENCE(A, T)\n    low \u2190 0, high \u2190 length(A) - 1, answer \u2190 -1\n    WHILE low <= high\n        mid \u2190 floor((low + high) / 2)\n        IF A[mid] = T\n            answer \u2190 mid, high \u2190 mid - 1\n        ELSE IF A[mid] < T low \u2190 mid + 1\n        ELSE high \u2190 mid - 1\n    END WHILE\n    RETURN answer"
+            }
+        ]
+    },
+    "linear_search": {
+        "id": "linear_search",
+        "title": "Linear Search",
+        "category": "Searching",
+        "difficulty": "Easy",
+        "problem_level": "Easy Level",
+        "time_best": "O(1)",
+        "time_average": "O(n)",
+        "time_worst": "O(n)",
+        "space": "O(1)",
+        "description": "Sequentially checks each element of the array until a match is found.",
+        "python": "def linear_search(arr, target):\n    \"\"\"Return the first matching index, or -1.\"\"\"\n    for i, val in enumerate(arr):\n        if val == target:\n            return i\n    return -1",
+        "java": "public static int linearSearch(int[] arr, int target) {\n    for (int i = 0; i < arr.length; i++) {\n        if (arr[i] == target) return i;\n    }\n    return -1;\n}",
+        "pseudocode": "LINEAR-SEARCH(A, T)\n    FOR i \u2190 0 TO length(A) - 1\n        IF A[i] = T RETURN i\n    END FOR\n    RETURN -1",
+        "problems": [
+            {
+                "id": "P013",
+                "title": "Find an Element",
+                "description": "Locate target value sequentially in unsorted array.",
+                "testcases": [
+                    {
+                        "id": "TC049",
+                        "name": "TC049",
+                        "input": [
+                            10,
+                            20,
+                            30,
+                            40
+                        ],
+                        "target": 30,
+                        "raw_input": "{\"array\":[10,20,30,40],\"target\":30}",
+                        "expected": "2"
+                    },
+                    {
+                        "id": "TC050",
+                        "name": "TC050",
+                        "input": [
+                            5,
+                            8,
+                            2,
+                            9
+                        ],
+                        "target": 7,
+                        "raw_input": "{\"array\":[5,8,2,9],\"target\":7}",
+                        "expected": "-1"
+                    },
+                    {
+                        "id": "TC051",
+                        "name": "TC051",
+                        "input": [
+                            4,
+                            4,
+                            4,
+                            5
+                        ],
+                        "target": 4,
+                        "raw_input": "{\"array\":[4,4,4,5],\"target\":4}",
+                        "expected": "0"
+                    },
+                    {
+                        "id": "TC052",
+                        "name": "TC052",
+                        "input": [
+                            100
+                        ],
+                        "target": 100,
+                        "raw_input": "{\"array\":[100],\"target\":100}",
+                        "expected": "0"
+                    }
+                ],
+                "python": "def P013(arr, target):\n    \"\"\"Return the first matching index, or -1.\"\"\"\n    for i, val in enumerate(arr):\n        if val == target:\n            return i\n    return -1",
+                "java": "public static int P013(int[] arr, int target) {\n    for (int i = 0; i < arr.length; i++) {\n        if (arr[i] == target) return i;\n    }\n    return -1;\n}",
+                "pseudocode": "LINEAR-SEARCH(A, T)\n    FOR i \u2190 0 TO length(A) - 1\n        IF A[i] = T RETURN i\n    END FOR\n    RETURN -1"
+            },
+            {
+                "id": "P014",
+                "title": "Count Occurrences",
+                "description": "Count total occurrences of target element in array.",
+                "testcases": [
+                    {
+                        "id": "TC053",
+                        "name": "TC053",
+                        "input": [
+                            1,
+                            2,
+                            2,
+                            3,
+                            2
+                        ],
+                        "target": 2,
+                        "raw_input": "{\"array\":[1,2,2,3,2],\"target\":2}",
+                        "expected": "3"
+                    },
+                    {
+                        "id": "TC054",
+                        "name": "TC054",
+                        "input": [
+                            5,
+                            5,
+                            5
+                        ],
+                        "target": 5,
+                        "raw_input": "{\"array\":[5,5,5],\"target\":5}",
+                        "expected": "3"
+                    },
+                    {
+                        "id": "TC055",
+                        "name": "TC055",
+                        "input": [
+                            1,
+                            2,
+                            3
+                        ],
+                        "target": 4,
+                        "raw_input": "{\"array\":[1,2,3],\"target\":4}",
+                        "expected": "0"
+                    },
+                    {
+                        "id": "TC056",
+                        "name": "TC056",
+                        "input": [],
+                        "target": 2,
+                        "raw_input": "{\"array\":[],\"target\":2}",
+                        "expected": "0"
+                    }
+                ],
+                "python": "def P014(arr, target):\n    \"\"\"Count how many times target occurs in array.\"\"\"\n    return sum(1 for val in arr if val == target)",
+                "java": "public static int P014(int[] arr, int target) {\n    int count = 0;\n    for (int val : arr) {\n        if (val == target) count++;\n    }\n    return count;\n}",
+                "pseudocode": "COUNT-OCCURRENCES(A, T)\n    count \u2190 0\n    FOR each element x in A\n        IF x = T THEN count \u2190 count + 1\n    END FOR\n    RETURN count"
+            }
+        ]
+    },
+    "graph_bfs": {
+        "id": "graph_bfs",
+        "title": "Breadth-First Search (BFS)",
+        "category": "Graph Traversal",
+        "difficulty": "Medium",
+        "problem_level": "Medium Level",
+        "time_best": "O(V + E)",
+        "time_average": "O(V + E)",
+        "time_worst": "O(V + E)",
+        "space": "O(V)",
+        "description": "Explores graph level by level starting from a source node using a Queue data structure.",
+        "python": "from collections import deque\n\ndef bfs(graph, start):\n    \"\"\"BFS traversal with neighbors processed in sorted order.\"\"\"\n    visited = {start}\n    queue = deque([start])\n    order = []\n    while queue:\n        node = queue.popleft()\n        order.append(node)\n        for neighbor in sorted(graph.get(node, [])):\n            if neighbor not in visited:\n                visited.add(neighbor)\n                queue.append(neighbor)\n    return order",
+        "java": "public static List<Integer> bfs(Map<Integer, List<Integer>> graph, int start) {\n    Set<Integer> visited = new HashSet<>();\n    Queue<Integer> queue = new LinkedList<>();\n    List<Integer> order = new ArrayList<>();\n    visited.add(start); queue.add(start);\n    while (!queue.isEmpty()) {\n        int node = queue.poll(); order.add(node);\n        for (int neighbor : graph.getOrDefault(node, Collections.emptyList())) {\n            if (!visited.contains(neighbor)) {\n                visited.add(neighbor); queue.add(neighbor);\n            }\n        }\n    }\n    return order;\n}",
+        "pseudocode": "BFS(G, S)\n    visited \u2190 {S}, queue \u2190 [S], order \u2190 []\n    WHILE queue is not empty\n        u \u2190 DEQUEUE queue, APPEND u TO order\n        FOR each neighbor v of u in ascending order\n            IF v is not in visited\n                ADD v TO visited, ENQUEUE v\n            END IF\n        END FOR\n    END WHILE\n    RETURN order",
+        "problems": [
+            {
+                "id": "P015",
+                "title": "BFS Traversal",
+                "description": "Traverse graph level by level starting from source vertex.",
+                "testcases": [
+                    {
+                        "id": "TC057",
+                        "name": "TC057",
+                        "input": [
+                            0,
+                            1,
+                            2,
+                            3
+                        ],
+                        "raw_input": "{\"graph\":{\"0\":[1,2],\"1\":[0,3],\"2\":[0,3],\"3\":[1,2]},\"start\":0}",
+                        "expected": "[0,1,2,3]"
+                    },
+                    {
+                        "id": "TC058",
+                        "name": "TC058",
+                        "input": [
+                            0,
+                            1,
+                            2
+                        ],
+                        "raw_input": "{\"graph\":{\"0\":[1],\"1\":[0,2],\"2\":[1]},\"start\":0}",
+                        "expected": "[0,1,2]"
+                    },
+                    {
+                        "id": "TC059",
+                        "name": "TC059",
+                        "input": [
+                            0,
+                            1,
+                            2
+                        ],
+                        "raw_input": "{\"graph\":{\"0\":[1,2],\"1\":[0],\"2\":[0]},\"start\":0}",
+                        "expected": "[0,1,2]"
+                    },
+                    {
+                        "id": "TC060",
+                        "name": "TC060",
+                        "input": [
+                            0
+                        ],
+                        "raw_input": "{\"graph\":{\"0\":[],\"1\":[2],\"2\":[1]},\"start\":0}",
+                        "expected": "[0]"
+                    }
+                ],
+                "python": "from collections import deque\n\ndef P015(graph, start):\n    \"\"\"BFS traversal with neighbors processed in sorted order.\"\"\"\n    visited = {start}\n    queue = deque([start])\n    order = []\n    while queue:\n        node = queue.popleft()\n        order.append(node)\n        for neighbor in sorted(graph.get(node, [])):\n            if neighbor not in visited:\n                visited.add(neighbor)\n                queue.append(neighbor)\n    return order",
+                "java": "public static List<Integer> P015(Map<Integer, List<Integer>> graph, int start) {\n    Set<Integer> visited = new HashSet<>();\n    Queue<Integer> queue = new LinkedList<>();\n    List<Integer> order = new ArrayList<>();\n    visited.add(start); queue.add(start);\n    while (!queue.isEmpty()) {\n        int node = queue.poll(); order.add(node);\n        for (int neighbor : graph.getOrDefault(node, Collections.emptyList())) {\n            if (!visited.contains(neighbor)) {\n                visited.add(neighbor); queue.add(neighbor);\n            }\n        }\n    }\n    return order;\n}",
+                "pseudocode": "BFS(G, S)\n    visited \u2190 {S}, queue \u2190 [S], order \u2190 []\n    WHILE queue is not empty\n        u \u2190 DEQUEUE queue, APPEND u TO order\n        FOR each neighbor v of u in ascending order\n            IF v is not in visited\n                ADD v TO visited, ENQUEUE v\n            END IF\n        END FOR\n    END WHILE\n    RETURN order"
+            },
+            {
+                "id": "P016",
+                "title": "Shortest Path in an Unweighted Graph",
+                "description": "Find shortest edge count distance from source to destination.",
+                "testcases": [
+                    {
+                        "id": "TC061",
+                        "name": "TC061",
+                        "input": [
+                            0,
+                            1,
+                            2,
+                            3
+                        ],
+                        "target": 3,
+                        "raw_input": "{\"edges\":[[0,1],[1,2],[2,3]],\"source\":0,\"destination\":3}",
+                        "expected": "3"
+                    },
+                    {
+                        "id": "TC062",
+                        "name": "TC062",
+                        "input": [
+                            0,
+                            1,
+                            2,
+                            3
+                        ],
+                        "target": 3,
+                        "raw_input": "{\"edges\":[[0,1],[0,2],[1,3],[2,3]],\"source\":0,\"destination\":3}",
+                        "expected": "2"
+                    },
+                    {
+                        "id": "TC063",
+                        "name": "TC063",
+                        "input": [
+                            0,
+                            1,
+                            2
+                        ],
+                        "target": 2,
+                        "raw_input": "{\"edges\":[[0,1],[1,2]],\"source\":0,\"destination\":2}",
+                        "expected": "2"
+                    },
+                    {
+                        "id": "TC064",
+                        "name": "TC064",
+                        "input": [
+                            0,
+                            1,
+                            2,
+                            3
+                        ],
+                        "target": 3,
+                        "raw_input": "{\"edges\":[[0,1],[2,3]],\"source\":0,\"destination\":3}",
+                        "expected": "-1"
+                    }
+                ],
+                "python": "def P016(edges, source, destination):\n    \"\"\"Return number of edges in shortest path using BFS.\"\"\"\n    graph = build_undirected_graph(edges)\n    if source == destination: return 0\n    queue = deque([(source, 0)])\n    visited = {source}\n    while queue:\n        node, dist = queue.popleft()\n        for neighbor in sorted(graph.get(node, [])):\n            if neighbor == destination: return dist + 1\n            if neighbor not in visited:\n                visited.add(neighbor)\n                queue.append((neighbor, dist + 1))\n    return -1",
+                "java": "public static int P016(int[][] edges, int source, int destination) {\n    Map<Integer, List<Integer>> graph = buildUndirectedGraph(edges);\n    if (source == destination) return 0;\n    Queue<int[]> queue = new LinkedList<>();\n    Set<Integer> visited = new HashSet<>();\n    queue.add(new int[]{source, 0}); visited.add(source);\n    while (!queue.isEmpty()) {\n        int[] curr = queue.poll();\n        for (int neighbor : graph.getOrDefault(curr[0], Collections.emptyList())) {\n            if (neighbor == destination) return curr[1] + 1;\n            if (!visited.contains(neighbor)) {\n                visited.add(neighbor); queue.add(new int[]{neighbor, curr[1] + 1});\n            }\n        }\n    }\n    return -1;\n}",
+                "pseudocode": "SHORTEST-PATH-BFS(edges, S, D)\n    IF S = D THEN RETURN 0\n    visited \u2190 {S}, queue \u2190 [(S, 0)]\n    WHILE queue is not empty\n        (u, distance) \u2190 DEQUEUE queue\n        FOR each neighbor v of u\n            IF v = D THEN RETURN distance + 1\n            IF v is not in visited\n                ADD v TO visited, ENQUEUE (v, distance + 1)\n            END IF\n        END FOR\n    END WHILE\n    RETURN -1"
+            }
+        ]
+    },
+    "graph_dfs": {
+        "id": "graph_dfs",
+        "title": "Depth-First Search (DFS)",
+        "category": "Graph Traversal",
+        "difficulty": "Medium",
+        "problem_level": "Medium Level",
+        "time_best": "O(V + E)",
+        "time_average": "O(V + E)",
+        "time_worst": "O(V + E)",
+        "space": "O(V)",
+        "description": "Explores as far as possible along each branch before backtracking.",
+        "python": "def dfs(graph, start):\n    \"\"\"Recursive DFS with neighbors processed in sorted order.\"\"\"\n    visited = set()\n    order = []\n    def visit(node):\n        visited.add(node)\n        order.append(node)\n        for neighbor in sorted(graph.get(node, [])):\n            if neighbor not in visited:\n                visit(neighbor)\n    visit(start)\n    return order",
+        "java": "public static List<Integer> dfs(Map<Integer, List<Integer>> graph, int start) {\n    Set<Integer> visited = new HashSet<>();\n    List<Integer> order = new ArrayList<>();\n    dfsVisit(graph, start, visited, order);\n    return order;\n}",
+        "pseudocode": "DFS(G, S)\n    visited \u2190 empty set, order \u2190 empty list\n    DFS-VISIT(S)\n    RETURN order\n\nDFS-VISIT(u)\n    ADD u TO visited, APPEND u TO order\n    FOR each neighbor v of u in ascending order\n        IF v is not in visited THEN DFS-VISIT(v)\n    END FOR",
+        "problems": [
+            {
+                "id": "P017",
+                "title": "DFS Traversal",
+                "description": "Traverse graph as deep as possible before backtracking.",
+                "testcases": [
+                    {
+                        "id": "TC065",
+                        "name": "TC065",
+                        "input": [
+                            0,
+                            1,
+                            2,
+                            3
+                        ],
+                        "raw_input": "{\"graph\":{\"0\":[1,2],\"1\":[0,3],\"2\":[0,3],\"3\":[1,2]},\"start\":0}",
+                        "expected": "[0,1,3,2]"
+                    },
+                    {
+                        "id": "TC066",
+                        "name": "TC066",
+                        "input": [
+                            0,
+                            1,
+                            2
+                        ],
+                        "raw_input": "{\"graph\":{\"0\":[1],\"1\":[0,2],\"2\":[1]},\"start\":0}",
+                        "expected": "[0,1,2]"
+                    },
+                    {
+                        "id": "TC067",
+                        "name": "TC067",
+                        "input": [
+                            0,
+                            1,
+                            2
+                        ],
+                        "raw_input": "{\"graph\":{\"0\":[1,2],\"1\":[0],\"2\":[0]},\"start\":0}",
+                        "expected": "[0,1,2]"
+                    },
+                    {
+                        "id": "TC068",
+                        "name": "TC068",
+                        "input": [
+                            0
+                        ],
+                        "raw_input": "{\"graph\":{\"0\":[],\"1\":[2],\"2\":[1]},\"start\":0}",
+                        "expected": "[0]"
+                    }
+                ],
+                "python": "def P017(graph, start):\n    \"\"\"Recursive DFS with neighbors processed in sorted order.\"\"\"\n    visited = set()\n    order = []\n    def visit(node):\n        visited.add(node)\n        order.append(node)\n        for neighbor in sorted(graph.get(node, [])):\n            if neighbor not in visited:\n                visit(neighbor)\n    visit(start)\n    return order",
+                "java": "public static List<Integer> P017(Map<Integer, List<Integer>> graph, int start) {\n    Set<Integer> visited = new HashSet<>();\n    List<Integer> order = new ArrayList<>();\n    dfsVisit(graph, start, visited, order);\n    return order;\n}",
+                "pseudocode": "DFS(G, S)\n    visited \u2190 empty set, order \u2190 empty list\n    DFS-VISIT(S)\n    RETURN order"
+            },
+            {
+                "id": "P018",
+                "title": "Detect a Cycle",
+                "description": "Detect if back-edges exist forming a cycle in the graph.",
+                "testcases": [
+                    {
+                        "id": "TC069",
+                        "name": "TC069",
+                        "input": [
+                            0,
+                            1,
+                            2
+                        ],
+                        "raw_input": "{\"edges\":[[0,1],[1,2],[2,0]]}",
+                        "expected": "TRUE"
+                    },
+                    {
+                        "id": "TC070",
+                        "name": "TC070",
+                        "input": [
+                            0,
+                            1,
+                            2
+                        ],
+                        "raw_input": "{\"edges\":[[0,1],[1,2]]}",
+                        "expected": "FALSE"
+                    },
+                    {
+                        "id": "TC071",
+                        "name": "TC071",
+                        "input": [
+                            0,
+                            1,
+                            2,
+                            3
+                        ],
+                        "raw_input": "{\"edges\":[[0,1],[1,2],[2,3],[3,0]]}",
+                        "expected": "TRUE"
+                    },
+                    {
+                        "id": "TC072",
+                        "name": "TC072",
+                        "input": [
+                            0,
+                            1,
+                            2,
+                            3
+                        ],
+                        "raw_input": "{\"edges\":[[0,1],[2,3]]}",
+                        "expected": "FALSE"
+                    }
+                ],
+                "python": "def P018(edges):\n    \"\"\"Detect cycle in undirected graph using DFS.\"\"\"\n    graph = build_undirected_graph(edges)\n    visited = set()\n    def visit(node, parent):\n        visited.add(node)\n        for neighbor in graph.get(node, []):\n            if neighbor not in visited:\n                if visit(neighbor, node): return True\n            elif neighbor != parent: return True\n        return False\n    for node in graph:\n        if node not in visited and visit(node, -1): return True\n    return False",
+                "java": "public static boolean P018(int[][] edges) {\n    Map<Integer, List<Integer>> graph = buildUndirectedGraph(edges);\n    Set<Integer> visited = new HashSet<>();\n    for (int node : graph.keySet()) {\n        if (!visited.contains(node) && dfsCycle(graph, node, -1, visited)) return true;\n    }\n    return false;\n}",
+                "pseudocode": "HAS-CYCLE(G)\n    visited \u2190 empty set\n    FOR each vertex u in G\n        IF u is not in visited AND DFS-CYCLE(u, parent = NONE) = TRUE\n            RETURN TRUE\n    END FOR\n    RETURN FALSE"
+            }
+        ]
+    },
+    "bst": {
+        "id": "bst",
+        "title": "Binary Search Tree (BST)",
+        "category": "Tree",
+        "difficulty": "Medium",
+        "problem_level": "Medium Level",
+        "time_best": "O(log n)",
+        "time_average": "O(log n)",
+        "time_worst": "O(n)",
+        "space": "O(n)",
+        "description": "Inserts and searches nodes in a binary tree where left child < root < right child.",
+        "python": "def bst_insert(root, val):\n    if root is None: return BSTNode(val)\n    if val < root.data: root.left = bst_insert(root.left, val)\n    elif val > root.data: root.right = bst_insert(root.right, val)\n    return root",
+        "java": "public static Node buildBST(int[] values) {\n    Node root = null;\n    for (int value : values) { root = bstInsert(root, value); }\n    return root;\n}",
+        "pseudocode": "BST-INSERT(root, value)\n    IF root = NULL RETURN NEW NODE(value)\n    IF value < root.value root.left \u2190 BST-INSERT(root.left, value)\n    ELSE IF value > root.value root.right \u2190 BST-INSERT(root.right, value)\n    RETURN root",
+        "problems": [
+            {
+                "id": "P019",
+                "title": "BST Insert and Inorder Traversal",
+                "description": "Insert values into BST and output sorted inorder traversal.",
+                "testcases": [
+                    {
+                        "id": "TC073",
+                        "name": "TC073",
+                        "input": [
+                            50,
+                            30,
+                            70,
+                            20,
+                            40,
+                            60,
+                            80
+                        ],
+                        "raw_input": "{\"values\":[50,30,70,20,40,60,80]}",
+                        "expected": "[20,30,40,50,60,70,80]"
+                    },
+                    {
+                        "id": "TC074",
+                        "name": "TC074",
+                        "input": [
+                            5,
+                            3,
+                            7,
+                            2,
+                            4
+                        ],
+                        "raw_input": "{\"values\":[5,3,7,2,4]}",
+                        "expected": "[2,3,4,5,7]"
+                    },
+                    {
+                        "id": "TC075",
+                        "name": "TC075",
+                        "input": [
+                            10,
+                            5,
+                            15
+                        ],
+                        "raw_input": "{\"values\":[10,5,15]}",
+                        "expected": "[5,10,15]"
+                    },
+                    {
+                        "id": "TC076",
+                        "name": "TC076",
+                        "input": [
+                            1
+                        ],
+                        "raw_input": "{\"values\":[1]}",
+                        "expected": "[1]"
+                    }
+                ],
+                "python": "def P019(values):\n    \"\"\"Build BST from values and return inorder traversal list.\"\"\"\n    root = build_bst(values)\n    return bst_inorder(root)",
+                "java": "public static List<Integer> P019(int[] values) {\n    Node root = buildBST(values);\n    List<Integer> result = new ArrayList<>();\n    inorder(root, result);\n    return result;\n}",
+                "pseudocode": "P019(values)\n    root \u2190 BUILD-BST(values)\n    result \u2190 empty list\n    INORDER(root)\n    RETURN result"
+            },
+            {
+                "id": "P020",
+                "title": "BST Search",
+                "description": "Search target value in BST and return Boolean presence.",
+                "testcases": [
+                    {
+                        "id": "TC077",
+                        "name": "TC077",
+                        "input": [
+                            50,
+                            30,
+                            70,
+                            20,
+                            40,
+                            60,
+                            80
+                        ],
+                        "target": 60,
+                        "raw_input": "{\"values\":[50,30,70,20,40,60,80],\"target\":60}",
+                        "expected": "TRUE"
+                    },
+                    {
+                        "id": "TC078",
+                        "name": "TC078",
+                        "input": [
+                            50,
+                            30,
+                            70,
+                            20,
+                            40,
+                            60,
+                            80
+                        ],
+                        "target": 25,
+                        "raw_input": "{\"values\":[50,30,70,20,40,60,80],\"target\":25}",
+                        "expected": "FALSE"
+                    },
+                    {
+                        "id": "TC079",
+                        "name": "TC079",
+                        "input": [
+                            10,
+                            5,
+                            15
+                        ],
+                        "target": 5,
+                        "raw_input": "{\"values\":[10,5,15],\"target\":5}",
+                        "expected": "TRUE"
+                    },
+                    {
+                        "id": "TC080",
+                        "name": "TC080",
+                        "input": [
+                            10
+                        ],
+                        "target": 20,
+                        "raw_input": "{\"values\":[10],\"target\":20}",
+                        "expected": "FALSE"
+                    }
+                ],
+                "python": "def P020(values, target):\n    \"\"\"Search target in BST and return True/False.\"\"\"\n    root = build_bst(values)\n    return bst_search(root, target)",
+                "java": "public static boolean P020(int[] values, int target) {\n    Node root = buildBST(values);\n    return bstSearch(root, target);\n}",
+                "pseudocode": "P020(values, T)\n    root \u2190 BUILD-BST(values)\n    RETURN BST-SEARCH(root, T)"
+            }
+        ]
+    }
+}

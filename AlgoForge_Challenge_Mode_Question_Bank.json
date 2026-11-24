@@ -1,0 +1,2014 @@
+[
+  {
+    "id": "POOL_COD_01",
+    "title": "SELECTION SORT MINIMUM INDEX INVARIANT",
+    "type": "coding",
+    "topic": "Sorting Algorithms",
+    "difficulty": "Easy",
+    "timeLimitMinutes": 15,
+    "pts": 50,
+    "description": "Implement Selection Sort maintaining the exact loop invariant where after pass i, elements in index range [0..i] are in sorted non-decreasing order. Return the sorted array.",
+    "starterCode": "def solution(arr):\n    # Write your Selection Sort code here\n    pass\n",
+    "testCases": [
+      {
+        "id": "TC #01",
+        "input": "[64, 25, 12, 22, 11]",
+        "expected": "[11, 12, 22, 25, 64]",
+        "expectedOutput": "[11, 12, 22, 25, 64]",
+        "description": "Standard unsorted array"
+      },
+      {
+        "id": "TC #02",
+        "input": "[5, 4, 3, 2, 1]",
+        "expected": "[1, 2, 3, 4, 5]",
+        "expectedOutput": "[1, 2, 3, 4, 5]",
+        "description": "Strictly reverse-sorted array"
+      },
+      {
+        "id": "TC #03",
+        "input": "[42]",
+        "expected": "[42]",
+        "expectedOutput": "[42]",
+        "description": "Single-element boundary"
+      },
+      {
+        "id": "TC #04",
+        "input": "[3, 1, 4, 1, 5, 9, 2, 6, 5]",
+        "expected": "[1, 1, 2, 3, 4, 5, 5, 6, 9]",
+        "expectedOutput": "[1, 1, 2, 3, 4, 5, 5, 6, 9]",
+        "description": "Duplicate keys and collisions"
+      },
+      {
+        "id": "TC #05",
+        "input": "[-10, 45, 0, -2, 18, -100]",
+        "expected": "[-100, -10, -2, 0, 18, 45]",
+        "expectedOutput": "[-100, -10, -2, 0, 18, 45]",
+        "description": "Negative numbers and zero"
+      }
+    ],
+    "desc": "Implement Selection Sort maintaining the exact loop invariant where after pass i, elements in index range [0..i] are in sorted non-decreasing order. Return the sorted array.",
+    "code": "def solution(arr):\n    # Write your Selection Sort code here\n    pass\n",
+    "points": 50,
+    "testcases": [
+      {
+        "id": "TC #01",
+        "input": "[64, 25, 12, 22, 11]",
+        "expected": "[11, 12, 22, 25, 64]",
+        "expectedOutput": "[11, 12, 22, 25, 64]",
+        "description": "Standard unsorted array"
+      },
+      {
+        "id": "TC #02",
+        "input": "[5, 4, 3, 2, 1]",
+        "expected": "[1, 2, 3, 4, 5]",
+        "expectedOutput": "[1, 2, 3, 4, 5]",
+        "description": "Strictly reverse-sorted array"
+      },
+      {
+        "id": "TC #03",
+        "input": "[42]",
+        "expected": "[42]",
+        "expectedOutput": "[42]",
+        "description": "Single-element boundary"
+      },
+      {
+        "id": "TC #04",
+        "input": "[3, 1, 4, 1, 5, 9, 2, 6, 5]",
+        "expected": "[1, 1, 2, 3, 4, 5, 5, 6, 9]",
+        "expectedOutput": "[1, 1, 2, 3, 4, 5, 5, 6, 9]",
+        "description": "Duplicate keys and collisions"
+      },
+      {
+        "id": "TC #05",
+        "input": "[-10, 45, 0, -2, 18, -100]",
+        "expected": "[-100, -10, -2, 0, 18, 45]",
+        "expectedOutput": "[-100, -10, -2, 0, 18, 45]",
+        "description": "Negative numbers and zero"
+      }
+    ],
+    "input_format": "arr = [64, 25, 12, 22, 11]",
+    "output_format": "Result: [11, 12, 22, 25, 64]",
+    "constraints": "1 ≤ N ≤ 100,000 • Runtime: ≤ 1.5s • Memory: ≤ 256MB",
+    "hint": "Optimize asymptotically for O(N log N) or linear time bounds."
+  },
+  {
+    "id": "POOL_COD_02",
+    "title": "BUBBLE SORT SWAP COUNTER & OPTIMIZATION",
+    "type": "coding",
+    "topic": "Sorting Algorithms",
+    "difficulty": "Easy",
+    "timeLimitMinutes": 15,
+    "pts": 50,
+    "description": "Given an array of integers, sort the array in ascending order using Bubble Sort with an early-exit flag. Return a list [swap_count, first_element, last_element].",
+    "starterCode": "def solution(arr):\n    # Return [swap_count, first_element, last_element]\n    pass\n",
+    "testCases": [
+      {
+        "id": "TC #01",
+        "input": "[6, 4, 1]",
+        "expected": "[3, 1, 6]",
+        "expectedOutput": "[3, 1, 6]",
+        "description": "3-element inversion"
+      },
+      {
+        "id": "TC #02",
+        "input": "[1, 2, 3]",
+        "expected": "[0, 1, 3]",
+        "expectedOutput": "[0, 1, 3]",
+        "description": "Already sorted, 0 swaps"
+      },
+      {
+        "id": "TC #03",
+        "input": "[3, 2, 1]",
+        "expected": "[3, 1, 3]",
+        "expectedOutput": "[3, 1, 3]",
+        "description": "Worst-case reverse sorted"
+      },
+      {
+        "id": "TC #04",
+        "input": "[4, 4, 4]",
+        "expected": "[0, 4, 4]",
+        "expectedOutput": "[0, 4, 4]",
+        "description": "All equal elements"
+      },
+      {
+        "id": "TC #05",
+        "input": "[-5, 2, -8, 10]",
+        "expected": "[3, -8, 10]",
+        "expectedOutput": "[3, -8, 10]",
+        "description": "Signed integers"
+      }
+    ],
+    "desc": "Given an array of integers, sort the array in ascending order using Bubble Sort with an early-exit flag. Return a list [swap_count, first_element, last_element].",
+    "code": "def solution(arr):\n    # Return [swap_count, first_element, last_element]\n    pass\n",
+    "points": 50,
+    "testcases": [
+      {
+        "id": "TC #01",
+        "input": "[6, 4, 1]",
+        "expected": "[3, 1, 6]",
+        "expectedOutput": "[3, 1, 6]",
+        "description": "3-element inversion"
+      },
+      {
+        "id": "TC #02",
+        "input": "[1, 2, 3]",
+        "expected": "[0, 1, 3]",
+        "expectedOutput": "[0, 1, 3]",
+        "description": "Already sorted, 0 swaps"
+      },
+      {
+        "id": "TC #03",
+        "input": "[3, 2, 1]",
+        "expected": "[3, 1, 3]",
+        "expectedOutput": "[3, 1, 3]",
+        "description": "Worst-case reverse sorted"
+      },
+      {
+        "id": "TC #04",
+        "input": "[4, 4, 4]",
+        "expected": "[0, 4, 4]",
+        "expectedOutput": "[0, 4, 4]",
+        "description": "All equal elements"
+      },
+      {
+        "id": "TC #05",
+        "input": "[-5, 2, -8, 10]",
+        "expected": "[3, -8, 10]",
+        "expectedOutput": "[3, -8, 10]",
+        "description": "Signed integers"
+      }
+    ],
+    "input_format": "arr = [6, 4, 1]",
+    "output_format": "Result: [3, 1, 6]",
+    "constraints": "1 ≤ N ≤ 100,000 • Runtime: ≤ 1.5s • Memory: ≤ 256MB",
+    "hint": "Optimize asymptotically for O(N log N) or linear time bounds."
+  },
+  {
+    "id": "POOL_COD_03",
+    "title": "MARK AND TOYS GREEDY BUDGET MAXIMIZER",
+    "type": "coding",
+    "topic": "Sorting Algorithms",
+    "difficulty": "Easy",
+    "timeLimitMinutes": 15,
+    "pts": 50,
+    "description": "Given a list of toy prices and a total budget k, determine the maximum number of toys Mark can buy. Sort prices greedily.",
+    "starterCode": "def solution(prices, k):\n    # Return maximum number of toys Mark can buy\n    pass\n",
+    "testCases": [
+      {
+        "id": "TC #01",
+        "input": "prices=[1, 12, 5, 111, 200, 1000, 10], k=50",
+        "expected": "4",
+        "expectedOutput": "4",
+        "description": "Standard budget"
+      },
+      {
+        "id": "TC #02",
+        "input": "prices=[1, 2, 3, 4], k=7",
+        "expected": "3",
+        "expectedOutput": "3",
+        "description": "Small array"
+      },
+      {
+        "id": "TC #03",
+        "input": "prices=[10, 20, 30], k=5",
+        "expected": "0",
+        "expectedOutput": "0",
+        "description": "Budget lower than cheapest"
+      },
+      {
+        "id": "TC #04",
+        "input": "prices=[5, 5, 5, 5], k=15",
+        "expected": "3",
+        "expectedOutput": "3",
+        "description": "Identical prices"
+      },
+      {
+        "id": "TC #05",
+        "input": "prices=[100], k=100",
+        "expected": "1",
+        "expectedOutput": "1",
+        "description": "Exact match"
+      }
+    ],
+    "desc": "Given a list of toy prices and a total budget k, determine the maximum number of toys Mark can buy. Sort prices greedily.",
+    "code": "def solution(prices, k):\n    # Return maximum number of toys Mark can buy\n    pass\n",
+    "points": 50,
+    "testcases": [
+      {
+        "id": "TC #01",
+        "input": "prices=[1, 12, 5, 111, 200, 1000, 10], k=50",
+        "expected": "4",
+        "expectedOutput": "4",
+        "description": "Standard budget"
+      },
+      {
+        "id": "TC #02",
+        "input": "prices=[1, 2, 3, 4], k=7",
+        "expected": "3",
+        "expectedOutput": "3",
+        "description": "Small array"
+      },
+      {
+        "id": "TC #03",
+        "input": "prices=[10, 20, 30], k=5",
+        "expected": "0",
+        "expectedOutput": "0",
+        "description": "Budget lower than cheapest"
+      },
+      {
+        "id": "TC #04",
+        "input": "prices=[5, 5, 5, 5], k=15",
+        "expected": "3",
+        "expectedOutput": "3",
+        "description": "Identical prices"
+      },
+      {
+        "id": "TC #05",
+        "input": "prices=[100], k=100",
+        "expected": "1",
+        "expectedOutput": "1",
+        "description": "Exact match"
+      }
+    ],
+    "input_format": "arr = prices=[1, 12, 5, 111, 200, 1000, 10], k=50",
+    "output_format": "Result: 4",
+    "constraints": "1 ≤ N ≤ 100,000 • Runtime: ≤ 1.5s • Memory: ≤ 256MB",
+    "hint": "Optimize asymptotically for O(N log N) or linear time bounds."
+  },
+  {
+    "id": "POOL_COD_04",
+    "title": "SEARCH IN ROTATED SORTED ARRAY",
+    "type": "coding",
+    "topic": "Searching Algorithms",
+    "difficulty": "Medium",
+    "timeLimitMinutes": 20,
+    "pts": 60,
+    "description": "Given a sorted array of distinct integers that has been rotated at some unknown pivot, find the index of target in O(log N) time. Return -1 if not found.",
+    "starterCode": "def solution(nums, target):\n    # Return index of target in rotated sorted array, or -1\n    pass\n",
+    "testCases": [
+      {
+        "id": "TC #01",
+        "input": "nums=[4, 5, 6, 7, 0, 1, 2], target=0",
+        "expected": "4",
+        "expectedOutput": "4",
+        "description": "Target in right half"
+      },
+      {
+        "id": "TC #02",
+        "input": "nums=[4, 5, 6, 7, 0, 1, 2], target=3",
+        "expected": "-1",
+        "expectedOutput": "-1",
+        "description": "Target missing"
+      },
+      {
+        "id": "TC #03",
+        "input": "nums=[1], target=0",
+        "expected": "-1",
+        "expectedOutput": "-1",
+        "description": "Single element missing"
+      },
+      {
+        "id": "TC #04",
+        "input": "nums=[1], target=1",
+        "expected": "0",
+        "expectedOutput": "0",
+        "description": "Single element hit"
+      },
+      {
+        "id": "TC #05",
+        "input": "nums=[5, 1, 3], target=5",
+        "expected": "0",
+        "expectedOutput": "0",
+        "description": "Boundary at start"
+      }
+    ],
+    "desc": "Given a sorted array of distinct integers that has been rotated at some unknown pivot, find the index of target in O(log N) time. Return -1 if not found.",
+    "code": "def solution(nums, target):\n    # Return index of target in rotated sorted array, or -1\n    pass\n",
+    "points": 60,
+    "testcases": [
+      {
+        "id": "TC #01",
+        "input": "nums=[4, 5, 6, 7, 0, 1, 2], target=0",
+        "expected": "4",
+        "expectedOutput": "4",
+        "description": "Target in right half"
+      },
+      {
+        "id": "TC #02",
+        "input": "nums=[4, 5, 6, 7, 0, 1, 2], target=3",
+        "expected": "-1",
+        "expectedOutput": "-1",
+        "description": "Target missing"
+      },
+      {
+        "id": "TC #03",
+        "input": "nums=[1], target=0",
+        "expected": "-1",
+        "expectedOutput": "-1",
+        "description": "Single element missing"
+      },
+      {
+        "id": "TC #04",
+        "input": "nums=[1], target=1",
+        "expected": "0",
+        "expectedOutput": "0",
+        "description": "Single element hit"
+      },
+      {
+        "id": "TC #05",
+        "input": "nums=[5, 1, 3], target=5",
+        "expected": "0",
+        "expectedOutput": "0",
+        "description": "Boundary at start"
+      }
+    ],
+    "input_format": "arr = nums=[4, 5, 6, 7, 0, 1, 2], target=0",
+    "output_format": "Result: 4",
+    "constraints": "1 ≤ N ≤ 100,000 • Runtime: ≤ 1.5s • Memory: ≤ 256MB",
+    "hint": "Optimize asymptotically for O(N log N) or linear time bounds."
+  },
+  {
+    "id": "POOL_COD_05",
+    "title": "BINARY SEARCH FIRST AND LAST BOUNDS",
+    "type": "coding",
+    "topic": "Searching Algorithms",
+    "difficulty": "Medium",
+    "timeLimitMinutes": 20,
+    "pts": 60,
+    "description": "Given an array of integers sorted in non-decreasing order, find the starting and ending position of a given target value in O(log N). Return [-1, -1] if not found.",
+    "starterCode": "def solution(nums, target):\n    # Return [first_index, last_index] of target\n    pass\n",
+    "testCases": [
+      {
+        "id": "TC #01",
+        "input": "nums=[5,7,7,8,8,10], target=8",
+        "expected": "[3, 4]",
+        "expectedOutput": "[3, 4]",
+        "description": "Target with multi-occurrences"
+      },
+      {
+        "id": "TC #02",
+        "input": "nums=[5,7,7,8,8,10], target=6",
+        "expected": "[-1, -1]",
+        "expectedOutput": "[-1, -1]",
+        "description": "Target missing"
+      },
+      {
+        "id": "TC #03",
+        "input": "nums=[], target=0",
+        "expected": "[-1, -1]",
+        "expectedOutput": "[-1, -1]",
+        "description": "Empty array"
+      },
+      {
+        "id": "TC #04",
+        "input": "nums=[8,8,8,8], target=8",
+        "expected": "[0, 3]",
+        "expectedOutput": "[0, 3]",
+        "description": "All elements match target"
+      },
+      {
+        "id": "TC #05",
+        "input": "nums=[1,2,3,4,5], target=5",
+        "expected": "[4, 4]",
+        "expectedOutput": "[4, 4]",
+        "description": "Target at last position"
+      }
+    ],
+    "desc": "Given an array of integers sorted in non-decreasing order, find the starting and ending position of a given target value in O(log N). Return [-1, -1] if not found.",
+    "code": "def solution(nums, target):\n    # Return [first_index, last_index] of target\n    pass\n",
+    "points": 60,
+    "testcases": [
+      {
+        "id": "TC #01",
+        "input": "nums=[5,7,7,8,8,10], target=8",
+        "expected": "[3, 4]",
+        "expectedOutput": "[3, 4]",
+        "description": "Target with multi-occurrences"
+      },
+      {
+        "id": "TC #02",
+        "input": "nums=[5,7,7,8,8,10], target=6",
+        "expected": "[-1, -1]",
+        "expectedOutput": "[-1, -1]",
+        "description": "Target missing"
+      },
+      {
+        "id": "TC #03",
+        "input": "nums=[], target=0",
+        "expected": "[-1, -1]",
+        "expectedOutput": "[-1, -1]",
+        "description": "Empty array"
+      },
+      {
+        "id": "TC #04",
+        "input": "nums=[8,8,8,8], target=8",
+        "expected": "[0, 3]",
+        "expectedOutput": "[0, 3]",
+        "description": "All elements match target"
+      },
+      {
+        "id": "TC #05",
+        "input": "nums=[1,2,3,4,5], target=5",
+        "expected": "[4, 4]",
+        "expectedOutput": "[4, 4]",
+        "description": "Target at last position"
+      }
+    ],
+    "input_format": "arr = nums=[5,7,7,8,8,10], target=8",
+    "output_format": "Result: [3, 4]",
+    "constraints": "1 ≤ N ≤ 100,000 • Runtime: ≤ 1.5s • Memory: ≤ 256MB",
+    "hint": "Optimize asymptotically for O(N log N) or linear time bounds."
+  },
+  {
+    "id": "POOL_COD_06",
+    "title": "COUNT INVERSIONS IN AN ARRAY (MERGE SORT)",
+    "type": "coding",
+    "topic": "Sorting Algorithms",
+    "difficulty": "Hard",
+    "timeLimitMinutes": 25,
+    "pts": 70,
+    "description": "Given an array of integers, count the number of inversions (pairs (i, j) such that i < j and arr[i] > arr[j]) in O(N log N) time using Merge Sort.",
+    "starterCode": "def solution(arr):\n    # Return total count of inversions in arr\n    pass\n",
+    "testCases": [
+      {
+        "id": "TC #01",
+        "input": "[2, 4, 1, 3, 5]",
+        "expected": "3",
+        "expectedOutput": "3",
+        "description": "Standard 3 inversions"
+      },
+      {
+        "id": "TC #02",
+        "input": "[1, 2, 3, 4, 5]",
+        "expected": "0",
+        "expectedOutput": "0",
+        "description": "Already sorted array"
+      },
+      {
+        "id": "TC #03",
+        "input": "[5, 4, 3, 2, 1]",
+        "expected": "10",
+        "expectedOutput": "10",
+        "description": "Maximum inversions n*(n-1)/2"
+      },
+      {
+        "id": "TC #04",
+        "input": "[1]",
+        "expected": "0",
+        "expectedOutput": "0",
+        "description": "Single element base case"
+      },
+      {
+        "id": "TC #05",
+        "input": "[2, 1, 3, 1, 2]",
+        "expected": "4",
+        "expectedOutput": "4",
+        "description": "Duplicates with multiple inversions"
+      }
+    ],
+    "desc": "Given an array of integers, count the number of inversions (pairs (i, j) such that i < j and arr[i] > arr[j]) in O(N log N) time using Merge Sort.",
+    "code": "def solution(arr):\n    # Return total count of inversions in arr\n    pass\n",
+    "points": 70,
+    "testcases": [
+      {
+        "id": "TC #01",
+        "input": "[2, 4, 1, 3, 5]",
+        "expected": "3",
+        "expectedOutput": "3",
+        "description": "Standard 3 inversions"
+      },
+      {
+        "id": "TC #02",
+        "input": "[1, 2, 3, 4, 5]",
+        "expected": "0",
+        "expectedOutput": "0",
+        "description": "Already sorted array"
+      },
+      {
+        "id": "TC #03",
+        "input": "[5, 4, 3, 2, 1]",
+        "expected": "10",
+        "expectedOutput": "10",
+        "description": "Maximum inversions n*(n-1)/2"
+      },
+      {
+        "id": "TC #04",
+        "input": "[1]",
+        "expected": "0",
+        "expectedOutput": "0",
+        "description": "Single element base case"
+      },
+      {
+        "id": "TC #05",
+        "input": "[2, 1, 3, 1, 2]",
+        "expected": "4",
+        "expectedOutput": "4",
+        "description": "Duplicates with multiple inversions"
+      }
+    ],
+    "input_format": "arr = [2, 4, 1, 3, 5]",
+    "output_format": "Result: 3",
+    "constraints": "1 ≤ N ≤ 100,000 • Runtime: ≤ 1.5s • Memory: ≤ 256MB",
+    "hint": "Optimize asymptotically for O(N log N) or linear time bounds."
+  },
+  {
+    "id": "POOL_COD_07",
+    "title": "BFS SHORTEST REACH IN UNWEIGHTED GRAPH",
+    "type": "coding",
+    "topic": "Graph Algorithms",
+    "difficulty": "Medium",
+    "timeLimitMinutes": 20,
+    "pts": 60,
+    "description": "Given an unweighted undirected graph with nodes numbered 1..n and a starting node s, find the shortest distance from s to all other nodes (each edge has weight 6). Return distance array for all nodes except s. If unreachable, distance is -1.",
+    "starterCode": "def solution(n, edges, s):\n    # Return distance array from s to all other nodes\n    pass\n",
+    "testCases": [
+      {
+        "id": "TC #01",
+        "input": "n=4, edges=[[1,2],[2,3],[3,4],[1,3]], s=1",
+        "expected": "[6, 6, 12]",
+        "expectedOutput": "[6, 6, 12]",
+        "description": "Connected graph with multiple paths"
+      },
+      {
+        "id": "TC #02",
+        "input": "n=3, edges=[[2,3]], s=2",
+        "expected": "[-1, 6]",
+        "expectedOutput": "[-1, 6]",
+        "description": "Disconnected component"
+      },
+      {
+        "id": "TC #03",
+        "input": "n=2, edges=[[1,2]], s=1",
+        "expected": "[6]",
+        "expectedOutput": "[6]",
+        "description": "Two connected vertices"
+      },
+      {
+        "id": "TC #04",
+        "input": "n=5, edges=[[1,2],[1,3],[3,4]], s=1",
+        "expected": "[6, 6, 12, -1]",
+        "expectedOutput": "[6, 6, 12, -1]",
+        "description": "Node 5 disconnected"
+      },
+      {
+        "id": "TC #05",
+        "input": "n=4, edges=[], s=1",
+        "expected": "[-1, -1, -1]",
+        "expectedOutput": "[-1, -1, -1]",
+        "description": "Zero edges"
+      }
+    ],
+    "desc": "Given an unweighted undirected graph with nodes numbered 1..n and a starting node s, find the shortest distance from s to all other nodes (each edge has weight 6). Return distance array for all nodes except s. If unreachable, distance is -1.",
+    "code": "def solution(n, edges, s):\n    # Return distance array from s to all other nodes\n    pass\n",
+    "points": 60,
+    "testcases": [
+      {
+        "id": "TC #01",
+        "input": "n=4, edges=[[1,2],[2,3],[3,4],[1,3]], s=1",
+        "expected": "[6, 6, 12]",
+        "expectedOutput": "[6, 6, 12]",
+        "description": "Connected graph with multiple paths"
+      },
+      {
+        "id": "TC #02",
+        "input": "n=3, edges=[[2,3]], s=2",
+        "expected": "[-1, 6]",
+        "expectedOutput": "[-1, 6]",
+        "description": "Disconnected component"
+      },
+      {
+        "id": "TC #03",
+        "input": "n=2, edges=[[1,2]], s=1",
+        "expected": "[6]",
+        "expectedOutput": "[6]",
+        "description": "Two connected vertices"
+      },
+      {
+        "id": "TC #04",
+        "input": "n=5, edges=[[1,2],[1,3],[3,4]], s=1",
+        "expected": "[6, 6, 12, -1]",
+        "expectedOutput": "[6, 6, 12, -1]",
+        "description": "Node 5 disconnected"
+      },
+      {
+        "id": "TC #05",
+        "input": "n=4, edges=[], s=1",
+        "expected": "[-1, -1, -1]",
+        "expectedOutput": "[-1, -1, -1]",
+        "description": "Zero edges"
+      }
+    ],
+    "input_format": "arr = n=4, edges=[[1,2],[2,3],[3,4],[1,3]], s=1",
+    "output_format": "Result: [6, 6, 12]",
+    "constraints": "1 ≤ N ≤ 100,000 • Runtime: ≤ 1.5s • Memory: ≤ 256MB",
+    "hint": "Optimize asymptotically for O(N log N) or linear time bounds."
+  },
+  {
+    "id": "POOL_COD_08",
+    "title": "GRAPH CYCLE DETECTION VIA DFS 3-COLORING",
+    "type": "coding",
+    "topic": "Graph Algorithms",
+    "difficulty": "Hard",
+    "timeLimitMinutes": 20,
+    "pts": 60,
+    "description": "Given a directed graph with n vertices labeled 0..n-1, return True if the graph contains a directed cycle, otherwise False. Use 3-color DFS (WHITE=0, GRAY=1, BLACK=2).",
+    "starterCode": "def solution(n, edges):\n    # Return True if graph has a cycle, False otherwise\n    pass\n",
+    "testCases": [
+      {
+        "id": "TC #01",
+        "input": "n=4, edges=[[0,1],[1,2],[2,3],[3,0]]",
+        "expected": "True",
+        "expectedOutput": "True",
+        "description": "Simple directed 4-cycle"
+      },
+      {
+        "id": "TC #02",
+        "input": "n=4, edges=[[0,1],[0,2],[1,3],[2,3]]",
+        "expected": "False",
+        "expectedOutput": "False",
+        "description": "Directed Acyclic Graph (DAG)"
+      },
+      {
+        "id": "TC #03",
+        "input": "n=2, edges=[[0,1],[1,0]]",
+        "expected": "True",
+        "expectedOutput": "True",
+        "description": "Back-and-forth 2-cycle"
+      },
+      {
+        "id": "TC #04",
+        "input": "n=3, edges=[[0,1],[1,2]]",
+        "expected": "False",
+        "expectedOutput": "False",
+        "description": "Linear chain"
+      },
+      {
+        "id": "TC #05",
+        "input": "n=5, edges=[[0,1],[2,3],[3,4],[4,2]]",
+        "expected": "True",
+        "expectedOutput": "True",
+        "description": "Cycle in disconnected component"
+      }
+    ],
+    "desc": "Given a directed graph with n vertices labeled 0..n-1, return True if the graph contains a directed cycle, otherwise False. Use 3-color DFS (WHITE=0, GRAY=1, BLACK=2).",
+    "code": "def solution(n, edges):\n    # Return True if graph has a cycle, False otherwise\n    pass\n",
+    "points": 60,
+    "testcases": [
+      {
+        "id": "TC #01",
+        "input": "n=4, edges=[[0,1],[1,2],[2,3],[3,0]]",
+        "expected": "True",
+        "expectedOutput": "True",
+        "description": "Simple directed 4-cycle"
+      },
+      {
+        "id": "TC #02",
+        "input": "n=4, edges=[[0,1],[0,2],[1,3],[2,3]]",
+        "expected": "False",
+        "expectedOutput": "False",
+        "description": "Directed Acyclic Graph (DAG)"
+      },
+      {
+        "id": "TC #03",
+        "input": "n=2, edges=[[0,1],[1,0]]",
+        "expected": "True",
+        "expectedOutput": "True",
+        "description": "Back-and-forth 2-cycle"
+      },
+      {
+        "id": "TC #04",
+        "input": "n=3, edges=[[0,1],[1,2]]",
+        "expected": "False",
+        "expectedOutput": "False",
+        "description": "Linear chain"
+      },
+      {
+        "id": "TC #05",
+        "input": "n=5, edges=[[0,1],[2,3],[3,4],[4,2]]",
+        "expected": "True",
+        "expectedOutput": "True",
+        "description": "Cycle in disconnected component"
+      }
+    ],
+    "input_format": "arr = n=4, edges=[[0,1],[1,2],[2,3],[3,0]]",
+    "output_format": "Result: True",
+    "constraints": "1 ≤ N ≤ 100,000 • Runtime: ≤ 1.5s • Memory: ≤ 256MB",
+    "hint": "Optimize asymptotically for O(N log N) or linear time bounds."
+  },
+  {
+    "id": "POOL_COD_09",
+    "title": "BST INORDER VALIDATION PROPERTY",
+    "type": "coding",
+    "topic": "Trees & BST",
+    "difficulty": "Medium",
+    "timeLimitMinutes": 20,
+    "pts": 60,
+    "description": "Given a binary tree represented as a serialized level-order array (where None represents null), validate if it is a strict Binary Search Tree (BST) where left < root < right.",
+    "starterCode": "def solution(tree_nodes):\n    # Return True if valid BST, False otherwise\n    pass\n",
+    "testCases": [
+      {
+        "id": "TC #01",
+        "input": "[2, 1, 3]",
+        "expected": "True",
+        "expectedOutput": "True",
+        "description": "Valid basic 3-node BST"
+      },
+      {
+        "id": "TC #02",
+        "input": "[5, 1, 4, None, None, 3, 6]",
+        "expected": "False",
+        "expectedOutput": "False",
+        "description": "Right child 4 has subtree value 3 < root"
+      },
+      {
+        "id": "TC #03",
+        "input": "[10, 5, 15, None, None, 6, 20]",
+        "expected": "False",
+        "expectedOutput": "False",
+        "description": "Node 6 in right subtree is < root 10"
+      },
+      {
+        "id": "TC #04",
+        "input": "[1]",
+        "expected": "True",
+        "expectedOutput": "True",
+        "description": "Single root node"
+      },
+      {
+        "id": "TC #05",
+        "input": "[2, 2, 2]",
+        "expected": "False",
+        "expectedOutput": "False",
+        "description": "Strict inequality violation"
+      }
+    ],
+    "desc": "Given a binary tree represented as a serialized level-order array (where None represents null), validate if it is a strict Binary Search Tree (BST) where left < root < right.",
+    "code": "def solution(tree_nodes):\n    # Return True if valid BST, False otherwise\n    pass\n",
+    "points": 60,
+    "testcases": [
+      {
+        "id": "TC #01",
+        "input": "[2, 1, 3]",
+        "expected": "True",
+        "expectedOutput": "True",
+        "description": "Valid basic 3-node BST"
+      },
+      {
+        "id": "TC #02",
+        "input": "[5, 1, 4, None, None, 3, 6]",
+        "expected": "False",
+        "expectedOutput": "False",
+        "description": "Right child 4 has subtree value 3 < root"
+      },
+      {
+        "id": "TC #03",
+        "input": "[10, 5, 15, None, None, 6, 20]",
+        "expected": "False",
+        "expectedOutput": "False",
+        "description": "Node 6 in right subtree is < root 10"
+      },
+      {
+        "id": "TC #04",
+        "input": "[1]",
+        "expected": "True",
+        "expectedOutput": "True",
+        "description": "Single root node"
+      },
+      {
+        "id": "TC #05",
+        "input": "[2, 2, 2]",
+        "expected": "False",
+        "expectedOutput": "False",
+        "description": "Strict inequality violation"
+      }
+    ],
+    "input_format": "arr = [2, 1, 3]",
+    "output_format": "Result: True",
+    "constraints": "1 ≤ N ≤ 100,000 • Runtime: ≤ 1.5s • Memory: ≤ 256MB",
+    "hint": "Optimize asymptotically for O(N log N) or linear time bounds."
+  },
+  {
+    "id": "POOL_COD_10",
+    "title": "LOWEST COMMON ANCESTOR IN A BST",
+    "type": "coding",
+    "topic": "Trees & BST",
+    "difficulty": "Medium",
+    "timeLimitMinutes": 20,
+    "pts": 60,
+    "description": "Given a Binary Search Tree (BST) represented as an array [val, left_child_val, right_child_val...] and two target node values p and q, find their Lowest Common Ancestor (LCA).",
+    "starterCode": "def solution(tree_map, p, q):\n    # Return LCA of p and q\n    pass\n",
+    "testCases": [
+      {
+        "id": "TC #01",
+        "input": "tree={6:[2,8], 2:[0,4], 8:[7,9], 0:[None,None], 4:[3,5], 7:[None,None], 9:[None,None], 3:[None,None], 5:[None,None]}, p=2, q=8",
+        "expected": "6",
+        "expectedOutput": "6",
+        "description": "LCA is root"
+      },
+      {
+        "id": "TC #02",
+        "input": "tree={6:[2,8], 2:[0,4], 8:[7,9]}, p=2, q=4",
+        "expected": "2",
+        "expectedOutput": "2",
+        "description": "LCA is p itself"
+      },
+      {
+        "id": "TC #03",
+        "input": "tree={6:[2,8], 2:[0,4], 8:[7,9], 4:[3,5]}, p=3, q=5",
+        "expected": "4",
+        "expectedOutput": "4",
+        "description": "LCA in left subtree"
+      },
+      {
+        "id": "TC #04",
+        "input": "tree={6:[2,8], 8:[7,9]}, p=7, q=9",
+        "expected": "8",
+        "expectedOutput": "8",
+        "description": "LCA in right subtree"
+      },
+      {
+        "id": "TC #05",
+        "input": "tree={6:[2,8], 2:[0,4]}, p=0, q=4",
+        "expected": "2",
+        "expectedOutput": "2",
+        "description": "LCA of leaves"
+      }
+    ],
+    "desc": "Given a Binary Search Tree (BST) represented as an array [val, left_child_val, right_child_val...] and two target node values p and q, find their Lowest Common Ancestor (LCA).",
+    "code": "def solution(tree_map, p, q):\n    # Return LCA of p and q\n    pass\n",
+    "points": 60,
+    "testcases": [
+      {
+        "id": "TC #01",
+        "input": "tree={6:[2,8], 2:[0,4], 8:[7,9], 0:[None,None], 4:[3,5], 7:[None,None], 9:[None,None], 3:[None,None], 5:[None,None]}, p=2, q=8",
+        "expected": "6",
+        "expectedOutput": "6",
+        "description": "LCA is root"
+      },
+      {
+        "id": "TC #02",
+        "input": "tree={6:[2,8], 2:[0,4], 8:[7,9]}, p=2, q=4",
+        "expected": "2",
+        "expectedOutput": "2",
+        "description": "LCA is p itself"
+      },
+      {
+        "id": "TC #03",
+        "input": "tree={6:[2,8], 2:[0,4], 8:[7,9], 4:[3,5]}, p=3, q=5",
+        "expected": "4",
+        "expectedOutput": "4",
+        "description": "LCA in left subtree"
+      },
+      {
+        "id": "TC #04",
+        "input": "tree={6:[2,8], 8:[7,9]}, p=7, q=9",
+        "expected": "8",
+        "expectedOutput": "8",
+        "description": "LCA in right subtree"
+      },
+      {
+        "id": "TC #05",
+        "input": "tree={6:[2,8], 2:[0,4]}, p=0, q=4",
+        "expected": "2",
+        "expectedOutput": "2",
+        "description": "LCA of leaves"
+      }
+    ],
+    "input_format": "arr = tree={6:[2,8], 2:[0,4], 8:[7,9], 0:[None,None], 4:[3,5], 7:[None,None], 9:[None,None], 3:[None,None], 5:[None,None]}, p=2, q=8",
+    "output_format": "Result: 6",
+    "constraints": "1 ≤ N ≤ 100,000 • Runtime: ≤ 1.5s • Memory: ≤ 256MB",
+    "hint": "Optimize asymptotically for O(N log N) or linear time bounds."
+  },
+  {
+    "id": "POOL_COD_11",
+    "title": "BINARY TREE MAXIMUM DEPTH & HEIGHT",
+    "type": "coding",
+    "topic": "Trees & BST",
+    "difficulty": "Easy",
+    "timeLimitMinutes": 15,
+    "pts": 50,
+    "description": "Given the level-order array representation of a binary tree, calculate the maximum depth (number of nodes along the longest path from the root down to the farthest leaf node).",
+    "starterCode": "def solution(tree_nodes):\n    # Return maximum depth of binary tree\n    pass\n",
+    "testCases": [
+      {
+        "id": "TC #01",
+        "input": "[3, 9, 20, None, None, 15, 7]",
+        "expected": "3",
+        "expectedOutput": "3",
+        "description": "Depth 3 balanced tree"
+      },
+      {
+        "id": "TC #02",
+        "input": "[1, None, 2]",
+        "expected": "2",
+        "expectedOutput": "2",
+        "description": "Right skewed depth 2"
+      },
+      {
+        "id": "TC #03",
+        "input": "[]",
+        "expected": "0",
+        "expectedOutput": "0",
+        "description": "Empty tree"
+      },
+      {
+        "id": "TC #04",
+        "input": "[1]",
+        "expected": "1",
+        "expectedOutput": "1",
+        "description": "Single root node"
+      },
+      {
+        "id": "TC #05",
+        "input": "[1, 2, 3, 4, None, None, 5]",
+        "expected": "3",
+        "expectedOutput": "3",
+        "description": "Irregular leaf depth"
+      }
+    ],
+    "desc": "Given the level-order array representation of a binary tree, calculate the maximum depth (number of nodes along the longest path from the root down to the farthest leaf node).",
+    "code": "def solution(tree_nodes):\n    # Return maximum depth of binary tree\n    pass\n",
+    "points": 50,
+    "testcases": [
+      {
+        "id": "TC #01",
+        "input": "[3, 9, 20, None, None, 15, 7]",
+        "expected": "3",
+        "expectedOutput": "3",
+        "description": "Depth 3 balanced tree"
+      },
+      {
+        "id": "TC #02",
+        "input": "[1, None, 2]",
+        "expected": "2",
+        "expectedOutput": "2",
+        "description": "Right skewed depth 2"
+      },
+      {
+        "id": "TC #03",
+        "input": "[]",
+        "expected": "0",
+        "expectedOutput": "0",
+        "description": "Empty tree"
+      },
+      {
+        "id": "TC #04",
+        "input": "[1]",
+        "expected": "1",
+        "expectedOutput": "1",
+        "description": "Single root node"
+      },
+      {
+        "id": "TC #05",
+        "input": "[1, 2, 3, 4, None, None, 5]",
+        "expected": "3",
+        "expectedOutput": "3",
+        "description": "Irregular leaf depth"
+      }
+    ],
+    "input_format": "arr = [3, 9, 20, None, None, 15, 7]",
+    "output_format": "Result: 3",
+    "constraints": "1 ≤ N ≤ 100,000 • Runtime: ≤ 1.5s • Memory: ≤ 256MB",
+    "hint": "Optimize asymptotically for O(N log N) or linear time bounds."
+  },
+  {
+    "id": "POOL_COD_12",
+    "title": "MIN-HEAP K-TH SMALLEST ELEMENT",
+    "type": "coding",
+    "topic": "Heaps & Priority Queues",
+    "difficulty": "Medium",
+    "timeLimitMinutes": 20,
+    "pts": 60,
+    "description": "Given an unsorted array of integers and an integer k, find the k-th smallest element using a min-heap structure in O(N + k log N) time.",
+    "starterCode": "def solution(nums, k):\n    # Return k-th smallest element\n    pass\n",
+    "testCases": [
+      {
+        "id": "TC #01",
+        "input": "nums=[7, 10, 4, 3, 20, 15], k=3",
+        "expected": "7",
+        "expectedOutput": "7",
+        "description": "3rd smallest is 7"
+      },
+      {
+        "id": "TC #02",
+        "input": "nums=[7, 10, 4, 3, 20, 15], k=1",
+        "expected": "3",
+        "expectedOutput": "3",
+        "description": "1st smallest is minimum 3"
+      },
+      {
+        "id": "TC #03",
+        "input": "nums=[1, 2, 3, 4, 5], k=5",
+        "expected": "5",
+        "expectedOutput": "5",
+        "description": "k equals array length"
+      },
+      {
+        "id": "TC #04",
+        "input": "nums=[5, 5, 5, 5], k=2",
+        "expected": "5",
+        "expectedOutput": "5",
+        "description": "Duplicates"
+      },
+      {
+        "id": "TC #05",
+        "input": "nums=[-1, -5, -3, 0, 2], k=2",
+        "expected": "-3",
+        "expectedOutput": "-3",
+        "description": "Negative integers"
+      }
+    ],
+    "desc": "Given an unsorted array of integers and an integer k, find the k-th smallest element using a min-heap structure in O(N + k log N) time.",
+    "code": "def solution(nums, k):\n    # Return k-th smallest element\n    pass\n",
+    "points": 60,
+    "testcases": [
+      {
+        "id": "TC #01",
+        "input": "nums=[7, 10, 4, 3, 20, 15], k=3",
+        "expected": "7",
+        "expectedOutput": "7",
+        "description": "3rd smallest is 7"
+      },
+      {
+        "id": "TC #02",
+        "input": "nums=[7, 10, 4, 3, 20, 15], k=1",
+        "expected": "3",
+        "expectedOutput": "3",
+        "description": "1st smallest is minimum 3"
+      },
+      {
+        "id": "TC #03",
+        "input": "nums=[1, 2, 3, 4, 5], k=5",
+        "expected": "5",
+        "expectedOutput": "5",
+        "description": "k equals array length"
+      },
+      {
+        "id": "TC #04",
+        "input": "nums=[5, 5, 5, 5], k=2",
+        "expected": "5",
+        "expectedOutput": "5",
+        "description": "Duplicates"
+      },
+      {
+        "id": "TC #05",
+        "input": "nums=[-1, -5, -3, 0, 2], k=2",
+        "expected": "-3",
+        "expectedOutput": "-3",
+        "description": "Negative integers"
+      }
+    ],
+    "input_format": "arr = nums=[7, 10, 4, 3, 20, 15], k=3",
+    "output_format": "Result: 7",
+    "constraints": "1 ≤ N ≤ 100,000 • Runtime: ≤ 1.5s • Memory: ≤ 256MB",
+    "hint": "Optimize asymptotically for O(N log N) or linear time bounds."
+  },
+  {
+    "id": "POOL_COD_13",
+    "title": "TOP-K FREQUENT ELEMENTS STREAM",
+    "type": "coding",
+    "topic": "Heaps & Priority Queues",
+    "difficulty": "Medium",
+    "timeLimitMinutes": 20,
+    "pts": 60,
+    "description": "Given an integer array nums and an integer k, return the k most frequent elements in descending order of frequency. Use a min-heap.",
+    "starterCode": "def solution(nums, k):\n    # Return k most frequent elements\n    pass\n",
+    "testCases": [
+      {
+        "id": "TC #01",
+        "input": "nums=[1,1,1,2,2,3], k=2",
+        "expected": "[1, 2]",
+        "expectedOutput": "[1, 2]",
+        "description": "1 occurs 3x, 2 occurs 2x"
+      },
+      {
+        "id": "TC #02",
+        "input": "nums=[1], k=1",
+        "expected": "[1]",
+        "expectedOutput": "[1]",
+        "description": "Single element"
+      },
+      {
+        "id": "TC #03",
+        "input": "nums=[4,1,-1,2,-1,2,3], k=2",
+        "expected": "[-1, 2]",
+        "expectedOutput": "[-1, 2]",
+        "description": "Negative numbers"
+      },
+      {
+        "id": "TC #04",
+        "input": "nums=[1,2,3,4,5], k=1",
+        "expected": "[1]",
+        "expectedOutput": "[1]",
+        "description": "All frequencies 1"
+      },
+      {
+        "id": "TC #05",
+        "input": "nums=[9,9,9,9,9], k=1",
+        "expected": "[9]",
+        "expectedOutput": "[9]",
+        "description": "Uniform array"
+      }
+    ],
+    "desc": "Given an integer array nums and an integer k, return the k most frequent elements in descending order of frequency. Use a min-heap.",
+    "code": "def solution(nums, k):\n    # Return k most frequent elements\n    pass\n",
+    "points": 60,
+    "testcases": [
+      {
+        "id": "TC #01",
+        "input": "nums=[1,1,1,2,2,3], k=2",
+        "expected": "[1, 2]",
+        "expectedOutput": "[1, 2]",
+        "description": "1 occurs 3x, 2 occurs 2x"
+      },
+      {
+        "id": "TC #02",
+        "input": "nums=[1], k=1",
+        "expected": "[1]",
+        "expectedOutput": "[1]",
+        "description": "Single element"
+      },
+      {
+        "id": "TC #03",
+        "input": "nums=[4,1,-1,2,-1,2,3], k=2",
+        "expected": "[-1, 2]",
+        "expectedOutput": "[-1, 2]",
+        "description": "Negative numbers"
+      },
+      {
+        "id": "TC #04",
+        "input": "nums=[1,2,3,4,5], k=1",
+        "expected": "[1]",
+        "expectedOutput": "[1]",
+        "description": "All frequencies 1"
+      },
+      {
+        "id": "TC #05",
+        "input": "nums=[9,9,9,9,9], k=1",
+        "expected": "[9]",
+        "expectedOutput": "[9]",
+        "description": "Uniform array"
+      }
+    ],
+    "input_format": "arr = nums=[1,1,1,2,2,3], k=2",
+    "output_format": "Result: [1, 2]",
+    "constraints": "1 ≤ N ≤ 100,000 • Runtime: ≤ 1.5s • Memory: ≤ 256MB",
+    "hint": "Optimize asymptotically for O(N log N) or linear time bounds."
+  },
+  {
+    "id": "POOL_COD_14",
+    "title": "TWO SUM II SORTED ARRAY TWO POINTERS",
+    "type": "coding",
+    "topic": "Searching Algorithms",
+    "difficulty": "Easy",
+    "timeLimitMinutes": 15,
+    "pts": 50,
+    "description": "Given a 1-indexed array of integers numbers that is already sorted in non-decreasing order, find two numbers such that they add up to a specific target number. Return [index1, index2].",
+    "starterCode": "def solution(numbers, target):\n    # Return 1-based indices [index1, index2]\n    pass\n",
+    "testCases": [
+      {
+        "id": "TC #01",
+        "input": "numbers=[2, 7, 11, 15], target=9",
+        "expected": "[1, 2]",
+        "expectedOutput": "[1, 2]",
+        "description": "Indices 1 and 2"
+      },
+      {
+        "id": "TC #02",
+        "input": "numbers=[2, 3, 4], target=6",
+        "expected": "[1, 3]",
+        "expectedOutput": "[1, 3]",
+        "description": "Ends sum to target"
+      },
+      {
+        "id": "TC #03",
+        "input": "numbers=[-1, 0], target=-1",
+        "expected": "[1, 2]",
+        "expectedOutput": "[1, 2]",
+        "description": "Negative integer sum"
+      },
+      {
+        "id": "TC #04",
+        "input": "numbers=[1, 2, 3, 4, 4, 9], target=8",
+        "expected": "[4, 5]",
+        "expectedOutput": "[4, 5]",
+        "description": "Duplicate values at 4, 4"
+      },
+      {
+        "id": "TC #05",
+        "input": "numbers=[5, 25, 75], target=100",
+        "expected": "[2, 3]",
+        "expectedOutput": "[2, 3]",
+        "description": "Target at upper end"
+      }
+    ],
+    "desc": "Given a 1-indexed array of integers numbers that is already sorted in non-decreasing order, find two numbers such that they add up to a specific target number. Return [index1, index2].",
+    "code": "def solution(numbers, target):\n    # Return 1-based indices [index1, index2]\n    pass\n",
+    "points": 50,
+    "testcases": [
+      {
+        "id": "TC #01",
+        "input": "numbers=[2, 7, 11, 15], target=9",
+        "expected": "[1, 2]",
+        "expectedOutput": "[1, 2]",
+        "description": "Indices 1 and 2"
+      },
+      {
+        "id": "TC #02",
+        "input": "numbers=[2, 3, 4], target=6",
+        "expected": "[1, 3]",
+        "expectedOutput": "[1, 3]",
+        "description": "Ends sum to target"
+      },
+      {
+        "id": "TC #03",
+        "input": "numbers=[-1, 0], target=-1",
+        "expected": "[1, 2]",
+        "expectedOutput": "[1, 2]",
+        "description": "Negative integer sum"
+      },
+      {
+        "id": "TC #04",
+        "input": "numbers=[1, 2, 3, 4, 4, 9], target=8",
+        "expected": "[4, 5]",
+        "expectedOutput": "[4, 5]",
+        "description": "Duplicate values at 4, 4"
+      },
+      {
+        "id": "TC #05",
+        "input": "numbers=[5, 25, 75], target=100",
+        "expected": "[2, 3]",
+        "expectedOutput": "[2, 3]",
+        "description": "Target at upper end"
+      }
+    ],
+    "input_format": "arr = numbers=[2, 7, 11, 15], target=9",
+    "output_format": "Result: [1, 2]",
+    "constraints": "1 ≤ N ≤ 100,000 • Runtime: ≤ 1.5s • Memory: ≤ 256MB",
+    "hint": "Optimize asymptotically for O(N log N) or linear time bounds."
+  },
+  {
+    "id": "POOL_COD_15",
+    "title": "MAXIMUM SUBARRAY SUM (KADANE'S ALGORITHM)",
+    "type": "coding",
+    "topic": "Dynamic Programming",
+    "difficulty": "Medium",
+    "timeLimitMinutes": 20,
+    "pts": 60,
+    "description": "Given an integer array nums, find the contiguous subarray with the largest sum and return its sum in O(N) time and O(1) space.",
+    "starterCode": "def solution(nums):\n    # Return maximum subarray sum\n    pass\n",
+    "testCases": [
+      {
+        "id": "TC #01",
+        "input": "[-2, 1, -3, 4, -1, 2, 1, -5, 4]",
+        "expected": "6",
+        "expectedOutput": "6",
+        "description": "Subarray [4,-1,2,1] has sum 6"
+      },
+      {
+        "id": "TC #02",
+        "input": "[1]",
+        "expected": "1",
+        "expectedOutput": "1",
+        "description": "Single positive element"
+      },
+      {
+        "id": "TC #03",
+        "input": "[5, 4, -1, 7, 8]",
+        "expected": "23",
+        "expectedOutput": "23",
+        "description": "Entire array except negative"
+      },
+      {
+        "id": "TC #04",
+        "input": "[-1, -2, -3, -4]",
+        "expected": "-1",
+        "expectedOutput": "-1",
+        "description": "All negative elements"
+      },
+      {
+        "id": "TC #05",
+        "input": "[0, 0, 0, 0]",
+        "expected": "0",
+        "expectedOutput": "0",
+        "description": "All zeros"
+      }
+    ],
+    "desc": "Given an integer array nums, find the contiguous subarray with the largest sum and return its sum in O(N) time and O(1) space.",
+    "code": "def solution(nums):\n    # Return maximum subarray sum\n    pass\n",
+    "points": 60,
+    "testcases": [
+      {
+        "id": "TC #01",
+        "input": "[-2, 1, -3, 4, -1, 2, 1, -5, 4]",
+        "expected": "6",
+        "expectedOutput": "6",
+        "description": "Subarray [4,-1,2,1] has sum 6"
+      },
+      {
+        "id": "TC #02",
+        "input": "[1]",
+        "expected": "1",
+        "expectedOutput": "1",
+        "description": "Single positive element"
+      },
+      {
+        "id": "TC #03",
+        "input": "[5, 4, -1, 7, 8]",
+        "expected": "23",
+        "expectedOutput": "23",
+        "description": "Entire array except negative"
+      },
+      {
+        "id": "TC #04",
+        "input": "[-1, -2, -3, -4]",
+        "expected": "-1",
+        "expectedOutput": "-1",
+        "description": "All negative elements"
+      },
+      {
+        "id": "TC #05",
+        "input": "[0, 0, 0, 0]",
+        "expected": "0",
+        "expectedOutput": "0",
+        "description": "All zeros"
+      }
+    ],
+    "input_format": "arr = [-2, 1, -3, 4, -1, 2, 1, -5, 4]",
+    "output_format": "Result: 6",
+    "constraints": "1 ≤ N ≤ 100,000 • Runtime: ≤ 1.5s • Memory: ≤ 256MB",
+    "hint": "Optimize asymptotically for O(N log N) or linear time bounds."
+  },
+  {
+    "id": "POOL_COD_16",
+    "title": "MINIMUM COINS CHANGE INVARIANT (DP)",
+    "type": "coding",
+    "topic": "Dynamic Programming",
+    "difficulty": "Hard",
+    "timeLimitMinutes": 20,
+    "pts": 60,
+    "description": "Given an integer array coins representing different denominations and an integer amount, compute the fewest number of coins needed to make up that amount. Return -1 if impossible.",
+    "starterCode": "def solution(coins, amount):\n    # Return minimum coins needed, or -1\n    pass\n",
+    "testCases": [
+      {
+        "id": "TC #01",
+        "input": "coins=[1, 2, 5], amount=11",
+        "expected": "3",
+        "expectedOutput": "3",
+        "description": "5 + 5 + 1 = 3 coins"
+      },
+      {
+        "id": "TC #02",
+        "input": "coins=[2], amount=3",
+        "expected": "-1",
+        "expectedOutput": "-1",
+        "description": "Impossible to form amount 3"
+      },
+      {
+        "id": "TC #03",
+        "input": "coins=[1], amount=0",
+        "expected": "0",
+        "expectedOutput": "0",
+        "description": "Amount 0 requires 0 coins"
+      },
+      {
+        "id": "TC #04",
+        "input": "coins=[186, 419, 83, 408], amount=6249",
+        "expected": "20",
+        "expectedOutput": "20",
+        "description": "Large target with mixed denominations"
+      },
+      {
+        "id": "TC #05",
+        "input": "coins=[1], amount=2",
+        "expected": "2",
+        "expectedOutput": "2",
+        "description": "1 + 1 = 2 coins"
+      }
+    ],
+    "desc": "Given an integer array coins representing different denominations and an integer amount, compute the fewest number of coins needed to make up that amount. Return -1 if impossible.",
+    "code": "def solution(coins, amount):\n    # Return minimum coins needed, or -1\n    pass\n",
+    "points": 60,
+    "testcases": [
+      {
+        "id": "TC #01",
+        "input": "coins=[1, 2, 5], amount=11",
+        "expected": "3",
+        "expectedOutput": "3",
+        "description": "5 + 5 + 1 = 3 coins"
+      },
+      {
+        "id": "TC #02",
+        "input": "coins=[2], amount=3",
+        "expected": "-1",
+        "expectedOutput": "-1",
+        "description": "Impossible to form amount 3"
+      },
+      {
+        "id": "TC #03",
+        "input": "coins=[1], amount=0",
+        "expected": "0",
+        "expectedOutput": "0",
+        "description": "Amount 0 requires 0 coins"
+      },
+      {
+        "id": "TC #04",
+        "input": "coins=[186, 419, 83, 408], amount=6249",
+        "expected": "20",
+        "expectedOutput": "20",
+        "description": "Large target with mixed denominations"
+      },
+      {
+        "id": "TC #05",
+        "input": "coins=[1], amount=2",
+        "expected": "2",
+        "expectedOutput": "2",
+        "description": "1 + 1 = 2 coins"
+      }
+    ],
+    "input_format": "arr = coins=[1, 2, 5], amount=11",
+    "output_format": "Result: 3",
+    "constraints": "1 ≤ N ≤ 100,000 • Runtime: ≤ 1.5s • Memory: ≤ 256MB",
+    "hint": "Optimize asymptotically for O(N log N) or linear time bounds."
+  },
+  {
+    "id": "POOL_OUT_01",
+    "title": "SELECTION SORT PASS 2 ARRAY STATE TRACE",
+    "type": "output_prediction",
+    "topic": "Sorting Algorithms",
+    "difficulty": "Easy",
+    "timeLimitMinutes": 10,
+    "pts": 35,
+    "description": "Given the initial array [29, 10, 14, 37, 13], what will be the exact array state after the completion of Pass 2 in standard Selection Sort (finding the minimum element in the remaining unsorted subarray and swapping)?",
+    "options": [
+      "[10, 13, 14, 37, 29]",
+      "[10, 14, 29, 37, 13]",
+      "[10, 13, 29, 37, 14]",
+      "[10, 14, 13, 37, 29]"
+    ],
+    "correctAnswer": 0,
+    "originalCorrectAnswerText": "[10, 13, 14, 37, 29]",
+    "explanation": "Pass 1 finds minimum 10 and swaps with index 0: [10, 29, 14, 37, 13]. Pass 2 searches remaining slice [29, 14, 37, 13], finds minimum 13 at index 4, and swaps with index 1: [10, 13, 14, 37, 29].",
+    "desc": "Given the initial array [29, 10, 14, 37, 13], what will be the exact array state after the completion of Pass 2 in standard Selection Sort (finding the minimum element in the remaining unsorted subarray and swapping)?",
+    "starterCode": "def solution(arr):\n    pass\n",
+    "code": "def solution(arr):\n    pass\n",
+    "points": 35,
+    "testCases": [],
+    "testcases": [],
+    "constraints": "1 ≤ N ≤ 100,000 • Runtime: ≤ 1.5s • Memory: ≤ 256MB",
+    "hint": "Pass 1 finds minimum 10 and swaps with index 0: [10, 29, 14, 37, 13]. Pass 2 searches remaining slice [29, 14, 37, 13], finds minimum 13 at index 4, and swaps with index 1: [10, 13, 14, 37, 29]."
+  },
+  {
+    "id": "POOL_OUT_02",
+    "title": "BUBBLE SORT PASS 1 ARRAY STATE TRACE",
+    "type": "output_prediction",
+    "topic": "Sorting Algorithms",
+    "difficulty": "Easy",
+    "timeLimitMinutes": 10,
+    "pts": 35,
+    "description": "Given the array [5, 1, 4, 2, 8], what will be the array state immediately after the first complete outer pass of standard Bubble Sort (ascending order)?",
+    "options": [
+      "[1, 4, 2, 5, 8]",
+      "[1, 5, 4, 2, 8]",
+      "[1, 2, 4, 5, 8]",
+      "[5, 1, 2, 4, 8]"
+    ],
+    "correctAnswer": 0,
+    "originalCorrectAnswerText": "[1, 4, 2, 5, 8]",
+    "explanation": "Pass 1: (5,1)->swap [1,5,4,2,8]; (5,4)->swap [1,4,5,2,8]; (5,2)->swap [1,4,2,5,8]; (5,8)->no swap [1,4,2,5,8]. Largest element 8 is now in final position.",
+    "desc": "Given the array [5, 1, 4, 2, 8], what will be the array state immediately after the first complete outer pass of standard Bubble Sort (ascending order)?",
+    "starterCode": "def solution(arr):\n    pass\n",
+    "code": "def solution(arr):\n    pass\n",
+    "points": 35,
+    "testCases": [],
+    "testcases": [],
+    "constraints": "1 ≤ N ≤ 100,000 • Runtime: ≤ 1.5s • Memory: ≤ 256MB",
+    "hint": "Pass 1: (5,1)->swap [1,5,4,2,8]; (5,4)->swap [1,4,5,2,8]; (5,2)->swap [1,4,2,5,8]; (5,8)->no swap [1,4,2,5,8]. Largest element 8 is now in final position."
+  },
+  {
+    "id": "POOL_OUT_03",
+    "title": "BINARY SEARCH MID-POINT SEQUENCE TRACE",
+    "type": "output_prediction",
+    "topic": "Searching Algorithms",
+    "difficulty": "Medium",
+    "timeLimitMinutes": 10,
+    "pts": 35,
+    "description": "Consider Binary Search looking for target = 44 in the sorted array A = [10, 14, 19, 26, 31, 44, 58, 62, 75, 88]. Using integer division mid = (low + high) // 2 with initial low = 0, high = 9, what sequence of mid-indices is evaluated?",
+    "options": [
+      "mid = 4, then mid = 7, then mid = 5",
+      "mid = 4, then mid = 5",
+      "mid = 5 directly",
+      "mid = 4, then mid = 6, then mid = 5"
+    ],
+    "correctAnswer": 0,
+    "originalCorrectAnswerText": "mid = 4, then mid = 7, then mid = 5",
+    "explanation": "Step 1: low=0, high=9 -> mid=(0+9)//2 = 4 (A[4]=31 < 44 -> low=5). Step 2: low=5, high=9 -> mid=(5+9)//2 = 7 (A[7]=62 > 44 -> high=6). Step 3: low=5, high=6 -> mid=(5+6)//2 = 5 (A[5]=44 == 44 -> Found!). Sequence is 4, 7, 5.",
+    "desc": "Consider Binary Search looking for target = 44 in the sorted array A = [10, 14, 19, 26, 31, 44, 58, 62, 75, 88]. Using integer division mid = (low + high) // 2 with initial low = 0, high = 9, what sequence of mid-indices is evaluated?",
+    "starterCode": "def solution(arr):\n    pass\n",
+    "code": "def solution(arr):\n    pass\n",
+    "points": 35,
+    "testCases": [],
+    "testcases": [],
+    "constraints": "1 ≤ N ≤ 100,000 • Runtime: ≤ 1.5s • Memory: ≤ 256MB",
+    "hint": "Step 1: low=0, high=9 -> mid=(0+9)//2 = 4 (A[4]=31 < 44 -> low=5). Step 2: low=5, high=9 -> mid=(5+9)//2 = 7 (A[7]=62 > 44 -> high=6). Step 3: low=5, high=6 -> mid=(5+6)//2 = 5 (A[5]=44 == 44 -> Found!). Sequence is 4, 7, 5."
+  },
+  {
+    "id": "POOL_OUT_04",
+    "title": "MERGE SORT RECURSIVE SPLIT TREE OUTPUT TRACE",
+    "type": "output_prediction",
+    "topic": "Sorting Algorithms",
+    "difficulty": "Medium",
+    "timeLimitMinutes": 10,
+    "pts": 35,
+    "description": "Given array [38, 27, 43, 3, 9, 82, 10], what is the left half subarray generated by the very first recursive call of Merge Sort (using mid = len(A)//2)?",
+    "options": [
+      "[38, 27, 43]",
+      "[38, 27, 43, 3]",
+      "[27, 38, 43]",
+      "[3, 27, 38]"
+    ],
+    "correctAnswer": 0,
+    "originalCorrectAnswerText": "[38, 27, 43]",
+    "explanation": "Length is 7, mid = 7 // 2 = 3. Left slice A[:3] produces [38, 27, 43], while right slice A[3:] produces [3, 9, 82, 10].",
+    "desc": "Given array [38, 27, 43, 3, 9, 82, 10], what is the left half subarray generated by the very first recursive call of Merge Sort (using mid = len(A)//2)?",
+    "starterCode": "def solution(arr):\n    pass\n",
+    "code": "def solution(arr):\n    pass\n",
+    "points": 35,
+    "testCases": [],
+    "testcases": [],
+    "constraints": "1 ≤ N ≤ 100,000 • Runtime: ≤ 1.5s • Memory: ≤ 256MB",
+    "hint": "Length is 7, mid = 7 // 2 = 3. Left slice A[:3] produces [38, 27, 43], while right slice A[3:] produces [3, 9, 82, 10]."
+  },
+  {
+    "id": "POOL_OUT_05",
+    "title": "QUICK SORT LOMUTO PARTITION PIVOT INDEX TRACE",
+    "type": "output_prediction",
+    "topic": "Sorting Algorithms",
+    "difficulty": "Hard",
+    "timeLimitMinutes": 10,
+    "pts": 35,
+    "description": "Given array [10, 80, 30, 90, 40, 50, 70] partitioned using standard Lomuto partition scheme with pivot = 70 (last element), what will be the final index position of pivot 70?",
+    "options": [
+      "Index 4 (Array: [10, 30, 40, 50, 70, 90, 80])",
+      "Index 3 (Array: [10, 30, 40, 70, 50, 90, 80])",
+      "Index 5 (Array: [10, 30, 40, 50, 80, 70, 90])",
+      "Index 2 (Array: [10, 30, 70, 40, 50, 80, 90])"
+    ],
+    "correctAnswer": 0,
+    "originalCorrectAnswerText": "Index 4 (Array: [10, 30, 40, 50, 70, 90, 80])",
+    "explanation": "Elements smaller than 70 are [10, 30, 40, 50] (4 elements total occupying indices 0..3). Pivot 70 is placed at index 4, followed by elements greater than 70 [90, 80].",
+    "desc": "Given array [10, 80, 30, 90, 40, 50, 70] partitioned using standard Lomuto partition scheme with pivot = 70 (last element), what will be the final index position of pivot 70?",
+    "starterCode": "def solution(arr):\n    pass\n",
+    "code": "def solution(arr):\n    pass\n",
+    "points": 35,
+    "testCases": [],
+    "testcases": [],
+    "constraints": "1 ≤ N ≤ 100,000 • Runtime: ≤ 1.5s • Memory: ≤ 256MB",
+    "hint": "Elements smaller than 70 are [10, 30, 40, 50] (4 elements total occupying indices 0..3). Pivot 70 is placed at index 4, followed by elements greater than 70 [90, 80]."
+  },
+  {
+    "id": "POOL_OUT_06",
+    "title": "BFS GRAPH LEVEL-ORDER TRAVERSAL OUTPUT",
+    "type": "output_prediction",
+    "topic": "Graph Algorithms",
+    "difficulty": "Easy",
+    "timeLimitMinutes": 10,
+    "pts": 35,
+    "description": "A graph has adjacency list: {1: [2, 3], 2: [4, 5], 3: [6], 4: [], 5: [], 6: []}. When Breadth-First Search (BFS) is executed starting at node 1, inserting neighbors in ascending numerical order, what is the visited vertex sequence?",
+    "options": [
+      "1 -> 2 -> 3 -> 4 -> 5 -> 6",
+      "1 -> 2 -> 4 -> 5 -> 3 -> 6",
+      "1 -> 3 -> 2 -> 6 -> 5 -> 4",
+      "1 -> 2 -> 3 -> 6 -> 5 -> 4"
+    ],
+    "correctAnswer": 0,
+    "originalCorrectAnswerText": "1 -> 2 -> 3 -> 4 -> 5 -> 6",
+    "explanation": "Queue processes: [1] -> pop 1, push [2, 3]. Pop 2, push [4, 5] -> queue is [3, 4, 5]. Pop 3, push [6] -> queue is [4, 5, 6]. Pop 4, 5, 6. Visited sequence: 1 -> 2 -> 3 -> 4 -> 5 -> 6.",
+    "desc": "A graph has adjacency list: {1: [2, 3], 2: [4, 5], 3: [6], 4: [], 5: [], 6: []}. When Breadth-First Search (BFS) is executed starting at node 1, inserting neighbors in ascending numerical order, what is the visited vertex sequence?",
+    "starterCode": "def solution(arr):\n    pass\n",
+    "code": "def solution(arr):\n    pass\n",
+    "points": 35,
+    "testCases": [],
+    "testcases": [],
+    "constraints": "1 ≤ N ≤ 100,000 • Runtime: ≤ 1.5s • Memory: ≤ 256MB",
+    "hint": "Queue processes: [1] -> pop 1, push [2, 3]. Pop 2, push [4, 5] -> queue is [3, 4, 5]. Pop 3, push [6] -> queue is [4, 5, 6]. Pop 4, 5, 6. Visited sequence: 1 -> 2 -> 3 -> 4 -> 5 -> 6."
+  },
+  {
+    "id": "POOL_OUT_07",
+    "title": "DFS TREE PREORDER SEQUENCE OUTPUT",
+    "type": "output_prediction",
+    "topic": "Trees & BST",
+    "difficulty": "Easy",
+    "timeLimitMinutes": 10,
+    "pts": 35,
+    "description": "Given a binary tree with root 1, left child 2 (with children 4, 5), and right child 3 (with child 6 on right), what is the exact Preorder traversal sequence (Root -> Left -> Right)?",
+    "options": [
+      "1 -> 2 -> 4 -> 5 -> 3 -> 6",
+      "4 -> 2 -> 5 -> 1 -> 3 -> 6",
+      "4 -> 5 -> 2 -> 6 -> 3 -> 1",
+      "1 -> 2 -> 3 -> 4 -> 5 -> 6"
+    ],
+    "correctAnswer": 0,
+    "originalCorrectAnswerText": "1 -> 2 -> 4 -> 5 -> 3 -> 6",
+    "explanation": "Preorder visits root first, then left subtree, then right subtree. Root 1 -> visit left node 2 -> visit 4 -> visit 5 -> visit right node 3 -> visit 6. Result: 1, 2, 4, 5, 3, 6.",
+    "desc": "Given a binary tree with root 1, left child 2 (with children 4, 5), and right child 3 (with child 6 on right), what is the exact Preorder traversal sequence (Root -> Left -> Right)?",
+    "starterCode": "def solution(arr):\n    pass\n",
+    "code": "def solution(arr):\n    pass\n",
+    "points": 35,
+    "testCases": [],
+    "testcases": [],
+    "constraints": "1 ≤ N ≤ 100,000 • Runtime: ≤ 1.5s • Memory: ≤ 256MB",
+    "hint": "Preorder visits root first, then left subtree, then right subtree. Root 1 -> visit left node 2 -> visit 4 -> visit 5 -> visit right node 3 -> visit 6. Result: 1, 2, 4, 5, 3, 6."
+  },
+  {
+    "id": "POOL_OUT_08",
+    "title": "BST INORDER RECONSTRUCTION OUTPUT TRACE",
+    "type": "output_prediction",
+    "topic": "Trees & BST",
+    "difficulty": "Easy",
+    "timeLimitMinutes": 10,
+    "pts": 35,
+    "description": "The following keys are inserted one by one into an initially empty Binary Search Tree (BST): [50, 30, 70, 20, 40, 60, 80]. What is the output produced by an Inorder traversal?",
+    "options": [
+      "[20, 30, 40, 50, 60, 70, 80]",
+      "[50, 30, 20, 40, 70, 60, 80]",
+      "[20, 40, 30, 60, 80, 70, 50]",
+      "[80, 70, 60, 50, 40, 30, 20]"
+    ],
+    "correctAnswer": 0,
+    "originalCorrectAnswerText": "[20, 30, 40, 50, 60, 70, 80]",
+    "explanation": "By BST definition, an Inorder traversal (Left, Root, Right) always outputs keys in strictly ascending sorted order regardless of insertion sequence.",
+    "desc": "The following keys are inserted one by one into an initially empty Binary Search Tree (BST): [50, 30, 70, 20, 40, 60, 80]. What is the output produced by an Inorder traversal?",
+    "starterCode": "def solution(arr):\n    pass\n",
+    "code": "def solution(arr):\n    pass\n",
+    "points": 35,
+    "testCases": [],
+    "testcases": [],
+    "constraints": "1 ≤ N ≤ 100,000 • Runtime: ≤ 1.5s • Memory: ≤ 256MB",
+    "hint": "By BST definition, an Inorder traversal (Left, Root, Right) always outputs keys in strictly ascending sorted order regardless of insertion sequence."
+  },
+  {
+    "id": "POOL_OUT_09",
+    "title": "MIN-HEAP SIFT-UP INSERTION OUTPUT TRACE",
+    "type": "output_prediction",
+    "topic": "Heaps & Priority Queues",
+    "difficulty": "Medium",
+    "timeLimitMinutes": 10,
+    "pts": 35,
+    "description": "Given a valid min-heap represented as an array [10, 15, 30, 40, 50, 100, 40], what is the resulting array state after inserting the new element 5 into the heap and performing sift-up?",
+    "options": [
+      "[5, 10, 30, 15, 50, 100, 40, 40]",
+      "[5, 15, 10, 40, 50, 100, 40, 30]",
+      "[10, 5, 30, 15, 50, 100, 40, 40]",
+      "[5, 10, 15, 30, 40, 40, 50, 100]"
+    ],
+    "correctAnswer": 0,
+    "originalCorrectAnswerText": "[5, 10, 30, 15, 50, 100, 40, 40]",
+    "explanation": "Element 5 is appended at index 7 (child of index 3, which is 40). 5 < 40 -> swap (5 is at index 3). Parent of index 3 is index 1 (val 15). 5 < 15 -> swap (5 is at index 1). Parent of index 1 is index 0 (val 10). 5 < 10 -> swap (5 is at index 0). Array is [5, 10, 30, 15, 50, 100, 40, 40].",
+    "desc": "Given a valid min-heap represented as an array [10, 15, 30, 40, 50, 100, 40], what is the resulting array state after inserting the new element 5 into the heap and performing sift-up?",
+    "starterCode": "def solution(arr):\n    pass\n",
+    "code": "def solution(arr):\n    pass\n",
+    "points": 35,
+    "testCases": [],
+    "testcases": [],
+    "constraints": "1 ≤ N ≤ 100,000 • Runtime: ≤ 1.5s • Memory: ≤ 256MB",
+    "hint": "Element 5 is appended at index 7 (child of index 3, which is 40). 5 < 40 -> swap (5 is at index 3). Parent of index 3 is index 1 (val 15). 5 < 15 -> swap (5 is at index 1). Parent of index 1 is index 0 (val 10). 5 < 10 -> swap (5 is at index 0). Array is [5, 10, 30, 15, 50, 100, 40, 40]."
+  },
+  {
+    "id": "POOL_OUT_10",
+    "title": "AVL TREE SINGLE LEFT ROTATION OUTPUT TRACE",
+    "type": "output_prediction",
+    "topic": "Trees & BST",
+    "difficulty": "Hard",
+    "timeLimitMinutes": 10,
+    "pts": 35,
+    "description": "An unbalanced AVL tree has root 10 with right child 20, and 20 has right child 30 (Right-Right case with Balance Factor -2 at root). After executing a single Left Rotation on root 10, which node becomes the new root?",
+    "options": [
+      "Node 20 with left child 10 and right child 30",
+      "Node 30 with left child 20 and left grandchild 10",
+      "Node 10 remains root with 20 and 30 restructured",
+      "Node 15 with 10 and 20 as children"
+    ],
+    "correctAnswer": 0,
+    "originalCorrectAnswerText": "Node 20 with left child 10 and right child 30",
+    "explanation": "A Left Rotation promotes the right child (20) to root. Node 10 becomes the left child of 20, and node 30 remains the right child of 20. The tree becomes perfectly balanced with height 2.",
+    "desc": "An unbalanced AVL tree has root 10 with right child 20, and 20 has right child 30 (Right-Right case with Balance Factor -2 at root). After executing a single Left Rotation on root 10, which node becomes the new root?",
+    "starterCode": "def solution(arr):\n    pass\n",
+    "code": "def solution(arr):\n    pass\n",
+    "points": 35,
+    "testCases": [],
+    "testcases": [],
+    "constraints": "1 ≤ N ≤ 100,000 • Runtime: ≤ 1.5s • Memory: ≤ 256MB",
+    "hint": "A Left Rotation promotes the right child (20) to root. Node 10 becomes the left child of 20, and node 30 remains the right child of 20. The tree becomes perfectly balanced with height 2."
+  },
+  {
+    "id": "POOL_MCQ_01",
+    "title": "SHORTEST PATH IN UNWEIGHTED GRAPHS",
+    "type": "mcq",
+    "topic": "Graph Algorithms",
+    "difficulty": "Easy",
+    "timeLimitMinutes": 10,
+    "pts": 30,
+    "description": "Why is Breadth-First Search (BFS) guaranteed to find the shortest path between two vertices in an unweighted graph, while Depth-First Search (DFS) is not?",
+    "options": [
+      "BFS visits vertices in strictly increasing order of their hop distance from the source.",
+      "BFS uses a stack which preserves deepest exploration order.",
+      "DFS explores all parallel edges simultaneously before recursing.",
+      "BFS only operates on Directed Acyclic Graphs (DAGs)."
+    ],
+    "correctAnswer": 0,
+    "originalCorrectAnswerText": "BFS visits vertices in strictly increasing order of their hop distance from the source.",
+    "explanation": "Because BFS explores nodes level by level using a FIFO queue, any node discovered at step k has an unweighted distance of exactly k edges.",
+    "desc": "Why is Breadth-First Search (BFS) guaranteed to find the shortest path between two vertices in an unweighted graph, while Depth-First Search (DFS) is not?",
+    "starterCode": "def solution(arr):\n    pass\n",
+    "code": "def solution(arr):\n    pass\n",
+    "points": 30,
+    "testCases": [],
+    "testcases": [],
+    "constraints": "1 ≤ N ≤ 100,000 • Runtime: ≤ 1.5s • Memory: ≤ 256MB",
+    "hint": "Because BFS explores nodes level by level using a FIFO queue, any node discovered at step k has an unweighted distance of exactly k edges."
+  },
+  {
+    "id": "POOL_MCQ_02",
+    "title": "BST SEARCH WORST-CASE COMPLEXITY",
+    "type": "mcq",
+    "topic": "Trees & BST",
+    "difficulty": "Easy",
+    "timeLimitMinutes": 10,
+    "pts": 30,
+    "description": "What is the worst-case time complexity of searching for an element in an unbalanced Binary Search Tree with N nodes?",
+    "options": [
+      "O(N), when the tree degenerates into a linear linked list.",
+      "O(log N), because branching factor is always two.",
+      "O(N log N), due to comparison sorting cost.",
+      "O(1), using hashing collision resolution."
+    ],
+    "correctAnswer": 0,
+    "originalCorrectAnswerText": "O(N), when the tree degenerates into a linear linked list.",
+    "explanation": "When keys are inserted in strictly sorted order without rebalancing, height h = N - 1, resulting in linear O(N) traversal.",
+    "desc": "What is the worst-case time complexity of searching for an element in an unbalanced Binary Search Tree with N nodes?",
+    "starterCode": "def solution(arr):\n    pass\n",
+    "code": "def solution(arr):\n    pass\n",
+    "points": 30,
+    "testCases": [],
+    "testcases": [],
+    "constraints": "1 ≤ N ≤ 100,000 • Runtime: ≤ 1.5s • Memory: ≤ 256MB",
+    "hint": "When keys are inserted in strictly sorted order without rebalancing, height h = N - 1, resulting in linear O(N) traversal."
+  },
+  {
+    "id": "POOL_MCQ_03",
+    "title": "INORDER TRAVERSAL PROPERTY OF BST",
+    "type": "mcq",
+    "topic": "Trees & BST",
+    "difficulty": "Easy",
+    "timeLimitMinutes": 10,
+    "pts": 30,
+    "description": "Which traversal of a valid Binary Search Tree always outputs the node keys in ascending non-decreasing order?",
+    "options": [
+      "Inorder Traversal (Left, Root, Right)",
+      "Preorder Traversal (Root, Left, Right)",
+      "Postorder Traversal (Left, Right, Root)",
+      "Level-Order Traversal (Breadth-First)"
+    ],
+    "correctAnswer": 0,
+    "originalCorrectAnswerText": "Inorder Traversal (Left, Root, Right)",
+    "explanation": "Because left child < root < right child everywhere, visiting left subtree then root then right subtree yields sorted order.",
+    "desc": "Which traversal of a valid Binary Search Tree always outputs the node keys in ascending non-decreasing order?",
+    "starterCode": "def solution(arr):\n    pass\n",
+    "code": "def solution(arr):\n    pass\n",
+    "points": 30,
+    "testCases": [],
+    "testcases": [],
+    "constraints": "1 ≤ N ≤ 100,000 • Runtime: ≤ 1.5s • Memory: ≤ 256MB",
+    "hint": "Because left child < root < right child everywhere, visiting left subtree then root then right subtree yields sorted order."
+  },
+  {
+    "id": "POOL_MCQ_04",
+    "title": "BALANCED BINARY TREE HEIGHT BOUND",
+    "type": "mcq",
+    "topic": "Trees & BST",
+    "difficulty": "Medium",
+    "timeLimitMinutes": 10,
+    "pts": 30,
+    "description": "An AVL tree guarantees that for every node, the heights of its left and right subtrees differ by at most 1. What is the guaranteed asymptotic upper bound on its height for N nodes?",
+    "options": [
+      "O(log N), specifically bounded by approx 1.44 log2(N)",
+      "O(sqrt(N))",
+      "O(N)",
+      "O(log^2 N)"
+    ],
+    "correctAnswer": 0,
+    "originalCorrectAnswerText": "O(log N), specifically bounded by approx 1.44 log2(N)",
+    "explanation": "Because the minimum number of nodes in an AVL tree of height h follows a Fibonacci recurrence, height is strictly bounded by 1.44 log2(N).",
+    "desc": "An AVL tree guarantees that for every node, the heights of its left and right subtrees differ by at most 1. What is the guaranteed asymptotic upper bound on its height for N nodes?",
+    "starterCode": "def solution(arr):\n    pass\n",
+    "code": "def solution(arr):\n    pass\n",
+    "points": 30,
+    "testCases": [],
+    "testcases": [],
+    "constraints": "1 ≤ N ≤ 100,000 • Runtime: ≤ 1.5s • Memory: ≤ 256MB",
+    "hint": "Because the minimum number of nodes in an AVL tree of height h follows a Fibonacci recurrence, height is strictly bounded by 1.44 log2(N)."
+  },
+  {
+    "id": "POOL_MCQ_05",
+    "title": "MIN-HEAP ROOT ELEMENT INVARIANT",
+    "type": "mcq",
+    "topic": "Heaps & Priority Queues",
+    "difficulty": "Easy",
+    "timeLimitMinutes": 10,
+    "pts": 30,
+    "description": "In a valid min-heap of size N, where is the smallest element always guaranteed to be located?",
+    "options": [
+      "At index 0 (the root of the heap).",
+      "At index N-1 (the last leaf).",
+      "At index N//2 (first non-leaf).",
+      "At any position depending on whether N is even or odd."
+    ],
+    "correctAnswer": 0,
+    "originalCorrectAnswerText": "At index 0 (the root of the heap).",
+    "explanation": "By definition of a min-heap, parent <= children everywhere, so root has no smaller ancestor and must hold the minimum element.",
+    "desc": "In a valid min-heap of size N, where is the smallest element always guaranteed to be located?",
+    "starterCode": "def solution(arr):\n    pass\n",
+    "code": "def solution(arr):\n    pass\n",
+    "points": 30,
+    "testCases": [],
+    "testcases": [],
+    "constraints": "1 ≤ N ≤ 100,000 • Runtime: ≤ 1.5s • Memory: ≤ 256MB",
+    "hint": "By definition of a min-heap, parent <= children everywhere, so root has no smaller ancestor and must hold the minimum element."
+  },
+  {
+    "id": "POOL_MCQ_06",
+    "title": "QUICKSORT WORST-CASE PARTITION TRIGGER",
+    "type": "mcq",
+    "topic": "Sorting Algorithms",
+    "difficulty": "Medium",
+    "timeLimitMinutes": 10,
+    "pts": 30,
+    "description": "Under which input condition does standard QuickSort with first-element pivot selection exhibit worst-case O(N^2) time complexity?",
+    "options": [
+      "When the input array is already sorted or reverse sorted.",
+      "When the array elements are uniformly randomized.",
+      "When the array contains exclusively unique prime numbers.",
+      "When array size is an exact power of two."
+    ],
+    "correctAnswer": 0,
+    "originalCorrectAnswerText": "When the input array is already sorted or reverse sorted.",
+    "explanation": "When sorted, choosing the first element yields partitions of size 0 and N-1 at every step, requiring N recursive levels and O(N^2) comparisons.",
+    "desc": "Under which input condition does standard QuickSort with first-element pivot selection exhibit worst-case O(N^2) time complexity?",
+    "starterCode": "def solution(arr):\n    pass\n",
+    "code": "def solution(arr):\n    pass\n",
+    "points": 30,
+    "testCases": [],
+    "testcases": [],
+    "constraints": "1 ≤ N ≤ 100,000 • Runtime: ≤ 1.5s • Memory: ≤ 256MB",
+    "hint": "When sorted, choosing the first element yields partitions of size 0 and N-1 at every step, requiring N recursive levels and O(N^2) comparisons."
+  },
+  {
+    "id": "POOL_MCQ_07",
+    "title": "DIJKSTRA GREEDY DISTANCE UPDATE CONDITION",
+    "type": "mcq",
+    "topic": "Graph Algorithms",
+    "difficulty": "Medium",
+    "timeLimitMinutes": 10,
+    "pts": 30,
+    "description": "In Dijkstra's algorithm, what is the prerequisite requirement for edge weights to guarantee that greedy vertex finalization produces the correct shortest paths?",
+    "options": [
+      "All edge weights must be non-negative (w(u, v) >= 0).",
+      "The graph must be a tree without any cycles.",
+      "Edge weights must all be strictly integers.",
+      "Every vertex must have in-degree equal to out-degree."
+    ],
+    "correctAnswer": 0,
+    "originalCorrectAnswerText": "All edge weights must be non-negative (w(u, v) >= 0).",
+    "explanation": "If negative edge weights exist, a finalized distance could subsequently be decreased by traversing a negative edge, invalidating greedy termination.",
+    "desc": "In Dijkstra's algorithm, what is the prerequisite requirement for edge weights to guarantee that greedy vertex finalization produces the correct shortest paths?",
+    "starterCode": "def solution(arr):\n    pass\n",
+    "code": "def solution(arr):\n    pass\n",
+    "points": 30,
+    "testCases": [],
+    "testcases": [],
+    "constraints": "1 ≤ N ≤ 100,000 • Runtime: ≤ 1.5s • Memory: ≤ 256MB",
+    "hint": "If negative edge weights exist, a finalized distance could subsequently be decreased by traversing a negative edge, invalidating greedy termination."
+  },
+  {
+    "id": "POOL_MCQ_08",
+    "title": "MERGE SORT AUXILIARY SPACE COMPLEXITY",
+    "type": "mcq",
+    "topic": "Sorting Algorithms",
+    "difficulty": "Easy",
+    "timeLimitMinutes": 10,
+    "pts": 30,
+    "description": "What is the standard auxiliary space complexity of classic out-of-place Merge Sort on an array of size N?",
+    "options": [
+      "O(N), required for temporary buffer arrays during merging.",
+      "O(1), it sorts entirely in place.",
+      "O(N^2), due to stack frame growth.",
+      "O(log N), matching recursion stack depth only."
+    ],
+    "correctAnswer": 0,
+    "originalCorrectAnswerText": "O(N), required for temporary buffer arrays during merging.",
+    "explanation": "The merge step requires an auxiliary buffer of size proportional to N to merge two sorted subarrays before copying back.",
+    "desc": "What is the standard auxiliary space complexity of classic out-of-place Merge Sort on an array of size N?",
+    "starterCode": "def solution(arr):\n    pass\n",
+    "code": "def solution(arr):\n    pass\n",
+    "points": 30,
+    "testCases": [],
+    "testcases": [],
+    "constraints": "1 ≤ N ≤ 100,000 • Runtime: ≤ 1.5s • Memory: ≤ 256MB",
+    "hint": "The merge step requires an auxiliary buffer of size proportional to N to merge two sorted subarrays before copying back."
+  },
+  {
+    "id": "POOL_MCQ_09",
+    "title": "BST INORDER SUCCESSOR IDENTIFICATION",
+    "type": "mcq",
+    "topic": "Trees & BST",
+    "difficulty": "Medium",
+    "timeLimitMinutes": 10,
+    "pts": 30,
+    "description": "In a Binary Search Tree, if a node has a non-empty right subtree, where is its Inorder Successor located?",
+    "options": [
+      "The leftmost node of the right subtree (minimum value in right subtree).",
+      "The immediate right child node.",
+      "The deepest right leaf of the tree.",
+      "The lowest ancestor whose left child is also an ancestor."
+    ],
+    "correctAnswer": 0,
+    "originalCorrectAnswerText": "The leftmost node of the right subtree (minimum value in right subtree).",
+    "explanation": "The inorder successor is the smallest value strictly greater than the current node. If a right subtree exists, that minimum is found by traversing left until null.",
+    "desc": "In a Binary Search Tree, if a node has a non-empty right subtree, where is its Inorder Successor located?",
+    "starterCode": "def solution(arr):\n    pass\n",
+    "code": "def solution(arr):\n    pass\n",
+    "points": 30,
+    "testCases": [],
+    "testcases": [],
+    "constraints": "1 ≤ N ≤ 100,000 • Runtime: ≤ 1.5s • Memory: ≤ 256MB",
+    "hint": "The inorder successor is the smallest value strictly greater than the current node. If a right subtree exists, that minimum is found by traversing left until null."
+  },
+  {
+    "id": "POOL_MCQ_10",
+    "title": "FLOYD-WARSHALL VS DIJKSTRA ALGORITHM SELECTION",
+    "type": "mcq",
+    "topic": "Graph Algorithms",
+    "difficulty": "Hard",
+    "timeLimitMinutes": 10,
+    "pts": 30,
+    "description": "When finding all-pairs shortest paths on a dense graph with V vertices and E = O(V^2) edges, why is Floyd-Warshall (O(V^3)) typically chosen over running Dijkstra V times?",
+    "options": [
+      "Floyd-Warshall has a very low constant factor with simple triple-nested loops and handles negative edges (without negative cycles).",
+      "Floyd-Warshall runs in O(V^2) while Dijkstra runs in O(V^4).",
+      "Dijkstra cannot be run multiple times on the same graph instance.",
+      "Floyd-Warshall converts graphs to trees automatically."
+    ],
+    "correctAnswer": 0,
+    "originalCorrectAnswerText": "Floyd-Warshall has a very low constant factor with simple triple-nested loops and handles negative edges (without negative cycles).",
+    "explanation": "Floyd-Warshall's O(V^3) algorithm uses dynamic programming with excellent cache locality and supports negative edge weights (provided no negative cycle exists).",
+    "desc": "When finding all-pairs shortest paths on a dense graph with V vertices and E = O(V^2) edges, why is Floyd-Warshall (O(V^3)) typically chosen over running Dijkstra V times?",
+    "starterCode": "def solution(arr):\n    pass\n",
+    "code": "def solution(arr):\n    pass\n",
+    "points": 30,
+    "testCases": [],
+    "testcases": [],
+    "constraints": "1 ≤ N ≤ 100,000 • Runtime: ≤ 1.5s • Memory: ≤ 256MB",
+    "hint": "Floyd-Warshall's O(V^3) algorithm uses dynamic programming with excellent cache locality and supports negative edge weights (provided no negative cycle exists)."
+  }
+]
