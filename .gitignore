@@ -43,3 +43,6 @@ Thumbs.db
 .vscode/
 .idea/
 .system_generated/
+
+.vercel
+.env*

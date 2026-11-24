@@ -14234,9 +14234,9 @@ function setupNavigationSlideDrawer() {
         backdrop.classList.add("opacity-0");
         setTimeout(() => {
             backdrop.classList.add("hidden");
-        }
-    window.closeDrawer = closeDrawer;, 300);
+        }, 300);
     }
+    window.closeDrawer = closeDrawer;
 
     if (toggleBtn) {
         toggleBtn.addEventListener("click", (e) => {
